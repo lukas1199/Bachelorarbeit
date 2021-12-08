@@ -1,14 +1,79 @@
 \documentclass[12pt, titlepage]{article}
 \usepackage[ngerman]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage[a4paper, lmargin={3cm}, rmargin={2.5cm}, tmargin={3cm}, bmargin={2cm}]{geometry}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{helvet}
+\usepackage{microtype}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength\parindent{0pt}
 
-\linespread{1.5}
+
+
+
 
 \begin{document}
-    Hello World
+% Leere Titelseite
+\pagenumbering{gobble}
+\newpage\null\thispagestyle{empty}\newpage
+
+\begin{titlepage}
+    \normalsize{Hochschule Hannover, Fakultät IV: Wirtschaft und Informatik \\
+    Bachelorarbeit im Studiengang Wirtschaftsinformatik, Wintersemester 2021/2022} 
+    \vspace{1.5cm}
+    \sloppy 
+    \textbf{\Large{\\Konzeption, Datenmodellierung und prototypischer Aufbau eines Prozess-Tracking-Tools zur Steuerung und Umsetzungsverfolgung einer S/4HANA Transformation im Vorgehensmodell eines IT-Beratungsunternehmens}}
+    \vspace{10cm}
+    \normalsize{\\Abgabedatum: 08. Februar 2022 \vspace{1cm}\\Lukas Hampel\\Matrikelnummer: 1481025\\Scharnhorststr. 8\\31785 Hameln\vspace{1cm}\\Erstprüfer: Herr Prof. Dr. Raymond Fleck\\Zweitprüfer: Herr Michael Bloß, adesso orange AG
+    }
+\end{titlepage}
+
+\section*{Sperrvermerk}
+Lorem
+\newpage
+
+
+\pagenumbering{Roman}
+\setcounter{page}{3}
+\section*{Vorbemerkung}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section*{Abkürzungsverzeichnis}
+
+\newpage
+
+\section*{Abbildungs-/Tabellenverzeichnis}
+
+\newpage
+
+\section*{Kurzfassung}
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\begin{normalsize}
+\linespread{1.5}
+\section{Einleitung}
+
+lorem ipsum dolor
+
+
+
+
+
+
+
+
+\end{normalsize}
+
+
 \end{document}
