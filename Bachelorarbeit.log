@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12 32-bit) (preloaded format=pdflatex 2021.12.8)  8 DEC 2021 22:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12 32-bit) (preloaded format=pdflatex 2021.12.8)  8 DEC 2021 22:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/hampel/OneDrive - adesso Group/Dokumente/Projekte/Bachelorarbeit/Latex/Bacherlorarbeit.tex"
-(c:/Users/hampel/OneDrive - adesso Group/Dokumente/Projekte/Bachelorarbeit/Latex/Bacherlorarbeit.tex
+**"c:/Users/hampel/OneDrive - adesso Group/Dokumente/Projekte/Bachelorarbeit/Latex/Bachelorarbeit.tex"
+(c:/Users/hampel/OneDrive - adesso Group/Dokumente/Projekte/Bachelorarbeit/Latex/Bachelorarbeit.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (C:\Users\hampel\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -115,8 +115,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count196
 \l__pdf_internal_box=\box50
-) (Bacherlorarbeit.aux)
-\openout1 = `Bacherlorarbeit.aux'.
+) (Bachelorarbeit.aux)
+\openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -187,17 +187,17 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 [1
 
-{C:/Users/hampel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Bacherlorarbeit.aux) ) 
+{C:/Users/hampel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Bachelorarbeit.aux) ) 
 Here is how much of TeX's memory you used:
  3547 strings out of 478659
- 58023 string characters out of 2845446
- 365567 words of memory out of 3000000
+ 58011 string characters out of 2845446
+ 365565 words of memory out of 3000000
  21642 multiletter control sequences out of 15000+600000
  403728 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,62p,335b,139s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,5n,62p,334b,139s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/hampel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Bacherlorarbeit.pdf (1 page, 11040 bytes).
+Output written on Bachelorarbeit.pdf (1 page, 11040 bytes).
 PDF statistics:
  11 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
