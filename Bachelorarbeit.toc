@@ -1,44 +1,48 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {section}{\numberline {1}Einleitung}{1}{}%
-\contentsline {section}{\numberline {2}Einleitung}{1}{}%
-\contentsline {subsection}{\numberline {2.1}Vorstellung des Themas}{1}{}%
-\contentsline {subsection}{\numberline {2.2}Einordnung des Themas / Umfeld}{1}{}%
-\contentsline {section}{\numberline {3}Umfeld}{2}{}%
-\contentsline {subsection}{\numberline {3.1}Vorstellung des Unternehmens}{2}{}%
-\contentsline {subsection}{\numberline {3.2}Einordnung AAT / Notwendigkeit}{2}{}%
-\contentsline {subsection}{\numberline {3.3}Notwendigkeit}{2}{}%
-\contentsline {subsection}{\numberline {3.4}Aufbau}{2}{}%
-\contentsline {subsection}{\numberline {3.5}Phasen}{2}{}%
-\contentsline {subsection}{\numberline {3.6}Einordnung des BTT}{2}{}%
-\contentsline {section}{\numberline {4}Vorgehensweise}{3}{}%
-\contentsline {subsection}{\numberline {4.1}Zielsetzung}{3}{}%
-\contentsline {subsection}{\numberline {4.2}Methodik}{3}{}%
-\contentsline {subsection}{\numberline {4.3}Was soll erreicht werden}{3}{}%
-\contentsline {section}{\numberline {5}Erhebung des Ist-Zustand}{4}{}%
-\contentsline {subsection}{\numberline {5.1}Was bietet das Tool bereits heute}{4}{}%
-\contentsline {subsection}{\numberline {5.2}Welche Verbesserungspotenziale gibt es}{4}{}%
-\contentsline {subsection}{\numberline {5.3}Warum verbessern?}{4}{}%
-\contentsline {subsection}{\numberline {5.4}Geplante Erweiterungen des Funktionsumfangs}{4}{}%
-\contentsline {section}{\numberline {6}Anforderungsanalyse}{5}{}%
-\contentsline {subsection}{\numberline {6.1}Interviews mit Stakeholdern}{5}{}%
-\contentsline {subsection}{\numberline {6.2}Use-Cases}{5}{}%
-\contentsline {subsection}{\numberline {6.3}Umgebung}{5}{}%
-\contentsline {subsection}{\numberline {6.4}Schnittstellen}{5}{}%
-\contentsline {section}{\numberline {7}Konzeption}{6}{}%
-\contentsline {subsection}{\numberline {7.1}Datenmodell}{6}{}%
-\contentsline {subsection}{\numberline {7.2}Klassen}{6}{}%
-\contentsline {subsection}{\numberline {7.3}Beziehungen}{6}{}%
-\contentsline {subsection}{\numberline {7.4}...}{6}{}%
-\contentsline {section}{\numberline {8}Prototyp}{7}{}%
-\contentsline {subsection}{\numberline {8.1}Aufbau}{7}{}%
-\contentsline {subsection}{\numberline {8.2}Beschreibung Funktionalität}{7}{}%
-\contentsline {subsection}{\numberline {8.3}Fehlende Feautures}{7}{}%
-\contentsline {section}{\numberline {9}Diskussion}{8}{}%
-\contentsline {subsection}{\numberline {9.1}...}{8}{}%
-\contentsline {section}{\numberline {10}Fazit}{9}{}%
-\contentsline {subsection}{\numberline {10.1}Messung der Zielerreichung}{9}{}%
-\contentsline {section}{\numberline {11}Schlussteil}{10}{}%
-\contentsline {section}{\numberline {12}Anhang}{11}{}%
-\contentsline {section}{\numberline {13}Quellenverzeichnis}{11}{}%
-\contentsline {section}{\numberline {14}Index}{11}{}%
-\contentsline {section}{\numberline {15}Erklärung zur ordnungsgemäßen Erstellung}{11}{}%
+\contentsline {section}{\numberline {2}Einleitung}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Vorstellung des Themas}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Einordnung des Themas / Umfeld}{2}{}%
+\contentsline {section}{\numberline {3}Umfeld}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Vorstellung des Unternehmens}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Einordnung AAT / Notwendigkeit}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Notwendigkeit}{3}{}%
+\contentsline {subsection}{\numberline {3.4}Aufbau}{3}{}%
+\contentsline {subsection}{\numberline {3.5}Phasen}{3}{}%
+\contentsline {subsection}{\numberline {3.6}Einordnung des BTT}{3}{}%
+\contentsline {section}{\numberline {4}Vorgehensweise}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Zielsetzung}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Methodik}{4}{}%
+\contentsline {subsection}{\numberline {4.3}Was soll erreicht werden}{4}{}%
+\contentsline {section}{\numberline {5}Erhebung des Ist-Zustand}{5}{}%
+\contentsline {subsection}{\numberline {5.1}Was bietet das Tool bereits heute}{5}{}%
+\contentsline {subsection}{\numberline {5.2}Welche Verbesserungspotenziale gibt es}{5}{}%
+\contentsline {subsection}{\numberline {5.3}Warum verbessern?}{5}{}%
+\contentsline {subsection}{\numberline {5.4}Geplante Erweiterungen des Funktionsumfangs}{5}{}%
+\contentsline {section}{\numberline {6}Anforderungsanalyse}{6}{}%
+\contentsline {subsection}{\numberline {6.1}Interviews mit Stakeholdern}{6}{}%
+\contentsline {subsection}{\numberline {6.2}Use-Cases}{6}{}%
+\contentsline {subsection}{\numberline {6.3}Umgebung}{6}{}%
+\contentsline {subsection}{\numberline {6.4}Schnittstellen}{6}{}%
+\contentsline {section}{\numberline {7}Datenmodellierung}{7}{}%
+\contentsline {subsection}{\numberline {7.1}Aufbau}{7}{}%
+\contentsline {subsection}{\numberline {7.2}Beschreibung }{7}{}%
+\contentsline {subsection}{\numberline {7.3}...}{7}{}%
+\contentsline {section}{\numberline {8}Konzeption}{8}{}%
+\contentsline {subsection}{\numberline {8.1}Datenmodell}{8}{}%
+\contentsline {subsection}{\numberline {8.2}Klassen}{8}{}%
+\contentsline {subsection}{\numberline {8.3}Beziehungen}{8}{}%
+\contentsline {subsection}{\numberline {8.4}...}{8}{}%
+\contentsline {section}{\numberline {9}Prototyp}{9}{}%
+\contentsline {subsection}{\numberline {9.1}Aufbau}{9}{}%
+\contentsline {subsection}{\numberline {9.2}Beschreibung Funktionalität}{9}{}%
+\contentsline {subsection}{\numberline {9.3}Fehlende Feautures}{9}{}%
+\contentsline {section}{\numberline {10}Diskussion}{10}{}%
+\contentsline {subsection}{\numberline {10.1}...}{10}{}%
+\contentsline {section}{\numberline {11}Fazit}{11}{}%
+\contentsline {subsection}{\numberline {11.1}Messung der Zielerreichung}{11}{}%
+\contentsline {section}{\numberline {12}Schlussteil}{12}{}%
+\contentsline {section}{\numberline {13}Anhang}{13}{}%
+\contentsline {section}{\numberline {14}Quellenverzeichnis}{13}{}%
+\contentsline {section}{\numberline {15}Index}{13}{}%
+\contentsline {section}{\numberline {16}Erklärung zur ordnungsgemäßen Erstellung}{13}{}%
