@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  15 DEC 2021 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  16 DEC 2021 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -243,13 +243,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--13
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1] [3] (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.toc (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -262,38 +262,33 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 \openout2 = `./Kapitel/einleitung.aux'.
 
  (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/einleitung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
-
- []
-
-) [1
+[1
 
 
 
-] [2
+]) [2] [3
 
 
-] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]
-\gdef \@abspage@last{22}
+] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+\gdef \@abspage@last{23}
 (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.aux (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/einleitung.aux)) ) 
 Here is how much of TeX's memory you used:
- 5017 strings out of 478994
- 77476 string characters out of 5858183
- 419032 words of memory out of 5000000
+ 5032 strings out of 478994
+ 77599 string characters out of 5858183
+ 419288 words of memory out of 5000000
  22336 multiletter control sequences out of 15000+600000
- 418506 words of font info for 104 fonts, out of 8000000 for 9000
+ 419071 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,5n,74p,1340b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,6n,74p,1105b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (22 pages, 34470 bytes).
+Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (23 pages, 36697 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26625 words of extra memory for PDF output out of 29859 (max. 10000000)
 
