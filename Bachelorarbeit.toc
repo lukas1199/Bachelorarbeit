@@ -3,49 +3,49 @@
 \contentsline {subsection}{\numberline {1.1}Motivation}{1}{}%
 \contentsline {subsection}{\numberline {1.2}Zielsetzung}{2}{}%
 \contentsline {subsection}{\numberline {1.3}Vorgehensweise}{2}{}%
-\contentsline {section}{\numberline {2}Einleitung}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Vorstellung des Themas}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Einordnung des Themas / Umfeld}{3}{}%
-\contentsline {section}{\numberline {3}Umfeld}{4}{}%
-\contentsline {subsection}{\numberline {3.1}Vorstellung des Unternehmens}{4}{}%
-\contentsline {subsection}{\numberline {3.2}Einordnung AAT / Notwendigkeit}{4}{}%
-\contentsline {subsection}{\numberline {3.3}Notwendigkeit}{4}{}%
-\contentsline {subsection}{\numberline {3.4}Aufbau}{4}{}%
-\contentsline {subsection}{\numberline {3.5}Phasen}{4}{}%
-\contentsline {subsection}{\numberline {3.6}Einordnung des BTT}{4}{}%
-\contentsline {section}{\numberline {4}Vorgehensweise}{5}{}%
-\contentsline {subsection}{\numberline {4.1}Zielsetzung}{5}{}%
-\contentsline {subsection}{\numberline {4.2}Methodik}{5}{}%
-\contentsline {subsection}{\numberline {4.3}Was soll erreicht werden}{5}{}%
-\contentsline {section}{\numberline {5}Erhebung des Ist-Zustand}{6}{}%
-\contentsline {subsection}{\numberline {5.1}Was bietet das Tool bereits heute}{6}{}%
-\contentsline {subsection}{\numberline {5.2}Welche Verbesserungspotenziale gibt es}{6}{}%
-\contentsline {subsection}{\numberline {5.3}Warum verbessern?}{6}{}%
-\contentsline {subsection}{\numberline {5.4}Geplante Erweiterungen des Funktionsumfangs}{6}{}%
-\contentsline {section}{\numberline {6}Anforderungsanalyse}{7}{}%
-\contentsline {subsection}{\numberline {6.1}Interviews mit Stakeholdern}{7}{}%
-\contentsline {subsection}{\numberline {6.2}Use-Cases}{7}{}%
-\contentsline {subsection}{\numberline {6.3}Umgebung}{7}{}%
-\contentsline {subsection}{\numberline {6.4}Schnittstellen}{7}{}%
-\contentsline {section}{\numberline {7}Datenmodellierung}{8}{}%
-\contentsline {subsection}{\numberline {7.1}Aufbau}{8}{}%
-\contentsline {subsection}{\numberline {7.2}Beschreibung }{8}{}%
-\contentsline {subsection}{\numberline {7.3}...}{8}{}%
-\contentsline {section}{\numberline {8}Konzeption}{9}{}%
-\contentsline {subsection}{\numberline {8.1}Datenmodell}{9}{}%
-\contentsline {subsection}{\numberline {8.2}Klassen}{9}{}%
-\contentsline {subsection}{\numberline {8.3}Beziehungen}{9}{}%
-\contentsline {subsection}{\numberline {8.4}...}{9}{}%
-\contentsline {section}{\numberline {9}Prototyp}{10}{}%
-\contentsline {subsection}{\numberline {9.1}Aufbau}{10}{}%
-\contentsline {subsection}{\numberline {9.2}Beschreibung Funktionalität}{10}{}%
-\contentsline {subsection}{\numberline {9.3}Fehlende Feautures}{10}{}%
-\contentsline {section}{\numberline {10}Diskussion}{11}{}%
-\contentsline {subsection}{\numberline {10.1}...}{11}{}%
-\contentsline {section}{\numberline {11}Fazit}{12}{}%
-\contentsline {subsection}{\numberline {11.1}Messung der Zielerreichung}{12}{}%
-\contentsline {section}{\numberline {12}Schlussteil}{13}{}%
-\contentsline {section}{\numberline {13}Anhang}{14}{}%
-\contentsline {section}{\numberline {14}Quellenverzeichnis}{14}{}%
-\contentsline {section}{\numberline {15}Index}{14}{}%
-\contentsline {section}{\numberline {16}Erklärung zur ordnungsgemäßen Erstellung}{14}{}%
+\contentsline {section}{\numberline {2}Einleitung}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Vorstellung des Themas}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Einordnung des Themas / Umfeld}{4}{}%
+\contentsline {section}{\numberline {3}Umfeld}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Vorstellung des Unternehmens}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Einordnung AAT / Notwendigkeit}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Notwendigkeit}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Aufbau}{5}{}%
+\contentsline {subsection}{\numberline {3.5}Phasen}{5}{}%
+\contentsline {subsection}{\numberline {3.6}Einordnung des BTT}{5}{}%
+\contentsline {section}{\numberline {4}Vorgehensweise}{6}{}%
+\contentsline {subsection}{\numberline {4.1}Zielsetzung}{6}{}%
+\contentsline {subsection}{\numberline {4.2}Methodik}{6}{}%
+\contentsline {subsection}{\numberline {4.3}Was soll erreicht werden}{6}{}%
+\contentsline {section}{\numberline {5}Erhebung des Ist-Zustand}{7}{}%
+\contentsline {subsection}{\numberline {5.1}Was bietet das Tool bereits heute}{7}{}%
+\contentsline {subsection}{\numberline {5.2}Welche Verbesserungspotenziale gibt es}{7}{}%
+\contentsline {subsection}{\numberline {5.3}Warum verbessern?}{7}{}%
+\contentsline {subsection}{\numberline {5.4}Geplante Erweiterungen des Funktionsumfangs}{7}{}%
+\contentsline {section}{\numberline {6}Anforderungsanalyse}{8}{}%
+\contentsline {subsection}{\numberline {6.1}Interviews mit Stakeholdern}{8}{}%
+\contentsline {subsection}{\numberline {6.2}Use-Cases}{8}{}%
+\contentsline {subsection}{\numberline {6.3}Umgebung}{8}{}%
+\contentsline {subsection}{\numberline {6.4}Schnittstellen}{8}{}%
+\contentsline {section}{\numberline {7}Datenmodellierung}{9}{}%
+\contentsline {subsection}{\numberline {7.1}Aufbau}{9}{}%
+\contentsline {subsection}{\numberline {7.2}Beschreibung }{9}{}%
+\contentsline {subsection}{\numberline {7.3}...}{9}{}%
+\contentsline {section}{\numberline {8}Konzeption}{10}{}%
+\contentsline {subsection}{\numberline {8.1}Datenmodell}{10}{}%
+\contentsline {subsection}{\numberline {8.2}Klassen}{10}{}%
+\contentsline {subsection}{\numberline {8.3}Beziehungen}{10}{}%
+\contentsline {subsection}{\numberline {8.4}...}{10}{}%
+\contentsline {section}{\numberline {9}Prototyp}{11}{}%
+\contentsline {subsection}{\numberline {9.1}Aufbau}{11}{}%
+\contentsline {subsection}{\numberline {9.2}Beschreibung Funktionalität}{11}{}%
+\contentsline {subsection}{\numberline {9.3}Fehlende Feautures}{11}{}%
+\contentsline {section}{\numberline {10}Diskussion}{12}{}%
+\contentsline {subsection}{\numberline {10.1}...}{12}{}%
+\contentsline {section}{\numberline {11}Fazit}{13}{}%
+\contentsline {subsection}{\numberline {11.1}Messung der Zielerreichung}{13}{}%
+\contentsline {section}{\numberline {12}Schlussteil}{14}{}%
+\contentsline {section}{\numberline {13}Anhang}{15}{}%
+\contentsline {section}{\numberline {14}Quellenverzeichnis}{15}{}%
+\contentsline {section}{\numberline {15}Index}{15}{}%
+\contentsline {section}{\numberline {16}Erklärung zur ordnungsgemäßen Erstellung}{15}{}%
