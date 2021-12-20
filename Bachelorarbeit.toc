@@ -2,52 +2,52 @@
 \contentsline {section}{\numberline {1}Einleitung}{1}{}%
 \contentsline {subsection}{\numberline {1.1}Motivation}{1}{}%
 \contentsline {subsection}{\numberline {1.2}Zielsetzung}{2}{}%
-\contentsline {subsection}{\numberline {1.3}Methodik}{2}{}%
-\contentsline {section}{\numberline {2}Methodik und Vorgehen}{4}{}%
-\contentsline {section}{\numberline {3}Grundlagen}{5}{}%
-\contentsline {subsection}{\numberline {3.1}SAP-ERP}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Transformationsbegriff}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Begrifflichkeiten}{5}{}%
-\contentsline {section}{\numberline {4}Umfeld}{6}{}%
-\contentsline {subsection}{\numberline {4.1}Vorstellung des Unternehmens}{6}{}%
-\contentsline {subsection}{\numberline {4.2}Einordnung AAT / Notwendigkeit}{6}{}%
-\contentsline {subsection}{\numberline {4.3}Notwendigkeit}{6}{}%
-\contentsline {subsection}{\numberline {4.4}Aufbau}{6}{}%
-\contentsline {subsection}{\numberline {4.5}Phasen}{6}{}%
-\contentsline {subsection}{\numberline {4.6}Einordnung des BTT}{6}{}%
-\contentsline {section}{\numberline {5}Vorgehensweise}{7}{}%
-\contentsline {subsection}{\numberline {5.1}Zielsetzung}{7}{}%
-\contentsline {subsection}{\numberline {5.2}Methodik}{7}{}%
-\contentsline {subsection}{\numberline {5.3}Was soll erreicht werden}{7}{}%
-\contentsline {section}{\numberline {6}Erhebung des Ist-Zustand}{8}{}%
-\contentsline {subsection}{\numberline {6.1}Was bietet das Tool bereits heute}{8}{}%
-\contentsline {subsection}{\numberline {6.2}Welche Verbesserungspotenziale gibt es}{8}{}%
-\contentsline {subsection}{\numberline {6.3}Warum verbessern?}{8}{}%
-\contentsline {subsection}{\numberline {6.4}Geplante Erweiterungen des Funktionsumfangs}{8}{}%
-\contentsline {section}{\numberline {7}Anforderungsanalyse}{9}{}%
-\contentsline {subsection}{\numberline {7.1}Interviews mit Stakeholdern}{9}{}%
-\contentsline {subsection}{\numberline {7.2}Use-Cases}{9}{}%
-\contentsline {subsection}{\numberline {7.3}Umgebung}{9}{}%
-\contentsline {subsection}{\numberline {7.4}Schnittstellen}{9}{}%
-\contentsline {section}{\numberline {8}Datenmodellierung}{10}{}%
-\contentsline {subsection}{\numberline {8.1}Aufbau}{10}{}%
-\contentsline {subsection}{\numberline {8.2}Beschreibung }{10}{}%
-\contentsline {subsection}{\numberline {8.3}...}{10}{}%
-\contentsline {section}{\numberline {9}Konzeption}{11}{}%
-\contentsline {subsection}{\numberline {9.1}Datenmodell}{11}{}%
-\contentsline {subsection}{\numberline {9.2}Klassen}{11}{}%
-\contentsline {subsection}{\numberline {9.3}Beziehungen}{11}{}%
-\contentsline {subsection}{\numberline {9.4}...}{11}{}%
-\contentsline {section}{\numberline {10}Prototyp}{12}{}%
-\contentsline {subsection}{\numberline {10.1}Aufbau}{12}{}%
-\contentsline {subsection}{\numberline {10.2}Beschreibung Funktionalität}{12}{}%
-\contentsline {subsection}{\numberline {10.3}Fehlende Feautures}{12}{}%
-\contentsline {section}{\numberline {11}Diskussion}{13}{}%
-\contentsline {subsection}{\numberline {11.1}...}{13}{}%
-\contentsline {section}{\numberline {12}Fazit}{14}{}%
-\contentsline {subsection}{\numberline {12.1}Messung der Zielerreichung}{14}{}%
-\contentsline {section}{\numberline {13}Schlussteil}{15}{}%
-\contentsline {section}{\numberline {14}Anhang}{16}{}%
-\contentsline {section}{\numberline {15}Quellenverzeichnis}{16}{}%
-\contentsline {section}{\numberline {16}Index}{16}{}%
-\contentsline {section}{\numberline {17}Erklärung zur ordnungsgemäßen Erstellung}{16}{}%
+\contentsline {section}{\numberline {2}Methodik und Vorgehen}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Methodik}{3}{}%
+\contentsline {section}{\numberline {3}Grundlagen}{4}{}%
+\contentsline {subsection}{\numberline {3.1}SAP-ERP}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Transformationsbegriff}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Begrifflichkeiten}{4}{}%
+\contentsline {section}{\numberline {4}Umfeld}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Vorstellung des Unternehmens}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Einordnung AAT / Notwendigkeit}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Notwendigkeit}{5}{}%
+\contentsline {subsection}{\numberline {4.4}Aufbau}{5}{}%
+\contentsline {subsection}{\numberline {4.5}Phasen}{5}{}%
+\contentsline {subsection}{\numberline {4.6}Einordnung des BTT}{5}{}%
+\contentsline {section}{\numberline {5}Vorgehensweise}{6}{}%
+\contentsline {subsection}{\numberline {5.1}Zielsetzung}{6}{}%
+\contentsline {subsection}{\numberline {5.2}Methodik}{6}{}%
+\contentsline {subsection}{\numberline {5.3}Was soll erreicht werden}{6}{}%
+\contentsline {section}{\numberline {6}Erhebung des Ist-Zustand}{7}{}%
+\contentsline {subsection}{\numberline {6.1}Was bietet das Tool bereits heute}{7}{}%
+\contentsline {subsection}{\numberline {6.2}Welche Verbesserungspotenziale gibt es}{7}{}%
+\contentsline {subsection}{\numberline {6.3}Warum verbessern?}{7}{}%
+\contentsline {subsection}{\numberline {6.4}Geplante Erweiterungen des Funktionsumfangs}{7}{}%
+\contentsline {section}{\numberline {7}Anforderungsanalyse}{8}{}%
+\contentsline {subsection}{\numberline {7.1}Interviews mit Stakeholdern}{8}{}%
+\contentsline {subsection}{\numberline {7.2}Use-Cases}{8}{}%
+\contentsline {subsection}{\numberline {7.3}Umgebung}{8}{}%
+\contentsline {subsection}{\numberline {7.4}Schnittstellen}{8}{}%
+\contentsline {section}{\numberline {8}Datenmodellierung}{9}{}%
+\contentsline {subsection}{\numberline {8.1}Aufbau}{9}{}%
+\contentsline {subsection}{\numberline {8.2}Beschreibung }{9}{}%
+\contentsline {subsection}{\numberline {8.3}...}{9}{}%
+\contentsline {section}{\numberline {9}Konzeption}{10}{}%
+\contentsline {subsection}{\numberline {9.1}Datenmodell}{10}{}%
+\contentsline {subsection}{\numberline {9.2}Klassen}{10}{}%
+\contentsline {subsection}{\numberline {9.3}Beziehungen}{10}{}%
+\contentsline {subsection}{\numberline {9.4}...}{10}{}%
+\contentsline {section}{\numberline {10}Prototyp}{11}{}%
+\contentsline {subsection}{\numberline {10.1}Aufbau}{11}{}%
+\contentsline {subsection}{\numberline {10.2}Beschreibung Funktionalität}{11}{}%
+\contentsline {subsection}{\numberline {10.3}Fehlende Feautures}{11}{}%
+\contentsline {section}{\numberline {11}Diskussion}{12}{}%
+\contentsline {subsection}{\numberline {11.1}...}{12}{}%
+\contentsline {section}{\numberline {12}Fazit}{13}{}%
+\contentsline {subsection}{\numberline {12.1}Messung der Zielerreichung}{13}{}%
+\contentsline {section}{\numberline {13}Schlussteil}{14}{}%
+\contentsline {section}{\numberline {14}Anhang}{15}{}%
+\contentsline {section}{\numberline {15}Quellenverzeichnis}{15}{}%
+\contentsline {section}{\numberline {16}Index}{15}{}%
+\contentsline {section}{\numberline {17}Erklärung zur ordnungsgemäßen Erstellung}{15}{}%
