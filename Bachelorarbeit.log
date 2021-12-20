@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  20 DEC 2021 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  20 DEC 2021 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -127,47 +127,74 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count194
 )
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 20.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 22.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count194
+\l__color_backend_stack_int=\count195
 \l__pdf_internal_box=\box47
 ) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.aux (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/01_einleitung.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/02_methodik.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count195
+\scratchcounter=\count196
 \scratchdimen=\dimen151
 \scratchbox=\box48
-\nofMPsegments=\count196
-\nofMParguments=\count197
+\nofMPsegments=\count197
+\nofMParguments=\count198
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count198
+\MPscratchCnt=\count199
 \MPscratchDim=\dimen152
-\MPnumerator=\count199
-\makeMPintoPDFobject=\count266
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
 \everyMPtoPDFconversion=\toks28
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
@@ -205,14 +232,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 20.
+LaTeX Info: Redefining \microtypecontext on input line 22.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 20.
+LaTeX Info: Redefining \showhyphens on input line 22.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -275,26 +302,38 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ]
 \openout2 = `./Kapitel/03_grundlagen.aux'.
 
- (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.tex) [4
+ (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.tex
+
+Package natbib Warning: Citation `wi-buch' on page 4 undefined on input line 4.
+
+) [4
 
 
 
 ] [5
 
 
-] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+] [6] [7] [8] [9] [10] [11] [12] [13] [14] (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 10.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[15]
 \gdef \@abspage@last{24}
 (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.aux (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/01_einleitung.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/02_methodik.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.aux)) ) 
 Here is how much of TeX's memory you used:
- 5061 strings out of 478994
- 78804 string characters out of 5858183
- 419926 words of memory out of 5000000
- 22336 multiletter control sequences out of 15000+600000
- 419636 words of font info for 124 fonts, out of 8000000 for 9000
+ 5839 strings out of 478994
+ 90808 string characters out of 5858183
+ 434111 words of memory out of 5000000
+ 23079 multiletter control sequences out of 15000+600000
+ 419611 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,5n,74p,1159b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,5n,78p,1159b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (24 pages, 38925 bytes).
+Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (24 pages, 39024 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
