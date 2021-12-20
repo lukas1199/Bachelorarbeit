@@ -9,8 +9,12 @@
 \usepackage{helvet}
 \usepackage{microtype}
 \usepackage{setspace}
-\usepackage[round]{natbib}
-\bibliographystyle{alphadin}
+\usepackage[backend=biber, %% Hilfsprogramm "biber" (statt "biblatex" oder "bibtex")
+style=authoryear, %% Zitierstil (siehe Dokumentation)
+natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
+hyperref=false, %% hyperref-Paket verwenden, um Links zu erstellen
+]{biblatex}
+\addbibresource{literatur.bib}
 
 \renewcommand{\familydefault}{\sfdefault}
 \setlength\parindent{0pt}
@@ -97,7 +101,7 @@
 \newpage
 \section{Anhang}
 \section{Quellenverzeichnis}
-\bibliography{literatur.bib}
+\printbibliography
 \section{Index}
 \section{Erklärung zur ordnungsgemäßen Erstellung}
 
