@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  20 DEC 2021 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.15)  21 DEC 2021 09:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -127,7 +127,35 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count194
+)
+\csq@reset=\count195
+\csq@gtype=\count196
+\csq@glevel=\count197
+\csq@qlevel=\count198
+\csq@maxlvl=\count199
+\csq@tshold=\count266
+\csq@ltx@everypar=\toks27
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count267
+\l__pdf_internal_box=\box47
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))) (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
@@ -139,16 +167,13 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count194
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count195
+\lrq@indent=\count268
  (/usr/local/texlive/2021/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
@@ -157,48 +182,48 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count196
-\c@listtotal=\count197
-\c@listcount=\count198
-\c@liststart=\count199
-\c@liststop=\count266
-\c@citecount=\count267
-\c@citetotal=\count268
-\c@multicitecount=\count269
-\c@multicitetotal=\count270
-\c@instcount=\count271
-\c@maxnames=\count272
-\c@minnames=\count273
-\c@maxitems=\count274
-\c@minitems=\count275
-\c@citecounter=\count276
-\c@maxcitecounter=\count277
-\c@savedcitecounter=\count278
-\c@uniquelist=\count279
-\c@uniquename=\count280
-\c@refsection=\count281
-\c@refsegment=\count282
-\c@maxextratitle=\count283
-\c@maxextratitleyear=\count284
-\c@maxextraname=\count285
-\c@maxextradate=\count286
-\c@maxextraalpha=\count287
-\c@abbrvpenalty=\count288
-\c@highnamepenalty=\count289
-\c@lownamepenalty=\count290
-\c@maxparens=\count291
-\c@parenlevel=\count292
-\blx@tempcnta=\count293
-\blx@tempcntb=\count294
-\blx@tempcntc=\count295
-\blx@maxsection=\count296
-\blx@maxsegment@0=\count297
-\blx@notetype=\count298
-\blx@parenlevel@text=\count299
-\blx@parenlevel@foot=\count300
-\blx@sectionciteorder@0=\count301
-\blx@entrysetcounter=\count302
-\blx@biblioinstance=\count303
+\c@tabx@nest=\count269
+\c@listtotal=\count270
+\c@listcount=\count271
+\c@liststart=\count272
+\c@liststop=\count273
+\c@citecount=\count274
+\c@citetotal=\count275
+\c@multicitecount=\count276
+\c@multicitetotal=\count277
+\c@instcount=\count278
+\c@maxnames=\count279
+\c@minnames=\count280
+\c@maxitems=\count281
+\c@minitems=\count282
+\c@citecounter=\count283
+\c@maxcitecounter=\count284
+\c@savedcitecounter=\count285
+\c@uniquelist=\count286
+\c@uniquename=\count287
+\c@refsection=\count288
+\c@refsegment=\count289
+\c@maxextratitle=\count290
+\c@maxextratitleyear=\count291
+\c@maxextraname=\count292
+\c@maxextradate=\count293
+\c@maxextraalpha=\count294
+\c@abbrvpenalty=\count295
+\c@highnamepenalty=\count296
+\c@lownamepenalty=\count297
+\c@maxparens=\count298
+\c@parenlevel=\count299
+\blx@tempcnta=\count300
+\blx@tempcntb=\count301
+\blx@tempcntc=\count302
+\blx@maxsection=\count303
+\blx@maxsegment@0=\count304
+\blx@notetype=\count305
+\blx@parenlevel@text=\count306
+\blx@parenlevel@foot=\count307
+\blx@sectionciteorder@0=\count308
+\blx@entrysetcounter=\count309
+\blx@biblioinstance=\count310
 \labelnumberwidth=\skip53
 \labelalphawidth=\skip54
 \biblabelsep=\skip55
@@ -210,86 +235,86 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language88
-\c@mincomprange=\count304
-\c@maxcomprange=\count305
-\c@mincompwidth=\count306
+\c@mincomprange=\count311
+\c@maxcomprange=\count312
+\c@mincompwidth=\count313
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: ... file 'authoryear-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count307
-\c@savedafterword=\count308
-\c@annotator=\count309
-\c@savedannotator=\count310
-\c@author=\count311
-\c@savedauthor=\count312
-\c@bookauthor=\count313
-\c@savedbookauthor=\count314
-\c@commentator=\count315
-\c@savedcommentator=\count316
-\c@editor=\count317
-\c@savededitor=\count318
-\c@editora=\count319
-\c@savededitora=\count320
-\c@editorb=\count321
-\c@savededitorb=\count322
-\c@editorc=\count323
-\c@savededitorc=\count324
-\c@foreword=\count325
-\c@savedforeword=\count326
-\c@holder=\count327
-\c@savedholder=\count328
-\c@introduction=\count329
-\c@savedintroduction=\count330
-\c@namea=\count331
-\c@savednamea=\count332
-\c@nameb=\count333
-\c@savednameb=\count334
-\c@namec=\count335
-\c@savednamec=\count336
-\c@translator=\count337
-\c@savedtranslator=\count338
-\c@shortauthor=\count339
-\c@savedshortauthor=\count340
-\c@shorteditor=\count341
-\c@savedshorteditor=\count342
-\c@labelname=\count343
-\c@savedlabelname=\count344
-\c@institution=\count345
-\c@savedinstitution=\count346
-\c@lista=\count347
-\c@savedlista=\count348
-\c@listb=\count349
-\c@savedlistb=\count350
-\c@listc=\count351
-\c@savedlistc=\count352
-\c@listd=\count353
-\c@savedlistd=\count354
-\c@liste=\count355
-\c@savedliste=\count356
-\c@listf=\count357
-\c@savedlistf=\count358
-\c@location=\count359
-\c@savedlocation=\count360
-\c@organization=\count361
-\c@savedorganization=\count362
-\c@origlocation=\count363
-\c@savedoriglocation=\count364
-\c@origpublisher=\count365
-\c@savedorigpublisher=\count366
-\c@publisher=\count367
-\c@savedpublisher=\count368
-\c@language=\count369
-\c@savedlanguage=\count370
-\c@origlanguage=\count371
-\c@savedoriglanguage=\count372
-\c@pageref=\count373
-\c@savedpageref=\count374
+\c@afterword=\count314
+\c@savedafterword=\count315
+\c@annotator=\count316
+\c@savedannotator=\count317
+\c@author=\count318
+\c@savedauthor=\count319
+\c@bookauthor=\count320
+\c@savedbookauthor=\count321
+\c@commentator=\count322
+\c@savedcommentator=\count323
+\c@editor=\count324
+\c@savededitor=\count325
+\c@editora=\count326
+\c@savededitora=\count327
+\c@editorb=\count328
+\c@savededitorb=\count329
+\c@editorc=\count330
+\c@savededitorc=\count331
+\c@foreword=\count332
+\c@savedforeword=\count333
+\c@holder=\count334
+\c@savedholder=\count335
+\c@introduction=\count336
+\c@savedintroduction=\count337
+\c@namea=\count338
+\c@savednamea=\count339
+\c@nameb=\count340
+\c@savednameb=\count341
+\c@namec=\count342
+\c@savednamec=\count343
+\c@translator=\count344
+\c@savedtranslator=\count345
+\c@shortauthor=\count346
+\c@savedshortauthor=\count347
+\c@shorteditor=\count348
+\c@savedshorteditor=\count349
+\c@labelname=\count350
+\c@savedlabelname=\count351
+\c@institution=\count352
+\c@savedinstitution=\count353
+\c@lista=\count354
+\c@savedlista=\count355
+\c@listb=\count356
+\c@savedlistb=\count357
+\c@listc=\count358
+\c@savedlistc=\count359
+\c@listd=\count360
+\c@savedlistd=\count361
+\c@liste=\count362
+\c@savedliste=\count363
+\c@listf=\count364
+\c@savedlistf=\count365
+\c@location=\count366
+\c@savedlocation=\count367
+\c@organization=\count368
+\c@savedorganization=\count369
+\c@origlocation=\count370
+\c@savedoriglocation=\count371
+\c@origpublisher=\count372
+\c@savedorigpublisher=\count373
+\c@publisher=\count374
+\c@savedpublisher=\count375
+\c@language=\count376
+\c@savedlanguage=\count377
+\c@origlanguage=\count378
+\c@savedoriglanguage=\count379
+\c@pageref=\count380
+\c@savedpageref=\count381
 \shorthandwidth=\skip61
 \shortjournalwidth=\skip62
 \shortserieswidth=\skip63
@@ -313,19 +338,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
-\c@textcitecount=\count375
-\c@textcitetotal=\count376
-\c@textcitemaxnames=\count377
-\c@biburlbigbreakpenalty=\count378
-\c@biburlbreakpenalty=\count379
-\c@biburlnumpenalty=\count380
-\c@biburlucpenalty=\count381
-\c@biburllcpenalty=\count382
+\c@textcitecount=\count382
+\c@textcitetotal=\count383
+\c@textcitemaxnames=\count384
+\c@biburlbigbreakpenalty=\count385
+\c@biburlbreakpenalty=\count386
+\c@biburlnumpenalty=\count387
+\c@biburlucpenalty=\count388
+\c@biburllcpenalty=\count389
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count383
+\c@smartand=\count390
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -333,6 +358,10 @@ Package biblatex Info: ... file 'blx-natbib.def' found.
 File: blx-natbib.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
 )
+Package biblatex Info: Trying to load bibliography style 'authoryear-ibid'...
+Package biblatex Info: ... file 'authoryear-ibid.bbx' found.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/authoryear-ibid.bbx
+File: authoryear-ibid.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
@@ -341,13 +370,13 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count384
-\c@bbx:relatedtotal=\count385
-))
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+\c@bbx:relatedcount=\count391
+\c@bbx:relatedtotal=\count392
+)))
+Package biblatex Info: Trying to load citation style 'authoryear-ibid'...
+Package biblatex Info: ... file 'authoryear-ibid.cbx' found.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/cbx/authoryear-ibid.cbx
+File: authoryear-ibid.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -361,49 +390,43 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count386
-\@quotereset=\count387
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 26.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1phv.fd
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 27.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count388
-\l__pdf_internal_box=\box47
 ) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.aux (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/01_einleitung.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/02_methodik.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
+\scratchcounter=\count393
 \scratchdimen=\dimen151
 \scratchbox=\box48
-\nofMPsegments=\count390
-\nofMParguments=\count391
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count392
+\nofMPsegments=\count394
+\nofMParguments=\count395
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count396
 \MPscratchDim=\dimen152
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count397
+\makeMPintoPDFobject=\count398
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/local/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
@@ -452,14 +475,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 26.
+LaTeX Info: Redefining \microtypecontext on input line 27.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 26.
+LaTeX Info: Redefining \showhyphens on input line 27.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -485,14 +508,11 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Document encoding is UTF8 ....
- (/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
-)
 Package biblatex Info: ... and expl3
 (biblatex)             2021-02-18 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
 \openout3 = `Bachelorarbeit.bcf'.
@@ -500,8 +520,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Bachelorarbeit.bbl' found.
  (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
+Package biblatex Info: Reference section=0 on input line 27.
+Package biblatex Info: Reference segment=0 on input line 27.
 \openout2 = `vorspann.aux'.
 
  (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.tex [1
@@ -567,6 +587,10 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ] [6] [7] [8] [9] [10] [11] [12] [13] [14]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 104.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
  [15]
 \gdef \@abspage@last{24}
 (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.aux (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/vorspann.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/01_einleitung.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/02_methodik.aux) (/Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/./Kapitel/03_grundlagen.aux))
@@ -575,18 +599,18 @@ Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12904 strings out of 478994
- 231979 string characters out of 5858183
- 1016027 words of memory out of 5000000
- 30025 multiletter control sequences out of 15000+600000
- 429972 words of font info for 161 fonts, out of 8000000 for 9000
+ 13628 strings out of 478994
+ 244644 string characters out of 5858183
+ 1039403 words of memory out of 5000000
+ 30723 multiletter control sequences out of 15000+600000
+ 432254 words of font info for 168 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 73i,8n,78p,1159b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (24 pages, 44035 bytes).
+ 72i,8n,78p,1241b,2241s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on /Users/lukas/Documents/Bachelorarbeit/Bachelorarbeit/Bachelorarbeit.pdf (24 pages, 53898 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 49153 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 53761 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -9,22 +9,22 @@
 \usepackage{helvet}
 \usepackage{microtype}
 \usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{xpatch}
 \usepackage[backend=biber, %% Hilfsprogramm "biber" (statt "biblatex" oder "bibtex")
-style=authoryear, %% Zitierstil (siehe Dokumentation)
+style=authoryear-ibid, %% Zitierstil (siehe Dokumentation)
 natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
 hyperref=false, %% hyperref-Paket verwenden, um Links zu erstellen
+ibidpage=true
 ]{biblatex}
 \addbibresource{literatur.bib}
 
+%\xapptobibmacro{cite}{\setunit{\nametitledelim}\printfield{year}}{}{}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength\parindent{0pt}
 
 
-
-
-
 \begin{document}
-
 \include{vorspann.tex}
 
 %Einleitung
