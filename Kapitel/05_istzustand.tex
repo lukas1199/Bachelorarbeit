@@ -1,11 +1,30 @@
-\section{Erhebung des Ist-Zustand}
+\section{Erhebung der Anforderungen}
 
 \subsection{Problemstellung}
-Der Business-Transformation-Tracker ist ein wichtiger Bestandteil der adesso orange AG eigenen Vorgehensweise zur Durchführung von S/4HANA Transformationsprojekten. Er soll dazu dienen alle im SAP-System abgebildeten Geschäftsprozesse inkl. ihrer Subprozesse und Prozessschritte zu erfassen, um sie entlang des Transformationspfades zu begleiten und übersichtlich den Fortschritt der Transformation zu ermitteln. Dadurch möchte man erreichen, dass alle abgebildeten Geschäftsprozesse unter den selben Gesichtspunkten betrachtet und bewertet werden, wodurch zum einen die Transformation der Prozesse hinterher wiedergegeben und zurückverfolgt werden kann und zum anderem für die Projektleitung stets ein aktueller Fortschrittsgrad eingeholt werden kann. Auch dient der BTT als Verzeichnis für alle den Prozess betreffende Informationen, wie z.B. die Verortung der Beschreibung im Fachkonzept, aber auch als Checkliste für vorzunehmende Maßnahmen, wie z.B. der Aktualisierung des kundeneigenen Benutzerhandbuchs. Diese Kriterien werden zu Beginn eines Projektes definiert und unterscheiden sich von Projekt zu Projekt, aber auch von Teilprojekt zu Teilprojekt.  
+Der Business-Transformation-Tracker soll ein wichtiger Bestandteil der adesso orange AG eigenen Vorgehensweise zur Durchführung von S/4HANA Transformationsprojekten werden. Er soll dazu dienen alle im Transformationsprojekt betrachteten und im SAP-System abgebildeten Geschäftsprozesse inkl. ihrer Subprozesse und Prozessschritte zu erfassen, um sie entlang des Transformationspfades zu begleiten und übersichtlich den Fortschritt der Transformation und den allgemeinen Projektfortschritt zu ermitteln und darzustellen. Dadurch möchte man erreichen, dass die betrachteten Geschäftsprozesse und Prozesschritte stets unter den selben Gesichtspunkten betrachtet und bewertet werden, wodurch zum einen die Transformation der Prozesse hinterher wiedergegeben und zurückverfolgt werden kann und zum anderen für die Projektleitung stets ein aktueller Fortschrittsgrad eingeholt werden kann. Primär soll der BTT jedoch als Verzeichnis für alle den Prozess betreffende Informationen, wie z.B. den verwendeten SAP-Transaktionscodes oder der Verortung der Beschreibung im Fachkonzept, aber auch als Checkliste für vorzunehmende Maßnahmen, wie z.B. der Aktualisierung des kundeneigenen Benutzerhandbuchs oder beschreibung des Prozesses im Fachkonzept. Diese Kriterien werden zu Beginn eines Projektes durch den (Teil-)Projektleiter in Zusammenarbeit mit dem Kunden definiert und unterscheiden sich von Projekt zu Projekt, aber auch innerhalb eiens Projekts, von Teilprojekt zu Teilprojekt. Der BTT soll logisch in die verschiedenen Projektphasen unterteilt sein und soll dadurch auch den Projektplan in seinen Grundzügen wiedergeben können.
 
 
-\subsection{Ist-Zustand}
-Zum jetzigen Zeitpunkt exisitiert der Business-Transformation-Tracker bereits in Form eines Excel-Spreadsheets. Dieses wird bereits in einigen Transformationsprojekten des betrachteten Unternehmens verwendet und unterstützt dadurch schon heute die Mitarbeiter in den Projekten. \\Das Tool dient dazu in einem S/4HANA Transformationsprojekt 
+\subsection{Beschreibung Ist-Zustand}
+Zum jetzigen Zeitpunkt exisitiert eine erste Version des Business-Transformation-Tracker in Form einer Spreadsheet-Vorlage. Diese kommt bereits in einigen Transformationsprojekten des Unternehmens zum Einsatz und unterstützt dabei bereits heute die Mitarbeiter in den Projekten.\\ Aufgebaut und bearbeitet wird das Dokument mit Hilfe des Programms Microsoft Excel, welches durch seine globale Verbreitung als Standardsoftware für Tabellenkalkulation hinlänglich allgemein bekannt ist und auch im betrachteten Unternehmen häufig zum Einsatz kommt.\\
+Der Aufbau der Vorlage gliedert sich in die Spalten- und Zeilendimension auf. Im linken Kopfbereich der Vorlage sind dabei die Basisinformationen des Dokuments enthalten, wie z.B. das zugehörige Projekt und das betrachtete SAP-Modul. Auf der Ebene der Zeilen werden die einzelnen Prozesse und die dazugehörigen Prozesschritte aufgeführt und anhand der Attribute ausgeprägt. Die Definition der Attribute erfolgt auf der Ebene der Tabellenspalten. Dabei ist eine Spalte für ein Attribut vorgesehen, welches im Kopfbereich der Tabelle definiert ist. Auf der darüberliegenden Ebene sind mehrere Attribute logisch zu einer Projektphase zusammengefasst. Es ist vorgesehen mehrere Projektphasen mit ihren jeweiligen Attributen visuell nebeneinander anzulegen und durch die Gesamtheit des Tabellenblattes einen chronologischen Aufbau der Bearbeitung eines Prozesschrittes zu erzeugen. Dieser sieht vor, dass auf der linken Seite mit dem ersten Attribut begonnen wird und stetig von links-nach-rechts ein Attribut nach dem anderen befüllt wird, bis schließlich komplette Phase ausgefüllt ist. Zum Ende einer jeden Phasen ist ein Fortschrittsgrad implementiert, der sich pro Zeile aus der Anzahl der ausgefüllten Zellen, bzw. Attribute ergibt.
+
+
+\subsection{Vor- und Nachteile der Spreadsheet-Lösung}
+Vorteile:
+- Einfache Bearbeitung
+- Einfaches Hinzufügen von Spalten
+- Schnelle Anpassung von Formeln, schnelle Fehlerbehebung
+- Excel = Standsoftware = Zuverlässig
+- dezentrale Speicherung (auch Contra), dadurch kein zentraler Ausfall
+
+Nachteile:
+- keine native Unterstützung, generelle Zweckentfremdung
+- Inkosistente Datenstände, wenn nicht zentral abgelegt
+- Unübersichtlichkeit, schneller Verlust des Überblicks 
+- Abhängigkeit von Excel-Lizenzen
+- Schnelles Zerstörung der Tabellenformeln
+- Versehentliches Löschen von ganzen Datensätzen möglich
+- Sicherheitsrisiken durch Excelmakros
 
 \subsection{Ergebnisse der Befragung}
 
@@ -37,6 +56,8 @@ Wird später zum Pflichtenheft erweitert (daher auch: „grobes Pflichtenheft“
 Im Englischen „Requirements Specification“ (keine Unterscheidung von Lasten-/Pflichtenheft)
 
 \subsection{Auswertung der Umfrage}
+
+\subsection{Exemplarischer Use-Case}
 
 \subsubsection{Welche Verbesserungspotenziale gibt es}
 
