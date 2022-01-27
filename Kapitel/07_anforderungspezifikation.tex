@@ -1,0 +1,154 @@
+\section{Spezifikation der Anforderungen}
+Im nun folgenden Unterkapitel werden die im letzten Kapitel, durch Onlinebefragung und in persönlichen Gesprächen, ermittelten Anforderungen spezifiziert, das heißt, systematisch ausgewertet. Es wird aufgrund einer nichtvorhandenen Ausschreibung des Projekts und des geringen Projektumfangs auf ein seperates Lasten- und Pflichtenheft verzichtet und stattdessen die Anforderungen in der hier beginnenden \glqq{}Requirements Specification\grqq{}, zu deutsch \glqq{}Anforderungsspezifikation\grqq{}, niedergeschrieben. Dazu wird sich an der von Helmut Balzert beschriebenen \glqq{}Schablone[n] für Lastenheft, Pflichtenheft und Glossar\grqq{}\footcite[S. 492]{balzert} orientiert. In dieser werden zuerst die Visionen und Ziele des Entwicklungsprojekt verfasst, danach die Rahmenbedingungen denen die Entwicklung unterliegt, im Anschluss der technische Kontext, in dem sich die Entwicklung abspielt und dann erst die funktionalen Anforderungen, die die Kernfunktionalität des Systems beschreiben gefolgt von den nichtfunktionalen Anforderungen, bzw. den Qualitätsanforderungen, in denen die messbare Qualität und das Verhalten des Systems beschrieben wird.\footcite[Vgl.][S. 492 ff.]{balzert}. Die Anforderungen sind natursprachlich verfasst und verfügen über einen einzigartigen Identifikator, um im späteren Verlauf auf sie verweisen zu können. Diese sind so aufgebaut, dass \glqq{} [j]ede Anforderung [..] mit einem Buchstaben [beginnt] [...], gefolgt von einer Zahl, eingschlossen in Schrägstriche. Der Anforderungstyp wird durch einen Buchstaben gekennzeichnet [...].\grqq{} \footcite[S. 493]{balzert}
+
+\subsection{Visionen und Ziele}
+Die hier aufgezählten Visionen und Ziele sind Ausdruck der mit dem fertigen Produkt zu erreichenden Zukunft. Visionen sind dabei abstrakter und generisch verfasst, Ziele konkretisieren diese dann im Anschluss.\footcite[Vgl.][S. 457]{balzert}
+\begin{itemize}
+    \item[] \emph{/V10/} Der Auftraggeber soll durch den Business Transformation Tracker eine Qualitätssteigerung und Effizienzverbesserung in seinen Transformationsprojekten erreichen.
+    \item[] \emph{/V20/} Die Anwender sollen mit dem Business Transformation Tracker während des gesamten Projektzeitraums die in SAP umgesetzten Prozesse erfassen und nachverfolgen können.
+    \item[] \emph{/V30/} In jedem adesso active transformation -Projekt soll der Business Transformation Tracker eingesetzt werden.
+    \item[] \emph{/V40/} Das Produkt soll dem Anwender eine angenehme User Experience bieten und muss ihn in seiner Arbeit produktiv unterstützen.\\
+\end{itemize}
+
+\begin{itemize} 
+    \item[] \emph{/Z10/} Der Business Transformation Tracker soll zu jedem Zeitpunkt den aktuellen Fortschritssgrad ausgeben können, um schnell eine Übersicht zu erhalten.
+    \item[] \emph{/Z20/} Dem Anwender soll es möglich sein, unterschiedliche Projekt aufrufen zu können.
+    \item[] \emph{/Z30/} Die Ziele der Informationssicherheit (Authentizität, Vertraulichkeit, Integrität) dürfen nicht verletzt werden.
+    \item[] \emph{/Z40/} Alle bereits jetzt implementierten Funktionen werden in die Neuentwicklung übernommen.         
+    \item[] \emph{/Z50/} Der Business Transformationen Tracker soll den Funktionsumfang der jetzigen Lösung überbieten.  
+    \item[] \emph{/Z60/} Das Anlegen eines Projektes im BTT dauert nicht länger als eine Minute.
+    \item[] \emph{/Z70/} Die Erstellung eines Prozesschrittes ist dem Benutzer intuitiv möglich.
+    \item[] \emph{/Z80/} Die Anwendung ist auf den verbreitetsten Systemen, Windows, Mac und Linux, einsetzbar.
+\end{itemize}
+
+\subsection{Rahmenbedingungen}
+Als Rahmenbedingungen bezeichnet man Einschränkungen, die in der Entwicklung der Software berücksichtigt werden müssen. Diese sind entweder technischer oder organisatorischer Natur.\footcite[Vgl.][S. 459 f.]{balzert}
+\begin{itemize}
+    \item[] \emph{/R10/}
+    \item[] \emph{/R20/}
+\end{itemize}
+
+\subsection{Kontext und Überblick}
+Der Kontext beschreibt die technische Umgebebung, in die die Entwicklung eingebettet ist und welche Abhängigkeiten und Schnittstellen zu anderen Systemen exisitieren.\footcite[Vgl.][S. 461 f.]{balzert} 
+\begin{itemize}
+    \item[] \emph{/K10/}
+    \item[] \emph{/K20/}
+\end{itemize}
+
+\subsection{Funktionale Anforderungen}
+Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und im nachfolgendem Kapitel durch Anwendungsfälle (Use-Cases) zusammengefasst und durch Sequenzdiagramme und Anwendungsfalldiagramme dargestellt.\footcite[Vgl.][S. 496]{balzert}
+
+\begin{itemize}
+    
+    \item[]\emph{/F10/} Der Benutzer meldet sich mit seinem Benutzernamen und Passwort im System an.
+    \\\emph{/F11/} Der Benutzer kann sein Passwort ändern.  
+    \vspace{0.5cm}   
+    
+    \item[] \emph{/F20/} Es gibt unterschiedliche Benutzerrollen im System.
+    \\\emph{/F21/} Es gibt Administratoren, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunden.
+    \\\emph{/F22/} Administratoren können Projekte erstellen, alle Projekte einsehen und bearbeiten.
+    \\\emph{/F23/} Ein Administrator kann Benutzer erstellen, einsehen, bearbeiten und das Passwort zurücksetzen.
+    \\\emph{/F24/} Projektleiter können Projekte erstellen und können diese verwalten und die untergeordneten Teilprojekte bearbeiten.
+    \\\emph{/F25/} Ein Projektleiter vergibt in seinem Projekt die Benutzerrollen an seine Mitarbeiter indem er die Rollen dem jeweiligen Benutzer zuweist.
+    \\\emph{/F26/} Ein Projektleiter kann Kunden-Benutzer erstellen, die Lesezugriff auf das Projekt haben.
+    \\\emph{/F27/} Ein Teilprojektleiter verwaltet sein Teilprojekt, kann dieses bearbeiten und hat Lesezugriff auf die andere Teilprojekte des selben Projekts.
+    \\\emph{/F28/} Ein Projektmitarbeiter kann in seinem zugeordneten Teilprojekt Prozessschritte bearbeiten und hat Lesezugriff auf die andere Teilprojekte des selben Projekts.
+    \vspace{0.5cm}
+    
+    \item[] \emph{/F30/} Es können beliebig viele Projekte durch den Adminsitrator erstellt werden.
+    \\\emph{/F31/} Projekte haben einen eindeutigen Bezeichner, einen Namen, ein Startdatum, ein Enddatum, einen Kunden und ein Bemerkungsfeld.
+    \\\emph{/F32/} Ein Benutzer kann einem oder mehreren Projekten zugewiesen werden.
+    \\\emph{/F33/} Benutzer können zwischen ihren zugewiesenen Projekten hin- und her wechseln. 
+    \vspace{0.5cm}
+
+    \item[] \emph{/F40/} Ein Projekt besteht aus einem oder mehreren Teilprojekten.
+    \\\emph{/F41/} Einem Teilprojekt sind ein oder mehrere Teilprojektleiter zugeordnet.
+    \\\emph{/F42/} Teilprojekte werden durch den Projektleiter erstellt.
+    \\\emph{/F43/} Es können in einem Projekt maximal 10 Teilprojekte erstellt werden.
+    \\\emph{/F44/} Teilprojekte können auch nach dem initialen Anlegen des Projekts noch hinzugefügt werden.
+    \vspace{0.5cm}  
+
+    \item[] \emph{/F50/} Ein Projekt besteht aus einer oder mehreren Projektphasen.
+    \\\emph{/F51/} Projektphasen verfügen über einen eindeutigen Namen, einer Beschreibung, einer Sortierreihenfolge, einem Startdatum und einen Enddatum.
+    \\\emph{/F51/} Projektphasen können durch den Projektleiter erstellt werden.
+    \\\emph{/F52/} Es können maximal fünf Projektphasen erstellt werden.
+    \\\emph{/F53/} Die Projektphasen werden auf die Teilprojekte vererbt.
+    \\\emph{/F54/} Projektphasen können nach ihrem Abschluss durch den Projektleiter gesperrt werden, sodass keine nachträglichen Veränderung mehr stattfinden. 
+    \\\emph{/F55/} Projektphasen können auch nach dem initialen Anlegen des Projektes noch hinzugefügt 
+    werden.
+    \\\emph{/F56/} Es gibt einen Fortschrittsgrad der aktuellen Projektphase in einem Projekt, der sich aus dem Mittelwert der Fortschritte der Prozesse in der aktuellen Projektphase ergibt.
+    \vspace{0.5cm} 
+
+    \item[] \emph{/F60/} Einer Projektphase sind unterschiedliche Attribute zugeordnet.
+    \\\emph{/F61/} Es gibt eine standardmäßig voreingestellte Vorlage an Attributen.
+    \\\emph{/F62/} Teilprojektleiter können in ihrem Teilprojekt Attribute hinzufügen, bearbeiten und löschen.
+    \\\emph{/F62/} Attribute verfügen über einen eindeutigen Namen, einer Beschreibung, einer zugeordneten Projektphase
+    \\\emph{/F63/} Attribute speichern entweder eine Zeichenfolge, eine Zahl oder einen Wahrheitswert.
+    \\\emph{/F63/} Attribute können von Teilprojekt zu Teilprojekt variieren, werden aber bei der Erstellung initial durch das Projekt vererbt.
+    
+    \vspace{0.5cm} 
+
+    \item[] \emph{/F70/} Ein Prozess kann einem oder mehreren Teilprojekten zugeordnet sein.
+    \\\emph{/F71/} Innerhalb eines Prozesses können keine, ein oder mehere Subprozesse erfasst werden.
+    \\\emph{/F72/} Ein (Sub-)Prozess besteht aus einem oder mehreren Prozessschritten.
+    \\\emph{/F73/} Ein Prozessschritt muss genau einem Teilprojekt zugeordnet sein.
+    \\\emph{/F74/} Es gibt einen Fortschrittsgrad für einen Prozesschritt, der sich aus der Vollständigkeit der Attribute innerhalb der aktuellen Projektphase ergibt. 
+    \\\emph{/F75/} Es gibt einen Fortschrittsgrad für einen Prozess, der sich aus dem Mittelwert der des Fortschrittes zugehörigen Prozessschritte der aktuellen Projektphase ergibt.
+    \\\emph{/F76/} Es gibt einen Fortschrittsgrad für eine Projektphase in einem Teilprojekt, der sich aus der Vollständigkeit der Attribute aller Prozesse innerhalb der aktuellen Projektphase ergibt.
+    \vspace{0.5cm} 
+    
+    \item[] \emph{/F80/} Ein Benutzer kann sich in einem Dashboard eine Übersicht über die derzeitigen Fortschrittsgrade in seinen zugeordneten Projekten verschaffen.
+    \\\emph{F/81/} Das Dashboard gibt den Soll-Zustand an, der anhand der bereits verstrichenen Zeit errechnet wird.
+\end{itemize}
+
+
+
+\subsubsection{Qualitätsanforderungen}
+Die nichtfunktionalen Anforderungen, bzw. Qualitätsanforderungen spiegeln Eigenschaften wieder, die das gesamte System und somit alle funktionalen Anforderungen betreffen. Die Qualitätsanforderungen werden anhand unterschiedlicher Kriterien kategorisiert, der \textbf{F}unktionalität, der \textbf{Z}uverlässigkeit, der \textbf{B}enutzbarkeit, der \textbf{E}ffizienz, der \textbf{W}artbarkeit und der \textbf{P}ortabilität.\footcite[Vgl.][S. 494 f.]{balzert} Die ermittelten nichtfunktionalen Anforderungen lauten wie folgt:
+\begin{itemize}
+    \item[] \emph{/Q10/}
+    \item[] \emph{/F00/} Die Anwendung benutzt eine grafische Oberfläche.
+    \vspace{0.5cm}
+    \item[] \emph{/Q20/}
+\end{itemize}
+
+\begin{comment}
+    Use cases
+    1. Tägliches Statusupdates zur Besprechung des Fortschrittes in den Teilprojekten
+    2. Anlegen eines Projektes mit seinen jeweiligen Teilprojekten und Projektphasen, Zuordnung der Rollen
+    3. Initiales Erfassen eines Prozesses, mit seinen Subprozessen und den Prozessschritten
+    4. Pflegen der Felder einer Projektphase 
+    5. Abschließen einer Projektphase.
+
+    Akteuere im System
+    - Eigentümer des Projekts, Admin, oberes Mgmnt.
+    - Projektleiter (n, normalfall 2)
+    - Projektcontroller (read only)
+    - Teilprojektleiter
+    - Projektmitarbeiter
+
+    \begin{itemize}
+        \item[] \emph{/F10/} Die Anwendung benutzt eine grafische Oberfläche.
+        
+        \item[] \emph{/F20/} Es gibt unterschiedliche Benutzerrollen im System.
+        
+        \item[] \emph{/F30/} Die Benutzerrollen haben unterschiedliche Berechtigungen.
+        \item[] \emph{/F31/} Der Benutzer loggt sich mit Benutzername und Passwort ein.
+        
+        \item[] \emph{/F40/} Es können ein oder mehrere Projekte angelegt und aufgerufen werden.
+        
+        \item[] \emph{/F50/} Ein Projekt besteht aus mehreren Projektphasen.
+        \item[] \emph{/F51/} Die Projektphasen werden auf die Teilprojekte vererbt.
+        
+        \item[] \emph{/F60/} Innerhalb eines Projektes können ein oder mehrere Teilprojekte erstellt werden.
+        
+        \item[] \emph{/F70/} Innerhalb eines Projektes werden Prozesse aufgenommen
+        \item[] \emph{/F80/} Die Prozesse können einem Teilprojekt zugeordnet werden oder nicht.
+        \item[] \emph{/F90/} Innerhalb eines Prozesses können keine oder mehere Subprozesse aufgenommen werden.
+        \item[] \emph{/F100/} Ein (Sub-)Prozess besteht aus einem oder mehreren Prozessschritten
+        \item[] \emph{/F110/} Ein Prozessschritt muss einem Teilprojekt zugeordnet sein.
+        \item[] \emph{/F120/}      
+    \end{itemize}
+    
+\end{comment}
+    
