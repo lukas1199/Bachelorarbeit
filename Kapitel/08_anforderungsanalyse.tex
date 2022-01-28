@@ -1,18 +1,192 @@
 \section{Analyse der Anforderungen}
-\subsection{Akteure des IT-Systems}
+\subsection{Rollen im IT-System}
 Anhand der Stakeholderanalyse und der Spezifikation der funktionalen Anforderungen wurden mehrere Akteure ermittelt, die mit dem System interagieren und später im Programm als Benutzerrolle umgesetzt werden sollen:
 \begin{itemize}
     \item[] \underline{Administrator:} Die Rolle des Administrator ist in den Anforderungen \emph{/F21/} bis \emph{/F23/} beschrieben und ist für die Verwaltung des Systems zuständig, indem er Benutzer anlegt, ihnen Rollen zuweist und Projekte erstellt. Er kann außerdem alle Projekte und darin enthaltenen Teilprojekte einsehen und Änderungen vornehmen. Verkörpert werden die Administratoren durch die Mitarbeiter des oberen Managements des auftraggebenen Unternehmen.
     
-    \item[] \underline{Projektleiter:} Die Rolle des Projektleiter ist in den Anforderungen \emph{/F24/} bis \emph{/F26/} beschrieben und kann ist für die Erstellung und Administration seiner Projekte im System veranwortlich. Im Gegensatz zum Administrator hat der Projektleiter keine vollständigen, globalen Berechtigungen sondern diese nur in seinem eigenen Projekt und kann dort z.B. Teilprojekte anlegen, Projektphasen definieren und Mitarbeiter zuordnen. Zum Ende einer Projektphase kann der Projektleiter die Phase für die Bearbeitung sperren. Auf fremde Projekte hat der Projektleiter keinen Zugriff.
+    \item[] \underline{Projektleiter:} Die Rolle des Projektleiter ist in den Anforderungen \emph{/F24/} bis \emph{/F26/} beschrieben und kann ist für die Erstellung und Administration seiner Projekte im System veranwortlich. Im Gegensatz zum Administrator hat der Projektleiter keine vollständigen, globalen Berechtigungen sondern diese nur in seinem eigenen Projekt und kann dort z.B. Teilprojekte anlegen, Projektphasen definieren und Mitarbeiter zuordnen. Zum Ende einer Projektphase kann der Projektleiter die Phase für die Bearbeitung sperren. Auf fremde Projekte hat der Projektleiter keinen Zugriff. 
     
     \item[] \underline{Teilprojektleiter:} Die Rolle des Teilprojektleiter ist in der Anforderung \emph{/F27/} beschrieben und ist für die Verwaltung des ihm zugeordneten Teilprojekts zuständig. In diesem kann er sämtliche Aktionen durchführen, wie z.B. das Bearbeiten von Projektphasenattributen, das Anlegen von Prozessen, Subprozessen und Prozessschritten und das Erfassen des aktuellen Fortschrittes. Des Weiteren haben Teilprojektleiter Lesezugriff auf fremde Teilprojekte im selben Projekt, um beispielweise Informationen zu übergreifenden Prozessen zu erlangen.
 
     \item[] \underline{Projektmitarbeiter:} Die Rolle des Projektmitarbeiters ist in der Anforderung \emph{/F28/} beschrieben und ist für die Erfassung in den jeweiligen Teilprojekten zuständig. Der Projektmitarbeiter ist einem Teilprojekt zugeordnet und kann dort Prozesse, Subprozesse und Prozessschritte anlegen und den aktuellen Status erfassen, indem die Attribute der aktuellen Projektphase entsprechend ausgeprägt werden.
 
-    \item[] \underline{Kunde:} Der Administrator wird in den Anforderungen \emph{/F21/} bis \emph{/F23/} beschrieben und verwaltet das System, indem er Benutzer anlegt, ihnen Rollen zuweist, Projekte erstellt und verwaltet. Er kann außerdem alle Projekte und darin enthaltenen Teilprojekte einsehen und Änderungen vornehmen. Verkörpert wird der Administrator durch die Mitarbeiter des oberen Managements des auftraggebenen Unternehmen.
+    \item[] \underline{Kunde:} Die Rolle des Kunden ist in der Anforderung \emph{/F26/} beschrieben und soll den Kunden, in deren Kontext das jeweilige Projekt stattfindet, Zugriff auf das System gewähren. Die Kunden erhalten dabei standardmäßig jeweils nur Lesezugriff auf ihr eigenes Projekt, damit die Fortschritte im Projekt nachvollzogen werden können. Es besteht die Möglichkeit den Benutzern Schreibrechte zu erteilen, entweder für das ganze Projekt, oder nur für einzelne Teilprojekte, um den Fall zu ermöglichen, das Mitarbeiter des Kunden ebenfalls mit dem BTT arbeiten.  
 
 \end{itemize}
+
+\subsection{Anwendungsfälle}
+Nachfolgend werden die funktionalen Anforderungen durch Anwendungsfälle genauer erklärt. Für die Beschreibung wird auf eine Anwendungsfallschablone zurückgegriffen, die die Eigenschaften des Anwendungsfall systematisch abfragt. Die Eigenschaften sind, das Ziel des Anwendungsfall, die Kategorie, die angibt wie häufig der Anwendungsfall ausgeführt wird, die Vorbedingung, die Nachbedingung bei Erfolg, die Nachbedingung bei Misserfolg, die Akteure des Anwendungsfall, das Auslösende Ereignis, die Beschreibung in einzelnen Schritten, die Erweiterung und mögliche Alternativen.\footcite[Vgl.][S. 261]{balzert}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/Anwendungsfalldiagramm.png}
+    \caption[Anwendungsfalldiagramm]{Anwendungsfalldiagramm mit Akteueren}
+    \label{fig:Anwendungsfalldiagramm}
+\end{figure}
+In Abbildung \ref{fig:Anwendungsfalldiagramm} ist eine Übersicht der aus den Anforderungen erarbeiteten Anwendungsfälle zu sehen, die in den nachfolgenden Unterkapiteln anhand der oben beschriebenen Schablone genauer beschrieben werden.
+
+\subsubsection{Anwendungsfall 1: User verwalten}
+\underline{\emph{Ziel:}}\\
+Es werden die für einen User hinterlegten Daten geändert. Dies kann zum einen das Passwort sein, aber auch die Stammdaten, die Rolle, oder die Zuordnung zu einem Projekt, oder Teilprojekt.\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Die Daten und Zuordnungen des Benutzer wurden wie gewünscht angepasst.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Die Daten und Zuordnungen des Benutzers bleiben unverändert.\\
+\underline{\emph{Akteure:}} \\
+Administrator, Projektleiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Die Daten oder Zuordnungen des Benutzer müssen angepasst werden.\\
+\underline{\emph{Beschreibung:}}
+\begin{itemize}
+    \item [1] Die Benutzerübersicht wird aufgerufen
+    \item [2] Der gewünschte Benutzer wird ausgewählt.
+    \item [3] Die Stammdaten des Benutzer werden editiert.
+    \item [4] Die veränderten Daten werden gesichert.
+\end{itemize}
+\underline{\emph{Erweiterung:}}
+\begin{itemize}
+    \item [2a] Der Nutzer ist nicht vorhanden und wird angelegt.
+    \item [3a] Der Benutzer wird einem Projekt zugeordnet.
+    \item [3b] Der Benutzer wird einem Teilprojekt zugeordnet.
+    \item [3c] Der Benutzer wird aus einem Projekt gelöscht.
+    \item [3d] Der Benutzer wird aus einem Teilprojekt gelöscht.
+    \item [3e] Das Passwort des Benutzer wird zurückgesetzt.
+\end{itemize}
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [2b] Der Benutzer wird gelöscht.
+    \item [3f] Die Daten sind korrekt und der Vorgang wird abgebrochen.
+\end{itemize}
+
+\subsubsection{Anwendungsfall 2: Projekt anlegen}
+\underline{\emph{Ziel:}}\\
+Ein neues Projekt wird hinzugefügt und die Stammdaten des Projekts werden erfasst.\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet und das Projekt ist noch nicht angelegt.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Das Projekt wird angelegt und die Stammdaten des Projekts werden wie gewünscht hinterlegt, die benötigten Projektphasen sind vorhanden und Teilprojekte sind ebenfalls angelegt.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es wird kein Projekt angelegt.\\
+\underline{\emph{Akteure:}} \\
+Administrator, Projektleiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Es wird ein neues Projekt begonnen.\\
+\underline{\emph{Beschreibung:}}
+\begin{itemize}
+    \item [1] Der Anwender ruft die Projektübersicht auf.
+    \item [2] Ein neues Projekt wird hinzugefügt.
+    \item [3] Die Stammdaten des Projekts werden hinterlegt, in Form eines Bezeichners, Beschreibung, Projektzeitraum, Kunde, und ggf. Bemerkungen.
+    \item [4] Es wird ein Teilprojekt hinzugefügt.
+    \item [5] Es wird eine Projektphase hinzugefügt.
+    \item [6] Es werden die vorgesehenen Mitarbeiter hinzugefügt.
+    \item [7] Die veränderten Daten werden gesichert.
+\end{itemize}
+\underline{\emph{Erweiterung:}} \\
+\begin{itemize}
+    \item [4a] Es werden weitere Teilprojekte hinzugefügt. 
+    \item [5a] Es werden weitere Projektphasen hinzugefügt.
+    \item [5b] Die Attribute der Projektphasen, die standardmäßig vorgegeben sind, werden angepasst. 
+\end{itemize}
+\underline{\emph{Alternativen:}} \\
+\begin{itemize}
+    \item  
+\end{itemize}
+
+\subsubsection{Anwendungsfall 3: Fortschritt erfassen}
+\underline{\emph{Ziel:}}\\
+\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+\\
+\underline{\emph{Akteure:}} \\
+Teilprojektleiter, Projektmitarbeiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+\\
+\underline{\emph{Beschreibung:}} \\
+\\
+\underline{\emph{Erweiterung:}} \\
+\\
+\underline{\emph{Alternativen:}} \\
+\\
+
+\subsubsection{Anwendungsfall 4: Fortschritt überprüfen}
+\underline{\emph{Ziel:}}\\
+\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+\\
+\underline{\emph{Akteure:}} \\
+Projektleiter, Teilprojektleiter, Kunde\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+\\
+\underline{\emph{Beschreibung:}} \\
+\\
+\underline{\emph{Erweiterung:}} \\
+\\
+\underline{\emph{Alternativen:}} \\
+\\
+
+\subsubsection{Anwendungsfall 5: Teilprojekt verwalten}
+\underline{\emph{Ziel:}}\\
+\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+\\
+\underline{\emph{Akteure:}} \\
+Projektleiter, Teilprojektleiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+\\
+\underline{\emph{Beschreibung:}} \\
+\\
+\underline{\emph{Erweiterung:}} \\
+\\
+\underline{\emph{Alternativen:}} \\
+\\
+
+\subsubsection{Anwendungsfall 6 Prozess erfassen}
+\underline{\emph{Ziel:}}\\
+\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+\\
+\underline{\emph{Akteure:}} \\
+Teilprojektleiter, Projektmitarbeiter, Kunde\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+\\
+\underline{\emph{Beschreibung:}} \\
+\\
+\underline{\emph{Erweiterung:}} \\
+\\
+\underline{\emph{Alternativen:}} \\
+\\
+
+
+
 \subsection{Benutzerollen und Berechtigungen}
 \subsection{Use-Cases}
 \subsection{Sequenzdiagramme}
