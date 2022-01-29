@@ -36,70 +36,213 @@ Der Kontext beschreibt die technische Umgebebung, in die die Entwicklung eingebe
 \end{itemize}
 
 \subsection{Funktionale Anforderungen}
-Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und im nachfolgendem Kapitel durch Anwendungsfälle (Use-Cases) zusammengefasst und durch Sequenzdiagramme und Anwendungsfalldiagramme dargestellt.\footcite[Vgl.][S. 496]{balzert}
+Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und durch Anwendungsfälle (Use-Cases) zusammengefasst mit Hilfe von Sequenzdiagrammen und Anwendungsfalldiagrammen dargestellt.\footcite[Vgl.][S. 496]{balzert}Für die Beschreibung wird auf eine Anwendungsfallschablone zurückgegriffen, die die Eigenschaften des Anwendungsfall systematisch abfragt. Die Eigenschaften sind, das Ziel des Anwendungsfall, die Kategorie, die angibt wie häufig der Anwendungsfall ausgeführt wird, die Vorbedingung, die Nachbedingung bei Erfolg, die Nachbedingung bei Misserfolg, die Akteure des Anwendungsfall, das Auslösende Ereignis, die Beschreibung in einzelnen Schritten, die Erweiterung und mögliche Alternativen.\footcite[Vgl.][S. 261]{balzert}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/Anwendungsfalldiagramm.png}
+    \caption[Anwendungsfalldiagramm]{Anwendungsfalldiagramm mit Akteueren}
+    \label{fig:Anwendungsfalldiagramm}
+\end{figure}
+In Abbildung \ref{fig:Anwendungsfalldiagramm} ist eine Übersicht der aus den Anforderungen erarbeiteten Anwendungsfälle zu sehen, die in den nachfolgenden Unterkapiteln anhand der oben beschriebenen Schablone genauer beschrieben werden.
 
+\subsubsection{Anwendungsfall 1: User verwalten}
+\underline{\emph{Ziel:}}\\
+Es werden die für einen User hinterlegten Daten geändert. Dies kann zum einen das Passwort sein, aber auch die Stammdaten, die Rolle, oder die Zuordnung zu einem Projekt, oder Teilprojekt.\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Die Daten und Zuordnungen des Benutzer wurden wie gewünscht angepasst.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Die Daten und Zuordnungen des Benutzers bleiben unverändert.\\
+\underline{\emph{Akteure:}} \\
+Administrator, Projektleiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Die Daten oder Zuordnungen des Benutzer müssen angepasst werden.\\
+\underline{\emph{Beschreibung:}}
 \begin{itemize}
-    
-    \item[]\emph{/F10/} Der Benutzer meldet sich mit seinem Benutzernamen und Passwort im System an.
-    \\\emph{/F11/} Der Benutzer kann sein Passwort ändern.  
-    \vspace{0.5cm}   
-    
-    \item[] \emph{/F20/} Es gibt unterschiedliche Benutzerrollen im System.
-    \\\emph{/F21/} Es gibt Administratoren, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunden.
-    \\\emph{/F22/} Administratoren können Projekte erstellen, alle Projekte einsehen und bearbeiten.
-    \\\emph{/F23/} Ein Administrator kann Benutzer erstellen, einsehen, bearbeiten und das Passwort zurücksetzen.
-    \\\emph{/F24/} Projektleiter können Projekte erstellen und können diese verwalten und die untergeordneten Teilprojekte bearbeiten.
-    \\\emph{/F25/} Ein Projektleiter vergibt in seinem Projekt die Benutzerrollen an seine Mitarbeiter indem er die Rollen dem jeweiligen Benutzer zuweist.
-    \\\emph{/F26/} Ein Projektleiter kann Kunden-Benutzer erstellen, die Lesezugriff auf das Projekt haben.
-    \\\emph{/F27/} Ein Teilprojektleiter verwaltet sein Teilprojekt, kann dieses bearbeiten und hat Lesezugriff auf die andere Teilprojekte des selben Projekts.
-    \\\emph{/F28/} Ein Projektmitarbeiter kann in seinem zugeordneten Teilprojekt Prozessschritte bearbeiten und hat Lesezugriff auf die andere Teilprojekte des selben Projekts.
-    \vspace{0.5cm}
-    
-    \item[] \emph{/F30/} Es können beliebig viele Projekte durch den Adminsitrator oder einen Projektleiter erstellt werden.
-    \\\emph{/F31/} Projekte haben einen eindeutigen Bezeichner, einen Namen, ein Startdatum, ein Enddatum, einen Kunden und ein Bemerkungsfeld.
-    \\\emph{/F32/} Ein Benutzer kann einem oder mehreren Projekten zugewiesen werden.
-    \\\emph{/F33/} Benutzer können zwischen ihren zugewiesenen Projekten hin- und her wechseln. 
-    \vspace{0.5cm}
-
-    \item[] \emph{/F40/} Ein Projekt besteht aus einem oder mehreren Teilprojekten.
-    \\\emph{/F41/} Einem Teilprojekt sind ein oder mehrere Teilprojektleiter zugeordnet.
-    \\\emph{/F42/} Teilprojekte werden durch den Projektleiter erstellt.
-    \\\emph{/F43/} Es können in einem Projekt maximal 10 Teilprojekte erstellt werden.
-    \\\emph{/F44/} Teilprojekte können auch nach dem initialen Anlegen des Projekts noch hinzugefügt werden.
-    \vspace{0.5cm}  
-
-    \item[] \emph{/F50/} Ein Projekt besteht aus einer oder mehreren Projektphasen.
-    \\\emph{/F51/} Projektphasen verfügen über einen eindeutigen Namen, einer Beschreibung, einer Sortierreihenfolge, einem Startdatum und einen Enddatum.
-    \\\emph{/F51/} Projektphasen werden durch den Projektleiter erstellt.
-    \\\emph{/F52/} Es können maximal fünf Projektphasen erstellt werden.
-    \\\emph{/F53/} Die Projektphasen werden auf die Teilprojekte vererbt.
-    \\\emph{/F54/} Projektphasen können nach ihrem Abschluss durch den Projektleiter gesperrt werden, sodass keine nachträglichen Veränderung mehr stattfinden. 
-    \\\emph{/F55/} Projektphasen können auch nach dem initialen Anlegen des Projektes noch hinzugefügt 
-    werden.
-    \\\emph{/F56/} Es gibt einen Fortschrittsgrad der aktuellen Projektphase in einem Projekt, der sich aus dem Mittelwert der Fortschritte der Prozesse in der aktuellen Projektphase ergibt.
-    \vspace{0.5cm} 
-
-    \item[] \emph{/F60/} Einer Projektphase sind unterschiedliche Attribute zugeordnet.
-    \\\emph{/F61/} Es gibt eine standardmäßig voreingestellte Vorlage an Attributen.
-    \\\emph{/F62/} Teilprojektleiter können in ihrem Teilprojekt Attribute hinzufügen, bearbeiten und löschen.
-    \\\emph{/F62/} Attribute verfügen über einen eindeutigen Namen, einer Beschreibung, einer zugeordneten Projektphase
-    \\\emph{/F63/} Attribute speichern entweder eine Zeichenfolge, eine Zahl oder einen Wahrheitswert.
-    \\\emph{/F63/} Attribute können von Teilprojekt zu Teilprojekt variieren, werden aber bei der Erstellung initial durch das Projekt vererbt.
-    
-    \vspace{0.5cm} 
-
-    \item[] \emph{/F70/} Ein Prozess kann einem oder mehreren Teilprojekten zugeordnet sein.
-    \\\emph{/F71/} Innerhalb eines Prozesses können keine, ein oder mehere Subprozesse erfasst werden.
-    \\\emph{/F72/} Ein (Sub-)Prozess besteht aus einem oder mehreren Prozessschritten.
-    \\\emph{/F73/} Ein Prozessschritt muss genau einem Teilprojekt zugeordnet sein.
-    \\\emph{/F74/} Es gibt einen Fortschrittsgrad für einen Prozesschritt, der sich aus der Vollständigkeit der Attribute innerhalb der aktuellen Projektphase ergibt. 
-    \\\emph{/F75/} Es gibt einen Fortschrittsgrad für einen Prozess, der sich aus dem Mittelwert der des Fortschrittes zugehörigen Prozessschritte der aktuellen Projektphase ergibt.
-    \\\emph{/F76/} Es gibt einen Fortschrittsgrad für eine Projektphase in einem Teilprojekt, der sich aus der Vollständigkeit der Attribute aller Prozesse innerhalb der aktuellen Projektphase ergibt.
-    \vspace{0.5cm} 
-    
-    \item[] \emph{/F80/} Ein Benutzer kann sich in einem Dashboard eine Übersicht über die derzeitigen Fortschrittsgrade in seinen zugeordneten Projekten verschaffen.
-    \\\emph{F/81/} Das Dashboard gibt den Soll-Zustand an, der anhand der bereits verstrichenen Zeit errechnet wird.
+    \item [1] Die Benutzerübersicht wird aufgerufen
+    \item [2] Der gewünschte Benutzer wird ausgewählt.
+    \item [3] Die Stammdaten des Benutzer werden editiert.
+    \item [4] Die veränderten Daten werden gesichert.
 \end{itemize}
+\underline{\emph{Erweiterung:}}
+\begin{itemize}
+    \item [2a] Der Nutzer ist nicht vorhanden und wird angelegt.
+    \item [3a] Der Benutzer wird einem Projekt zugeordnet.
+    \item [3b] Der Benutzer wird einem Teilprojekt zugeordnet.
+    \item [3c] Der Benutzer wird aus einem Projekt gelöscht.
+    \item [3d] Der Benutzer wird aus einem Teilprojekt gelöscht.
+    \item [3e] Das Passwort des Benutzer wird zurückgesetzt.
+\end{itemize}
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [2b] Der Benutzer wird gelöscht.
+    \item [3f] Die Daten sind korrekt und der Vorgang wird abgebrochen.
+\end{itemize}
+
+\subsubsection{Anwendungsfall 2: Projekt anlegen}
+\underline{\emph{Ziel:}}\\
+Ein neues Projekt wird hinzugefügt und die Stammdaten des Projekts werden erfasst.\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet und das Projekt ist noch nicht angelegt.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Das Projekt wird angelegt und die Stammdaten des Projekts werden wie gewünscht hinterlegt, die benötigten Projektphasen sind vorhanden und Teilprojekte sind ebenfalls angelegt.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es wird kein Projekt angelegt.\\
+\underline{\emph{Akteure:}} \\
+Administrator, Projektleiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Es wird ein neues Projekt begonnen.\\
+\underline{\emph{Beschreibung:}}
+\begin{itemize}
+    \item [1] Der Anwender ruft die Projektübersicht auf.
+    \item [2] Ein neues Projekt wird hinzugefügt.
+    \item [3] Die Stammdaten des Projekts werden hinterlegt, in Form eines Bezeichners, Beschreibung, Projektzeitraum, Kunde, und ggf. Bemerkungen.
+    \item [4] Es wird ein Teilprojekt hinzugefügt.
+    \item [5] Es wird eine Projektphase hinzugefügt.
+    \item [6] Es werden die vorgesehenen Mitarbeiter hinzugefügt.
+    \item [7] Die veränderten Daten werden gesichert.
+\end{itemize}
+\underline{\emph{Erweiterung:}} \\
+\begin{itemize}
+    \item [4a] Es werden weitere Teilprojekte hinzugefügt. 
+    \item [5a] Es werden weitere Projektphasen hinzugefügt.
+    \item [5b] Die Attribute der Projektphasen, die standardmäßig vorgegeben sind, werden angepasst. 
+\end{itemize}
+\underline{\emph{Alternativen:}} \\
+./.
+
+\subsubsection{Anwendungsfall 3: Fortschritt erfassen}
+\underline{\emph{Ziel:}}\\
+Der aktuell erarbeitete Fortschritt wird durch die Bearbeitung der Attribute eines Prozessschrittes dokumentiert.\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet. Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und der Bearbeiter ist dem Projekt zugeordnet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Es wurden Projektphasenattribute in den zu bearbeitenen Prozessschritten verändert und die Fortschrittsanzeige verändert sich.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es werden keine Projektphasenattribute verändert, die Fortschrittsanzeige bleibt gleich.\\
+\underline{\emph{Akteure:}} \\
+Teilprojektleiter, Projektmitarbeiter\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Außerhalb des IT-Systems wurde eine Aufgabe abgearbeitet, die anschließend dokumentiert werden muss.\\
+\underline{\emph{Beschreibung:}} 
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird das dem Benutzer zugeordnete Teilprojekt aufgerufen.
+    \item [3] Es wird der zu bearbeitene Prozess ausgewählt und innerhalb des Prozesses der entsprechende Prozessschritt.
+    \item [4] Das zu ändernde Projektphasenattribut wird verändert.
+    \item [5] Die Änderungen werden gespeichert.
+    \item [6] Das System verändert automatisch die Fortschrittsanzeige für den entsprechenden Prozess, bzw. die Phase.
+\end{itemize}
+
+\underline{\emph{Erweiterung:}} 
+\begin{itemize}
+    \item [1a] Wenn der Benutzer mehreren Projekten zugeordnet ist, wechselt er zuvor in das zu bearbeitene Projekt. 
+    \item [4a] Es werden weitere Projektphasenattribute verändert.
+\end{itemize}
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [6a] Wenn keine Änderung stattgefunden hat, verändert sich die Fortschrittsanzeige nicht.
+\end{itemize}
+
+\subsubsection{Anwendungsfall 4: Fortschritt überprüfen}
+\underline{\emph{Ziel:}}\\
+Der Fortschritt in den jeweiligen Teilrojekten für die aktuelle Projektphase wird wiedergegeben.\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet. Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt zugeordnet.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Es wird die gewünschte Auswertung ausgegeben.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es wird keine Auswertung ausgegeben, wordurch der Fortschritt individuell bei den Projektmitarbeitern abgefragt werden muss.\\
+\underline{\emph{Akteure:}} \\
+Projektleiter, Teilprojektleiter, Kunde\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+Während einer Überprüfung der geleisteten Arbeit soll der aktuelle Fortschritt aufgezeigt werden. Dies kann z.B. im Rahmen eines täglichen Jour Fixes geschehen.
+\underline{\emph{Beschreibung:}} 
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird das Dashboard des Projektes aufgerufen. Dort befindet sich auf einem Blick Fortschrittsanzeigen für alle Teilprojekte in der aktuellen Projektphase.
+\end{itemize}
+\underline{\emph{Erweiterung:}}
+\begin{itemize}
+    \item [1a] Wenn der Benutzer mehreren Projekten zugeordnet ist, wechselt er zuvor in das zu bearbeitene Projekt.
+\end{itemize}
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [2a] Es werden nach und nach die einzelnen Teilprojekte aufgerufen um dort eine detailliertere Aufschlüsselung des aktuellen Fortschrittes zu erhalten.
+\end{itemize}
+
+\subsubsection{Anwendungsfall 5: Teilprojekt verwalten}
+\underline{\emph{Ziel:}}\\
+Es werden Änderungen in einem Teilprojekt vorgenommen um die Stammdaten zu ändern, um Projektphasenattribute zu bearbeiten oder um Mitarbeiter dem Teilprojekt hinzuzufügen.\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet. Ein dem Teilprojekt zuzuordnener Mitarbeiter muss bereits dem Projekt zugeordnet sein.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Die Änderungen werden im System gespeichert um die Informationen im Teilprojekt werden wie gewünscht angepasst.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Die Änderungen werden nicht gespeichert, die Daten bleiben unverändert.\\
+\underline{\emph{Akteure:}} \\
+Projektleiter, Teilprojektleiter\\
+\underline{\emph{Auslösendes Ereignis:}}\\
+Die Daten im Teilprojekt müssen angepasst werden, weil z.B. ein neuer Mitarbeiter hinzu kommt.\\
+\underline{\emph{Beschreibung:}} 
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
+    \item [3] Die Stammdaten des Teilprojektes werden editiert.
+\end{itemize}
+\underline{\emph{Erweiterung:}}\\
+./.\\
+\underline{\emph{Alternativen:}}\\
+\begin{itemize}
+    \item [3a] Es wird ein neuer Mitarbeiter dem Teilprojekt zugeordnet.
+    \item [3b] Es wird ein Projektphasenattribut hinzugefügt. 
+    \item [3c] Es wird ein Projektphasenattribut entfernt.
+    \item [3d] Es wird ein Projektphasenattribut verändert.
+\end{itemize}
+
+\subsubsection{Anwendungsfall 6: Prozess erfassen}
+\underline{\emph{Ziel:}}\\
+Die Prozesse des Kunden sind vollständig inklusive ihrer einzelen Prozessschritte im System erfasst.\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet.
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Es sind neue Prozesse mit ihren jeweiligen Schritten im System hinterlegt.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es werden keine neuen Prozesse im System erfasst.\\
+\underline{\emph{Akteure:}} \\
+Teilprojektleiter, Projektmitarbeiter, Kunde\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+In einem Teilprojekt sollen zu Beginn des Projektes die Prozesse in allen Umfängen erfasst werden.\\
+\underline{\emph{Beschreibung:}}
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
+    \item [3] Die Prozessübersicht des Teilprojekts wird aufgerufen.
+    \item [4] Es wird ein neuer Prozess angelegt.
+    \item [5] Es werden die Informationen zu dem Prozess erfasst.
+    \item [6] Es wird ein neuer Prozessschritt angelegt.
+    \item [7] Die Änderungen werden gesichert.
+\end{itemize}
+
+\underline{\emph{Erweiterung:}}
+\begin{itemize}
+    \item [6a] Ein Subprozess wird erfasst.
+\end{itemize}
+\underline{\emph{Alternativen:}} \\
+./.\\
 
 
 
