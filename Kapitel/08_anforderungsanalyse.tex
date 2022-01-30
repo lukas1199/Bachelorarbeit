@@ -1,18 +1,4 @@
-\section{Analyse der Anforderungen}
-\subsection{Rollen und Berechtigungen}
-Anhand der Stakeholderanalyse und der Spezifikation der funktionalen Anforderungen wurden mehrere Akteure ermittelt, die mit dem System interagieren und später im Programm als Benutzerrolle umgesetzt werden sollen:
-\begin{itemize}
-    \item[] \underline{Administrator:} Die Rolle des Administrator ist in den Anforderungen \emph{/F21/} bis \emph{/F23/} beschrieben und ist für die Verwaltung des Systems zuständig, indem er Benutzer anlegt, ihnen Rollen zuweist und Projekte erstellt. Er kann außerdem alle Projekte und darin enthaltenen Teilprojekte einsehen und Änderungen vornehmen. Verkörpert werden die Administratoren durch die Mitarbeiter des oberen Managements des auftraggebenen Unternehmen.
-    
-    \item[] \underline{Projektleiter:} Die Rolle des Projektleiter ist in den Anforderungen \emph{/F24/} bis \emph{/F26/} beschrieben und kann ist für die Erstellung und Administration seiner Projekte im System veranwortlich. Im Gegensatz zum Administrator hat der Projektleiter keine vollständigen, globalen Berechtigungen sondern diese nur in seinem eigenen Projekt und kann dort z.B. Teilprojekte anlegen, Projektphasen definieren und Mitarbeiter zuordnen. Zum Ende einer Projektphase kann der Projektleiter die Phase für die Bearbeitung sperren. Auf fremde Projekte hat der Projektleiter keinen Zugriff. 
-    
-    \item[] \underline{Teilprojektleiter:} Die Rolle des Teilprojektleiter ist in der Anforderung \emph{/F27/} beschrieben und ist für die Verwaltung des ihm zugeordneten Teilprojekts zuständig. In diesem kann er sämtliche Aktionen durchführen, wie z.B. das Bearbeiten von Projektphasenattributen, das Anlegen von Prozessen, Subprozessen und Prozessschritten und das Erfassen des aktuellen Fortschrittes. Des Weiteren haben Teilprojektleiter Lesezugriff auf fremde Teilprojekte im selben Projekt, um beispielweise Informationen zu übergreifenden Prozessen zu erlangen.
 
-    \item[] \underline{Projektmitarbeiter:} Die Rolle des Projektmitarbeiters ist in der Anforderung \emph{/F28/} beschrieben und ist für die Erfassung in den jeweiligen Teilprojekten zuständig. Der Projektmitarbeiter ist einem Teilprojekt zugeordnet und kann dort Prozesse, Subprozesse und Prozessschritte anlegen und den aktuellen Status erfassen, indem die Attribute der aktuellen Projektphase entsprechend ausgeprägt werden.
-
-    \item[] \underline{Kunde:} Die Rolle des Kunden ist in der Anforderung \emph{/F26/} beschrieben und soll den Kunden, in deren Kontext das jeweilige Projekt stattfindet, Zugriff auf das System gewähren. Die Kunden erhalten dabei standardmäßig jeweils nur Lesezugriff auf ihr eigenes Projekt, damit die Fortschritte im Projekt nachvollzogen werden können. Es besteht die Möglichkeit den Benutzern Schreibrechte zu erteilen, entweder für das ganze Projekt, oder nur für einzelne Teilprojekte, um den Fall zu ermöglichen, das Mitarbeiter des Kunden ebenfalls mit dem BTT arbeiten.  
-
-\end{itemize}
 
 \begin{comment}
         

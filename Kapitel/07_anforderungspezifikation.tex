@@ -24,8 +24,16 @@ Die hier aufgezählten Visionen und Ziele sind Ausdruck der mit dem fertigen Pro
 \subsection{Rahmenbedingungen}
 Als Rahmenbedingungen bezeichnet man Einschränkungen, die in der Entwicklung der Software berücksichtigt werden müssen. Diese sind entweder technischer oder organisatorischer Natur.\footcite[Vgl.][S. 459 f.]{balzert}
 \begin{itemize}
-    \item[] \emph{/R10/}
-    \item[] \emph{/R20/}
+    \item[] \emph{/R10/ Anwendungsbereich:} Das Produkt dient der Transformationsdokumentation in S/4HANA-Transformationsprojekten.
+    \item[] \emph{/R20/ Zielgruppen:} Die Projektleiter und -mitarbeiter von adesso orange, die in S/4HANA-Transformationsprojekten eingesetzt werden, sowie die Kunden von adesso orange, die S/4HANA-Projekte in Auftrag geben.
+    \item[] \emph{/R30/ Betriebsbedingung:} Büroumgebung und mobiler Einsatz
+    \item[] \emph{/R40/ Technische Produktumgebung:} 
+    \begin{itemize}
+        \item [] \emph{/R41/ Software:} Server-Software: Linux mit Webserver und MySQL Datenbank; Client: x86-Betriebssystem, Google Android oder Apple iOS mit zeitgemäßem Webbrowser.
+        \item [] \emph{/R42/ Hardware}: Server: Computer mit 64 Bit x86-Prozessor und zeitgemäßer Ausstattung an Arbeitsspeicher und SSD-Speicher; Client: Mordernes, mobiles Endgerät oder Computer mit 64 Bit x86-Prozessor.
+        \item [] \emph{/R43/ Orgware:} Permanenter Internetzugriff und Zugriff auf das adesso VPN.
+    \end{itemize}
+    \item[] \emph{/R50/ Anforderungen an die Entwicklungsumgebung:} Selbe wie technische Produktumgebung.
 \end{itemize}
 
 \subsection{Kontext und Überblick}
@@ -36,16 +44,54 @@ Der Kontext beschreibt die technische Umgebebung, in die die Entwicklung eingebe
 \end{itemize}
 
 \subsection{Funktionale Anforderungen}
-Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und durch Anwendungsfälle (Use-Cases) zusammengefasst mit Hilfe von Sequenzdiagrammen und Anwendungsfalldiagrammen dargestellt.\footcite[Vgl.][S. 496]{balzert}Für die Beschreibung wird auf eine Anwendungsfallschablone zurückgegriffen, die die Eigenschaften des Anwendungsfall systematisch abfragt. Die Eigenschaften sind, das Ziel des Anwendungsfall, die Kategorie, die angibt wie häufig der Anwendungsfall ausgeführt wird, die Vorbedingung, die Nachbedingung bei Erfolg, die Nachbedingung bei Misserfolg, die Akteure des Anwendungsfall, das Auslösende Ereignis, die Beschreibung in einzelnen Schritten, die Erweiterung und mögliche Alternativen.\footcite[Vgl.][S. 261]{balzert}
+Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und durch Anwendungsfälle (Use-Cases) zusammengefasst, die wiederrum mit der Hilfe von Sequenzdiagrammen und Anwendungsfalldiagrammen dargestellt werden.\footcite[Vgl.][S. 496]{balzert}
+
+\subsubsection{Rollen und Berechtigungen}
+Zuvor werden jedoch die Akteure der Anwendungsfälle definiert, die sich aus der Anforderungsermittlung und der Stakeholderanalyse ergeben haben. Diese Akteure interagieren mit dem System und sollen später als Benutzerrolle umgesetzt werden. Dazu werden sie hier in einem Rollen- und Berechtigungskonzept beschrieben, damit sie eindeutig spezifiziert sind.
+
+\begin{itemize}
+    \item[] \underline{Administrator:} Die Rolle des Administrator ist für die Verwaltung des Systems zuständig, indem er Benutzer anlegt, ihnen Rollen zuweist und Projekte erstellt. Er kann außerdem alle Projekte und darin enthaltenen Teilprojekte einsehen und Änderungen vornehmen. Verkörpert werden die Administratoren durch die Mitarbeiter des oberen Managements des auftraggebenen Unternehmen.
+    
+    \item[] \underline{Projektleiter:} Die Rolle des Projektleiter ist für die Erstellung und Administration seiner Projekte im System veranwortlich. Im Gegensatz zum Administrator hat der Projektleiter keine vollständigen, globalen Berechtigungen sondern diese nur in seinem eigenen Projekt und kann dort z.B. Teilprojekte anlegen, Projektphasen definieren und Mitarbeiter zuordnen. Zum Ende einer Projektphase kann der Projektleiter die Phase für die Bearbeitung sperren. Auf fremde Projekte hat der Projektleiter keinen Zugriff. 
+    
+    \item[] \underline{Teilprojektleiter:} Die Rolle des Teilprojektleiter ist für die Verwaltung des ihm zugeordneten Teilprojekts zuständig. In diesem kann er sämtliche Aktionen durchführen, wie z.B. das Bearbeiten von Projektphasenattributen, das Anlegen von Prozessen, Subprozessen und Prozessschritten und das Erfassen des aktuellen Fortschrittes. Des Weiteren haben Teilprojektleiter Lesezugriff auf fremde Teilprojekte im selben Projekt, um beispielweise Informationen zu übergreifenden Prozessen zu erlangen.
+
+    \item[] \underline{Projektmitarbeiter:} Die Rolle des Projektmitarbeiters ist für die Erfassung in den jeweiligen Teilprojekten zuständig. Der Projektmitarbeiter ist einem Teilprojekt zugeordnet und kann dort Prozesse, Subprozesse und Prozessschritte anlegen und den aktuellen Status erfassen, indem die Attribute der aktuellen Projektphase entsprechend ausgeprägt werden.
+
+    \item[] \underline{Kunde:} Die Rolle des Kunden soll den Kunden, in dessen Kontext das jeweilige Projekt stattfindet, Zugriff auf das System gewähren. Die Kunden erhalten dabei standardmäßig jeweils nur Lesezugriff auf ihr eigenes Projekt, damit die Fortschritte im Projekt nachvollzogen werden können. Es besteht die Möglichkeit den Benutzern Schreibrechte zu erteilen, entweder für das ganze Projekt, oder nur für einzelne Teilprojekte, um den Fall zu ermöglichen, das Mitarbeiter des Kunden ebenfalls mit dem BTT arbeiten.  
+\end{itemize}
+
+\subsubsection{Anwendungsfallübersicht}
+Für die Beschreibung der Anwendungsfälle wird auf eine Anwendungsfallschablone zurückgegriffen, die die Eigenschaften des einzelnen Anwendungsfall systematisch abfragt. Die Eigenschaften sind das Ziel des Anwendungsfall, die Kategorie die angibt wie häufig der Anwendungsfall ausgeführt wird, die Vorbedingung, die Nachbedingung bei Erfolg, die Nachbedingung bei Misserfolg, die Akteure des Anwendungsfalls, das auslösende Ereignis, die Beschreibung der einzelnen Schritte, die Erweiterung und mögliche Alternativen.\footcite[Vgl.][S. 261]{balzert}
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.67]{./Bilder/Anwendungsfalldiagramm.png}
     \caption[Anwendungsfalldiagramm]{Anwendungsfalldiagramm mit Akteueren}
     \label{fig:Anwendungsfalldiagramm}
 \end{figure}
-In Abbildung \ref{fig:Anwendungsfalldiagramm} ist eine Übersicht der aus den Anforderungen erarbeiteten Anwendungsfälle zu sehen, die in den nachfolgenden Unterkapiteln anhand der oben beschriebenen Schablone genauer beschrieben werden.
+\\In Abbildung \ref{fig:Anwendungsfalldiagramm} ist eine Übersicht erarbeiteten Anwendungsfälle zu sehen, die in den nachfolgenden Unterkapiteln anhand der oben beschriebenen Schablone genauer spezifiziert werden.
 
+\newpage
 \subsubsection{Anwendungsfall 1: User verwalten}
+\begin{comment}
+    
+\begin{table}
+    \begin{tabular}[h]{l|l}
+        \underline{\emph{Ziel:}} & 
+        \underline{\emph{Kategorie:}} &
+        \underline{\emph{Vorbedingung:}} &
+        \underline{\emph{Nachbedingung Erfolg:}} &
+        \underline{\emph{Nachbedingung Fehlschlag:}} &
+        \underline{\emph{Akteure:}} &
+        \underline{\emph{Auslösendes Ereignis:}} &
+        \underline{\emph{Beschreibung:}} &
+        \underline{\emph{Erweiterung:}} &
+        \underline{\emph{Alternativen:}} &
+    \end{tabular}
+\end{table}
+
+\end{comment}
+
 \underline{\emph{Ziel:}}\\
 Es werden die für einen User hinterlegten Daten geändert. Dies kann zum einen das Passwort sein, aber auch die Stammdaten, die Rolle, oder die Zuordnung zu einem Projekt, oder Teilprojekt.\\
 \underline{\emph{Kategorie:}} \\
@@ -82,41 +128,139 @@ Die Daten oder Zuordnungen des Benutzer müssen angepasst werden.\\
     \item [3f] Die Daten sind korrekt und der Vorgang wird abgebrochen.
 \end{itemize}
 
+
+\newpage
 \subsubsection{Anwendungsfall 2: Projekt anlegen}
+Nachfolgend der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser zeigt das Vorgehen zum Anlegen eines neues Projektes im System auf. Das Vorgehen wird zuerst in einer Use-Case-Schablone beschrieben und im Anschluss durch ein Aktivitätsdiagramm beschrieben.
+
+\begin{table}
+    \begin{tabular}[h]{l|l}
+        \underline{\emph{Ziel:}} & Ein neues Projekt wird im System angelegt.\\
+        \underline{\emph{Kategorie:}} & Primär\\
+        \underline{\emph{Vorbedingung:}} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt ist noch nicht angelegt.\\
+        \underline{\emph{Nachbedingung Erfolg:}} & Das Projekt wird angelegt; Stammdaten werden hinterlegt; Projektphasen sind vorhanden; Teilprojekte sind vorhanden; Benutzer sind zugeordnet.\\
+        \underline{\emph{Nachbedingung Fehlschlag:}} & System bleibt unverändert.\\
+        \underline{\emph{Akteure:}} & Administrator, Projektleiter\\
+        \underline{\emph{Auslösendes Ereignis:}} & adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\
+        \multirow{5}{2em}{\underline{\emph{Beschreibung:}}} & [1] Projekt hinzufügen\\ 
+        & [2] Stammdaten anlegen\\ 
+        & [3] Teilprojekt anlegen\\ 
+        & [4] Projektphase anlegen\\ 
+        & [5] Mitarbeiter zuordnen\\
+        \multirow{2}{4em}{\underline{\emph{Erweiterung:}}} & [3a] Weiteres Teilprojekt anlegen\\ 
+        & [4a] Weitere Projektphase hinzufügen\\
+        \underline{\emph{Alternativen:}} & [4b] Attribute hinzufügen
+    \end{tabular}
+\end{table}
+
 \underline{\emph{Ziel:}}\\
-Ein neues Projekt wird hinzugefügt und die Stammdaten des Projekts werden erfasst.\\
+Ein neues Projekt wird im System angelegt.\\
 \underline{\emph{Kategorie:}} \\
 Primär\\
 \underline{\emph{Vorbedingung:}} \\
-Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet und das Projekt ist noch nicht angelegt.\\
+Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt ist noch nicht angelegt.\\
 \underline{\emph{Nachbedingung Erfolg:}} \\
-Das Projekt wird angelegt und die Stammdaten des Projekts werden wie gewünscht hinterlegt, die benötigten Projektphasen sind vorhanden und Teilprojekte sind ebenfalls angelegt.\\
+Das Projekt wird angelegt; Stammdaten werden hinterlegt; Projektphasen sind vorhanden; Teilprojekte sind vorhanden; Benutzer sind zugeordnet.\\
 \underline{\emph{Nachbedingung Fehlschlag:}} \\
-Es wird kein Projekt angelegt.\\
+System bleibt unverändert.\\
 \underline{\emph{Akteure:}} \\
 Administrator, Projektleiter\\
 \underline{\emph{Auslösendes Ereignis:}} \\
-Es wird ein neues Projekt begonnen.\\
+adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\
 \underline{\emph{Beschreibung:}}
 \begin{itemize}
-    \item [1] Der Anwender ruft die Projektübersicht auf.
-    \item [2] Ein neues Projekt wird hinzugefügt.
-    \item [3] Die Stammdaten des Projekts werden hinterlegt, in Form eines Bezeichners, Beschreibung, Projektzeitraum, Kunde, und ggf. Bemerkungen.
-    \item [4] Es wird ein Teilprojekt hinzugefügt.
-    \item [5] Es wird eine Projektphase hinzugefügt.
-    \item [6] Es werden die vorgesehenen Mitarbeiter hinzugefügt.
-    \item [7] Die veränderten Daten werden gesichert.
+    \item [1] Projekt hinzufügen.
+    \item [2] Stammdaten anlegen.
+    \item [3] Teilprojekt anlegen.
+    \item [4] Projektphase anlegen.
+    \item [5] Mitarbeiter zuordnen.
 \end{itemize}
-\underline{\emph{Erweiterung:}} \\
+\underline{\emph{Erweiterung:}}
 \begin{itemize}
-    \item [4a] Es werden weitere Teilprojekte hinzugefügt. 
-    \item [5a] Es werden weitere Projektphasen hinzugefügt.
-    \item [5b] Die Attribute der Projektphasen, die standardmäßig vorgegeben sind, werden angepasst. 
+    \item [3a] Weiteres Teilprojekt anlegen. 
+    \item [4a] Weitere Projektphase hinzufügen.
+\end{itemize}
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [4b] Attribute hinzufügen
+\end{itemize}
+
+Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt. Dies zeigt den Ablauf des Anwendungsfalls 2 detailliert auf und zeigt die Schritte, die der Anwender durchführen muss um im System erfolgreich ein Projekt anzulegen.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD2_ProjektAnlegen.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 2]{Aktivitätsdiagramm Projekt anlegen}
+    \label{fig:AD2}
+\end{figure}
+
+\newpage
+\subsubsection{Anwendungsfall 3: Teilprojekt verwalten}
+\underline{\emph{Ziel:}}\\
+Es werden Änderungen in einem Teilprojekt vorgenommen um die Stammdaten zu ändern, um Projektphasenattribute zu bearbeiten oder um Mitarbeiter dem Teilprojekt hinzuzufügen.\\
+\underline{\emph{Kategorie:}} \\
+Sekundär\\
+\underline{\emph{Vorbedingung:}} \\
+Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet. Ein dem Teilprojekt zuzuordnener Mitarbeiter muss bereits dem Projekt zugeordnet sein.\\
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Die Änderungen werden im System gespeichert um die Informationen im Teilprojekt werden wie gewünscht angepasst.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Die Änderungen werden nicht gespeichert, die Daten bleiben unverändert.\\
+\underline{\emph{Akteure:}} \\
+Projektleiter, Teilprojektleiter\\
+\underline{\emph{Auslösendes Ereignis:}}\\
+Die Daten im Teilprojekt müssen angepasst werden, weil z.B. ein neuer Mitarbeiter hinzu kommt.\\
+\underline{\emph{Beschreibung:}} 
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
+    \item [3] Die Stammdaten des Teilprojektes werden editiert.
+\end{itemize}
+\underline{\emph{Erweiterung:}}\\
+./.\\
+\underline{\emph{Alternativen:}}
+\begin{itemize}
+    \item [3a] Es wird ein neuer Mitarbeiter dem Teilprojekt zugeordnet.
+    \item [3b] Es wird ein Projektphasenattribut hinzugefügt. 
+    \item [3c] Es wird ein Projektphasenattribut entfernt.
+    \item [3d] Es wird ein Projektphasenattribut verändert.
+\end{itemize}
+
+\newpage
+\subsubsection{Anwendungsfall 4: Prozess erfassen}
+\underline{\emph{Ziel:}}\\
+Die Prozesse des Kunden sind vollständig inklusive ihrer einzelen Prozessschritte im System erfasst.\\
+\underline{\emph{Kategorie:}} \\
+Primär\\
+\underline{\emph{Vorbedingung:}} \\
+Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet.
+\underline{\emph{Nachbedingung Erfolg:}} \\
+Es sind neue Prozesse mit ihren jeweiligen Schritten im System hinterlegt.\\
+\underline{\emph{Nachbedingung Fehlschlag:}} \\
+Es werden keine neuen Prozesse im System erfasst.\\
+\underline{\emph{Akteure:}} \\
+Teilprojektleiter, Projektmitarbeiter, Kunde\\
+\underline{\emph{Auslösendes Ereignis:}} \\
+In einem Teilprojekt sollen zu Beginn des Projektes die Prozesse in allen Umfängen erfasst werden.\\
+\underline{\emph{Beschreibung:}}
+\begin{itemize}
+    \item [1] Es wird die Übersicht des Projekts aufgerufen.
+    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
+    \item [3] Die Prozessübersicht des Teilprojekts wird aufgerufen.
+    \item [4] Es wird ein neuer Prozess angelegt.
+    \item [5] Es werden die Informationen zu dem Prozess erfasst.
+    \item [6] Es wird ein neuer Prozessschritt angelegt.
+    \item [7] Die Änderungen werden gesichert.
+\end{itemize}
+\underline{\emph{Erweiterung:}}
+\begin{itemize}
+    \item [6a] Ein Subprozess wird erfasst.
 \end{itemize}
 \underline{\emph{Alternativen:}} \\
-./.
+./.\\
 
-\subsubsection{Anwendungsfall 3: Fortschritt erfassen}
+
+\newpage
+\subsubsection{Anwendungsfall 5: Fortschritt erfassen}
 \underline{\emph{Ziel:}}\\
 Der aktuell erarbeitete Fortschritt wird durch die Bearbeitung der Attribute eines Prozessschrittes dokumentiert.\\
 \underline{\emph{Kategorie:}} \\
@@ -140,7 +284,6 @@ Außerhalb des IT-Systems wurde eine Aufgabe abgearbeitet, die anschließend dok
     \item [5] Die Änderungen werden gespeichert.
     \item [6] Das System verändert automatisch die Fortschrittsanzeige für den entsprechenden Prozess, bzw. die Phase.
 \end{itemize}
-
 \underline{\emph{Erweiterung:}} 
 \begin{itemize}
     \item [1a] Wenn der Benutzer mehreren Projekten zugeordnet ist, wechselt er zuvor in das zu bearbeitene Projekt. 
@@ -151,7 +294,9 @@ Außerhalb des IT-Systems wurde eine Aufgabe abgearbeitet, die anschließend dok
     \item [6a] Wenn keine Änderung stattgefunden hat, verändert sich die Fortschrittsanzeige nicht.
 \end{itemize}
 
-\subsubsection{Anwendungsfall 4: Fortschritt überprüfen}
+
+\newpage
+\subsubsection{Anwendungsfall 6: Fortschritt überprüfen}
 \underline{\emph{Ziel:}}\\
 Der Fortschritt in den jeweiligen Teilrojekten für die aktuelle Projektphase wird wiedergegeben.\\
 \underline{\emph{Kategorie:}} \\
@@ -179,71 +324,6 @@ Während einer Überprüfung der geleisteten Arbeit soll der aktuelle Fortschrit
 \begin{itemize}
     \item [2a] Es werden nach und nach die einzelnen Teilprojekte aufgerufen um dort eine detailliertere Aufschlüsselung des aktuellen Fortschrittes zu erhalten.
 \end{itemize}
-
-\subsubsection{Anwendungsfall 5: Teilprojekt verwalten}
-\underline{\emph{Ziel:}}\\
-Es werden Änderungen in einem Teilprojekt vorgenommen um die Stammdaten zu ändern, um Projektphasenattribute zu bearbeiten oder um Mitarbeiter dem Teilprojekt hinzuzufügen.\\
-\underline{\emph{Kategorie:}} \\
-Sekundär\\
-\underline{\emph{Vorbedingung:}} \\
-Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet. Ein dem Teilprojekt zuzuordnener Mitarbeiter muss bereits dem Projekt zugeordnet sein.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Die Änderungen werden im System gespeichert um die Informationen im Teilprojekt werden wie gewünscht angepasst.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Die Änderungen werden nicht gespeichert, die Daten bleiben unverändert.\\
-\underline{\emph{Akteure:}} \\
-Projektleiter, Teilprojektleiter\\
-\underline{\emph{Auslösendes Ereignis:}}\\
-Die Daten im Teilprojekt müssen angepasst werden, weil z.B. ein neuer Mitarbeiter hinzu kommt.\\
-\underline{\emph{Beschreibung:}} 
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
-    \item [3] Die Stammdaten des Teilprojektes werden editiert.
-\end{itemize}
-\underline{\emph{Erweiterung:}}\\
-./.\\
-\underline{\emph{Alternativen:}}\\
-\begin{itemize}
-    \item [3a] Es wird ein neuer Mitarbeiter dem Teilprojekt zugeordnet.
-    \item [3b] Es wird ein Projektphasenattribut hinzugefügt. 
-    \item [3c] Es wird ein Projektphasenattribut entfernt.
-    \item [3d] Es wird ein Projektphasenattribut verändert.
-\end{itemize}
-
-\subsubsection{Anwendungsfall 6: Prozess erfassen}
-\underline{\emph{Ziel:}}\\
-Die Prozesse des Kunden sind vollständig inklusive ihrer einzelen Prozessschritte im System erfasst.\\
-\underline{\emph{Kategorie:}} \\
-Primär\\
-\underline{\emph{Vorbedingung:}} \\
-Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet.
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Es sind neue Prozesse mit ihren jeweiligen Schritten im System hinterlegt.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Es werden keine neuen Prozesse im System erfasst.\\
-\underline{\emph{Akteure:}} \\
-Teilprojektleiter, Projektmitarbeiter, Kunde\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-In einem Teilprojekt sollen zu Beginn des Projektes die Prozesse in allen Umfängen erfasst werden.\\
-\underline{\emph{Beschreibung:}}
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
-    \item [3] Die Prozessübersicht des Teilprojekts wird aufgerufen.
-    \item [4] Es wird ein neuer Prozess angelegt.
-    \item [5] Es werden die Informationen zu dem Prozess erfasst.
-    \item [6] Es wird ein neuer Prozessschritt angelegt.
-    \item [7] Die Änderungen werden gesichert.
-\end{itemize}
-
-\underline{\emph{Erweiterung:}}
-\begin{itemize}
-    \item [6a] Ein Subprozess wird erfasst.
-\end{itemize}
-\underline{\emph{Alternativen:}} \\
-./.\\
-
 
 
 \subsection{Qualitätsanforderungen}
