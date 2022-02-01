@@ -72,118 +72,79 @@ Für die Beschreibung der Anwendungsfälle wird auf eine Anwendungsfallschablone
 \\In Abbildung \ref{fig:Anwendungsfalldiagramm} ist eine Übersicht erarbeiteten Anwendungsfälle zu sehen, die in den nachfolgenden Unterkapiteln anhand der oben beschriebenen Schablone genauer spezifiziert werden.
 
 \newpage
-\subsubsection{Anwendungsfall 1: User verwalten}
+\subsubsection{Anwendungsfall 1: Benutzer verwalten}
 \begin{comment}
     
-\begin{table}
-    \begin{tabular}[h]{l|l}
-        \underline{\emph{Ziel:}} & 
-        \underline{\emph{Kategorie:}} &
-        \underline{\emph{Vorbedingung:}} &
-        \underline{\emph{Nachbedingung Erfolg:}} &
-        \underline{\emph{Nachbedingung Fehlschlag:}} &
-        \underline{\emph{Akteure:}} &
-        \underline{\emph{Auslösendes Ereignis:}} &
-        \underline{\emph{Beschreibung:}} &
-        \underline{\emph{Erweiterung:}} &
-        \underline{\emph{Alternativen:}} &
-    \end{tabular}
-\end{table}
+\label{tab:UCx}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} &  \\\hline
+        \underline{Kategorie:} & \\\hline
+        \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; \\\hline
+        \underline{Nachbedingung Erfolg:} &  \\\hline
+        \underline{Nachbedingung Fehlschlag:} &  \\\hline
+        \underline{Akteure:} &  \\\hline
+        \underline{Auslösendes Ereignis:} &  \\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1]  \\
+        & [2]  \\
+        & [3]  \\
+        & [4]  \\
+        & [5]  \\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [3a]  \\
+        & [4a]  \\\hline
+        \underline{Alternativen:} & [4b]  \\\hline
+\end{tabularx}\\
+\captionof{table}[Anwendungsfall : ]{xxx}
+
 
 \end{comment}
 
-\underline{\emph{Ziel:}}\\
-Es werden die für einen User hinterlegten Daten geändert. Dies kann zum einen das Passwort sein, aber auch die Stammdaten, die Rolle, oder die Zuordnung zu einem Projekt, oder Teilprojekt.\\
-\underline{\emph{Kategorie:}} \\
-Sekundär\\
-\underline{\emph{Vorbedingung:}} \\
-Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Die Daten und Zuordnungen des Benutzer wurden wie gewünscht angepasst.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Die Daten und Zuordnungen des Benutzers bleiben unverändert.\\
-\underline{\emph{Akteure:}} \\
-Administrator, Projektleiter\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-Die Daten oder Zuordnungen des Benutzer müssen angepasst werden.\\
-\underline{\emph{Beschreibung:}}
-\begin{itemize}
-    \item [1] Die Benutzerübersicht wird aufgerufen
-    \item [2] Der gewünschte Benutzer wird ausgewählt.
-    \item [3] Die Stammdaten des Benutzer werden editiert.
-    \item [4] Die veränderten Daten werden gesichert.
-\end{itemize}
-\underline{\emph{Erweiterung:}}
-\begin{itemize}
-    \item [2a] Der Nutzer ist nicht vorhanden und wird angelegt.
-    \item [3a] Der Benutzer wird einem Projekt zugeordnet.
-    \item [3b] Der Benutzer wird einem Teilprojekt zugeordnet.
-    \item [3c] Der Benutzer wird aus einem Projekt gelöscht.
-    \item [3d] Der Benutzer wird aus einem Teilprojekt gelöscht.
-    \item [3e] Das Passwort des Benutzer wird zurückgesetzt.
-\end{itemize}
-\underline{\emph{Alternativen:}}
-\begin{itemize}
-    \item [2b] Der Benutzer wird gelöscht.
-    \item [3f] Die Daten sind korrekt und der Vorgang wird abgebrochen.
-\end{itemize}
 
+\label{tab:UC1}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Stammdaten, Rolle oder Projektzuordnung des Benutzer verändern \\\hline
+        \underline{Kategorie:} & Sekundär \\\hline
+        \underline{Vorbedingung:} & Bearbeiter ist mit Benutzername und Passwort angemeldet \\\hline
+        \underline{Nachbedingung Erfolg:} & Stammdaten oder Zuordnung des Benutzers wird angepasst \\\hline
+        \underline{Nachbedingung Fehlschlag:} & Stammdaten des Benutzers bleiben unverändert \\\hline
+        \underline{Akteure:} & Administrator, Projektleiter \\\hline
+        \underline{Auslösendes Ereignis:} & Anpassungsbedarf in Stammdaten oder Zuordnung des Benutzers\\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Auswählen des Benutzers \\
+        & [2] Änderung der Stammdaten \\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [1a] Benutzer wird angelegt \\
+        & [2a] Änderung der Projektzuordnung \\
+        & [2b] Änderung der Teilprojektzuordnung \\
+        & [2c] Änderung der Benutzerrolle \\
+        & [2d] Zurücksetzen des Passwortes \\\hline
+        \underline{Alternativen:} & ./. \\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 1: Benutzer verwalten ]{Benutzer verwalten}
 
 \newpage
 \subsubsection{Anwendungsfall 2: Projekt anlegen}
-Nachfolgend der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser zeigt das Vorgehen zum Anlegen eines neues Projektes im System auf. Das Vorgehen wird zuerst in einer Use-Case-Schablone beschrieben und im Anschluss durch ein Aktivitätsdiagramm beschrieben.
+Nachfolgend der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser zeigt das Vorgehen zum Anlegen eines neues Projektes im System auf. Das Vorgehen wird zuerst in einer Use-Case-Schablone beschrieben und im Anschluss durch ein Aktivitätsdiagramm beschrieben.\\
 
-\begin{table}
-    \begin{tabular}[h]{l|l}
-        \underline{\emph{Ziel:}} & Ein neues Projekt wird im System angelegt.\\
-        \underline{\emph{Kategorie:}} & Primär\\
-        \underline{\emph{Vorbedingung:}} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt ist noch nicht angelegt.\\
-        \underline{\emph{Nachbedingung Erfolg:}} & Das Projekt wird angelegt; Stammdaten werden hinterlegt; Projektphasen sind vorhanden; Teilprojekte sind vorhanden; Benutzer sind zugeordnet.\\
-        \underline{\emph{Nachbedingung Fehlschlag:}} & System bleibt unverändert.\\
-        \underline{\emph{Akteure:}} & Administrator, Projektleiter\\
-        \underline{\emph{Auslösendes Ereignis:}} & adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\
-        \multirow{5}{2em}{\underline{\emph{Beschreibung:}}} & [1] Projekt hinzufügen\\ 
-        & [2] Stammdaten anlegen\\ 
-        & [3] Teilprojekt anlegen\\ 
-        & [4] Projektphase anlegen\\ 
-        & [5] Mitarbeiter zuordnen\\
-        \multirow{2}{4em}{\underline{\emph{Erweiterung:}}} & [3a] Weiteres Teilprojekt anlegen\\ 
-        & [4a] Weitere Projektphase hinzufügen\\
-        \underline{\emph{Alternativen:}} & [4b] Attribute hinzufügen
-    \end{tabular}
-\end{table}
-
-\underline{\emph{Ziel:}}\\
-Ein neues Projekt wird im System angelegt.\\
-\underline{\emph{Kategorie:}} \\
-Primär\\
-\underline{\emph{Vorbedingung:}} \\
-Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt ist noch nicht angelegt.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Das Projekt wird angelegt; Stammdaten werden hinterlegt; Projektphasen sind vorhanden; Teilprojekte sind vorhanden; Benutzer sind zugeordnet.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-System bleibt unverändert.\\
-\underline{\emph{Akteure:}} \\
-Administrator, Projektleiter\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\
-\underline{\emph{Beschreibung:}}
-\begin{itemize}
-    \item [1] Projekt hinzufügen.
-    \item [2] Stammdaten anlegen.
-    \item [3] Teilprojekt anlegen.
-    \item [4] Projektphase anlegen.
-    \item [5] Mitarbeiter zuordnen.
-\end{itemize}
-\underline{\emph{Erweiterung:}}
-\begin{itemize}
-    \item [3a] Weiteres Teilprojekt anlegen. 
-    \item [4a] Weitere Projektphase hinzufügen.
-\end{itemize}
-\underline{\emph{Alternativen:}}
-\begin{itemize}
-    \item [4b] Attribute hinzufügen
-\end{itemize}
+\label{tab:UC2}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Ein neues Projekt wird im System angelegt.\\\hline
+        \underline{Kategorie:} & Primär\\\hline
+        \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt ist noch nicht angelegt.\\\hline
+        \underline{Nachbedingung Erfolg:} & Das Projekt wird angelegt; Stammdaten werden hinterlegt; Projektphasen sind vorhanden; Teilprojekte sind vorhanden; Benutzer sind zugeordnet.\\\hline
+        \underline{Nachbedingung Fehlschlag:} & System bleibt unverändert.\\\hline
+        \underline{Akteure:} & Administrator, Projektleiter\\\hline
+        \underline{Auslösendes Ereignis:} & adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\\hline        
+        \multirow{5}{*}{\underline{Beschreibung:}} & [1] Projekt hinzufügen\\
+        & [2] Stammdaten anlegen\\
+        & [3] Teilprojekt anlegen\\
+        & [4] Projektphase anlegen\\
+        & [5] Mitarbeiter zuordnen\\\hline
+        \multirow{2}{*}{\underline{Erweiterung:}} & [3a] Weiteres Teilprojekt anlegen\\
+        & [4a] Weitere Projektphase hinzufügen\\\hline
+        \underline{Alternativen:} & [4b] Attribute hinzufügen\\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 2: Projekt anlegen]{Projekt anlegen}
 
 Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt. Dies zeigt den Ablauf des Anwendungsfalls 2 detailliert auf und zeigt die Schritte, die der Anwender durchführen muss um im System erfolgreich ein Projekt anzulegen.
 \begin{figure}[h]
@@ -195,135 +156,94 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
 
 \newpage
 \subsubsection{Anwendungsfall 3: Teilprojekt verwalten}
-\underline{\emph{Ziel:}}\\
-Es werden Änderungen in einem Teilprojekt vorgenommen um die Stammdaten zu ändern, um Projektphasenattribute zu bearbeiten oder um Mitarbeiter dem Teilprojekt hinzuzufügen.\\
-\underline{\emph{Kategorie:}} \\
-Sekundär\\
-\underline{\emph{Vorbedingung:}} \\
-Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet. Ein dem Teilprojekt zuzuordnener Mitarbeiter muss bereits dem Projekt zugeordnet sein.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Die Änderungen werden im System gespeichert um die Informationen im Teilprojekt werden wie gewünscht angepasst.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Die Änderungen werden nicht gespeichert, die Daten bleiben unverändert.\\
-\underline{\emph{Akteure:}} \\
-Projektleiter, Teilprojektleiter\\
-\underline{\emph{Auslösendes Ereignis:}}\\
-Die Daten im Teilprojekt müssen angepasst werden, weil z.B. ein neuer Mitarbeiter hinzu kommt.\\
-\underline{\emph{Beschreibung:}} 
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
-    \item [3] Die Stammdaten des Teilprojektes werden editiert.
-\end{itemize}
-\underline{\emph{Erweiterung:}}\\
-./.\\
-\underline{\emph{Alternativen:}}
-\begin{itemize}
-    \item [3a] Es wird ein neuer Mitarbeiter dem Teilprojekt zugeordnet.
-    \item [3b] Es wird ein Projektphasenattribut hinzugefügt. 
-    \item [3c] Es wird ein Projektphasenattribut entfernt.
-    \item [3d] Es wird ein Projektphasenattribut verändert.
-\end{itemize}
+
+\label{tab:UC3}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Änderung in Teilprojekt durchführen durch Stammdatenänderung, Attribut änderung oder Mitarbeiterzuweisung \\\hline
+        \underline{Kategorie:} & Sekundär\\\hline
+        \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt zugeordnet\\\hline
+        \underline{Nachbedingung Erfolg:} & Daten im Teilprojekt geändert \\\hline
+        \underline{Nachbedingung Fehlschlag:} & Keine Änderungen durchgeführt \\\hline
+        \underline{Akteure:} & Projektleiter, Teilprojektleiter \\\hline
+        \underline{Auslösendes Ereignis:} & Neue Mitarbeiter im Teilprojekt; Stammdaten müssen angepasst werden\\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Aufruf Teilprojekt\\
+        & [2] Bearbeitung der Stammdaten\\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [2a] Mitarbeiter zuordnen\\
+        & [2b] Phasenattribut ändern\\\hline
+        \underline{Alternativen:} & [4b]  \\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 3: Teilprojekt verwalten]{Teilprojekt verwalten}
+
 
 \newpage
 \subsubsection{Anwendungsfall 4: Prozess erfassen}
-\underline{\emph{Ziel:}}\\
-Die Prozesse des Kunden sind vollständig inklusive ihrer einzelen Prozessschritte im System erfasst.\\
-\underline{\emph{Kategorie:}} \\
-Primär\\
-\underline{\emph{Vorbedingung:}} \\
-Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt und dem zu verwaltenden Teilprojekt zugeordnet.
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Es sind neue Prozesse mit ihren jeweiligen Schritten im System hinterlegt.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Es werden keine neuen Prozesse im System erfasst.\\
-\underline{\emph{Akteure:}} \\
-Teilprojektleiter, Projektmitarbeiter, Kunde\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-In einem Teilprojekt sollen zu Beginn des Projektes die Prozesse in allen Umfängen erfasst werden.\\
-\underline{\emph{Beschreibung:}}
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird die Übersicht des Teilprojektes aufgerufen.
-    \item [3] Die Prozessübersicht des Teilprojekts wird aufgerufen.
-    \item [4] Es wird ein neuer Prozess angelegt.
-    \item [5] Es werden die Informationen zu dem Prozess erfasst.
-    \item [6] Es wird ein neuer Prozessschritt angelegt.
-    \item [7] Die Änderungen werden gesichert.
-\end{itemize}
-\underline{\emph{Erweiterung:}}
-\begin{itemize}
-    \item [6a] Ein Subprozess wird erfasst.
-\end{itemize}
-\underline{\emph{Alternativen:}} \\
-./.\\
+
+\label{tab:UC4}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Kundenprozess inklusive aller Schritte erfassen \\\hline
+        \underline{Kategorie:} & Primär\\\hline
+        \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt und Teilprojekt zugeordnet\\\hline
+        \underline{Nachbedingung Erfolg:} & Neuer Prozess mit jeweiligen Schritten wird hinterlegt \\\hline
+        \underline{Nachbedingung Fehlschlag:} & Kein neuer Prozess im System vorhanden oder Prozess unvollständig erfasst. \\\hline
+        \underline{Akteure:} & Teilprojektleiter, Projektmitarbeiter, Kunde\\\hline
+        \underline{Auslösendes Ereignis:} & Zu Beginn eines Projekts sollen Prozesse erfasst werden.\\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Projekt aufrufen\\
+        & [2] Teilprojekt aufrufen\\
+        & [3] Neuen Prozess anlegen\\
+        & [4] Stammdaten des Prozess erfassen\\
+        & [5] Neuen Prozessschritt anlegen\\
+        & [6] Daten des Prozessschritts erfassen.\\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [5a] Subprozess anlegen\\
+        & [5a] Daten des Subprozess erfassen\\\hline
+        \underline{Alternativen:} & ./. \\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 4: Prozess erfassen]{Prozess erfassen}
 
 
 \newpage
 \subsubsection{Anwendungsfall 5: Fortschritt erfassen}
-\underline{\emph{Ziel:}}\\
-Der aktuell erarbeitete Fortschritt wird durch die Bearbeitung der Attribute eines Prozessschrittes dokumentiert.\\
-\underline{\emph{Kategorie:}} \\
-Primär\\
-\underline{\emph{Vorbedingung:}} \\
-Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet. Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und der Bearbeiter ist dem Projekt zugeordnet.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Es wurden Projektphasenattribute in den zu bearbeitenen Prozessschritten verändert und die Fortschrittsanzeige verändert sich.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Es werden keine Projektphasenattribute verändert, die Fortschrittsanzeige bleibt gleich.\\
-\underline{\emph{Akteure:}} \\
-Teilprojektleiter, Projektmitarbeiter\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-Außerhalb des IT-Systems wurde eine Aufgabe abgearbeitet, die anschließend dokumentiert werden muss.\\
-\underline{\emph{Beschreibung:}} 
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird das dem Benutzer zugeordnete Teilprojekt aufgerufen.
-    \item [3] Es wird der zu bearbeitene Prozess ausgewählt und innerhalb des Prozesses der entsprechende Prozessschritt.
-    \item [4] Das zu ändernde Projektphasenattribut wird verändert.
-    \item [5] Die Änderungen werden gespeichert.
-    \item [6] Das System verändert automatisch die Fortschrittsanzeige für den entsprechenden Prozess, bzw. die Phase.
-\end{itemize}
-\underline{\emph{Erweiterung:}} 
-\begin{itemize}
-    \item [1a] Wenn der Benutzer mehreren Projekten zugeordnet ist, wechselt er zuvor in das zu bearbeitene Projekt. 
-    \item [4a] Es werden weitere Projektphasenattribute verändert.
-\end{itemize}
-\underline{\emph{Alternativen:}}
-\begin{itemize}
-    \item [6a] Wenn keine Änderung stattgefunden hat, verändert sich die Fortschrittsanzeige nicht.
-\end{itemize}
+
+\label{tab:UC5}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Im Projekt geleisteten Fortschritt dokumentieren \\\hline
+        \underline{Kategorie:} & Primär \\\hline
+        \underline{Vorbedingung:} & Der Benutzer ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt und Teilprojekt zugeordnet \\\hline
+        \underline{Nachbedingung Erfolg:} & Projektphasenattribute werden ausgefüllt; Fortschrittsanzeige verändert sich \\\hline
+        \underline{Nachbedingung Fehlschlag:} & Keine Änderung in Projektphasenattribut; Fortschrittsanzeige bleibt gleich \\\hline
+        \underline{Akteure:} & Teilprojektleiter; Projektmitarbeiter \\\hline
+        \underline{Auslösendes Ereignis:} & Im Transformationsprozess wurde Aufgabe abgearbeitet (Außerhalb des IT-Systems)\\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Projekt aufrufen \\
+        & [2] Teilprojekt aufrufen \\
+        & [3] Prozess aufrufen \\
+        & [4] Projektphasenattribut mit Wert befüllen \\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [4a] Weitere Projektphasenattribute verändern \\\hline
+        \underline{Alternativen:} & ./. \\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 5: Fortschritt erfassen]{Fortschritt erfassen}
 
 
 \newpage
 \subsubsection{Anwendungsfall 6: Fortschritt überprüfen}
-\underline{\emph{Ziel:}}\\
-Der Fortschritt in den jeweiligen Teilrojekten für die aktuelle Projektphase wird wiedergegeben.\\
-\underline{\emph{Kategorie:}} \\
-Sekundär\\
-\underline{\emph{Vorbedingung:}} \\
-Der Anwender hat sich zuvor im System mit seinem Benutzernamen und Passwort angemeldet. Es ist ein Projekt mit Teilprojekten und Projektphasen angelegt und die auswertende Person ist dem Projekt zugeordnet.\\
-\underline{\emph{Nachbedingung Erfolg:}} \\
-Es wird die gewünschte Auswertung ausgegeben.\\
-\underline{\emph{Nachbedingung Fehlschlag:}} \\
-Es wird keine Auswertung ausgegeben, wordurch der Fortschritt individuell bei den Projektmitarbeitern abgefragt werden muss.\\
-\underline{\emph{Akteure:}} \\
-Projektleiter, Teilprojektleiter, Kunde\\
-\underline{\emph{Auslösendes Ereignis:}} \\
-Während einer Überprüfung der geleisteten Arbeit soll der aktuelle Fortschritt aufgezeigt werden. Dies kann z.B. im Rahmen eines täglichen Jour Fixes geschehen.
-\underline{\emph{Beschreibung:}} 
-\begin{itemize}
-    \item [1] Es wird die Übersicht des Projekts aufgerufen.
-    \item [2] Es wird das Dashboard des Projektes aufgerufen. Dort befindet sich auf einem Blick Fortschrittsanzeigen für alle Teilprojekte in der aktuellen Projektphase.
-\end{itemize}
-\underline{\emph{Erweiterung:}}
-\begin{itemize}
-    \item [1a] Wenn der Benutzer mehreren Projekten zugeordnet ist, wechselt er zuvor in das zu bearbeitene Projekt.
-\end{itemize}
-\underline{\emph{Alternativen:}}
-\begin{itemize}
-    \item [2a] Es werden nach und nach die einzelnen Teilprojekte aufgerufen um dort eine detailliertere Aufschlüsselung des aktuellen Fortschrittes zu erhalten.
-\end{itemize}
+
+\label{tab:UC6}
+\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
+        \hline
+        \underline{Ziel:} & Aktuellen Fortschritt einer Projektphase wiedergeben\\\hline
+        \underline{Kategorie:} & Sekundär \\\hline
+        \underline{Vorbedingung:} & Der Benutzer ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt und Teilprojekt zugeordnet\\\hline
+        \underline{Nachbedingung Erfolg:} & Es wird die gewünschte Auswertung ausgegeben\\\hline
+        \underline{Nachbedingung Fehlschlag:} &  Es wird keine Auswertung wiedergegeben, diese muss bei durch Befragung der Mitarbeiter manuell erhoben werden.\\\hline
+        \underline{Akteure:} & Projektleiter, Teilprojektleiter, Kunde \\\hline
+        \underline{Auslösendes Ereignis:} & Regelmäßige Erhebung des Fortschrittes bspw. im Rahmen eines Jour Fixes \\\hline        
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Projekt aufrufen\\
+        & [2] Projektdashboard aufrufen\\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & ./. \\\hline
+        \underline{Alternativen:} & [3a] Teilprojekt aufrufen (detaillierte Auswertung)\\\hline
+\end{tabularx}
+\captionof{table}[Anwendungsfall 6: Fortschritt überprüfen]{Fortschritt überprüfen}
 
 
 \subsection{Qualitätsanforderungen}
