@@ -73,34 +73,8 @@ Für die Beschreibung der Anwendungsfälle wird auf eine Anwendungsfallschablone
 
 \newpage
 \subsubsection{Anwendungsfall 1: Benutzer verwalten}
-\begin{comment}
-    
-\label{tab:UCx}
-\begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
-        \hline
-        \underline{Ziel:} &  \\\hline
-        \underline{Kategorie:} & \\\hline
-        \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; \\\hline
-        \underline{Nachbedingung Erfolg:} &  \\\hline
-        \underline{Nachbedingung Fehlschlag:} &  \\\hline
-        \underline{Akteure:} &  \\\hline
-        \underline{Auslösendes Ereignis:} &  \\\hline        
-        \multirow{1}{*}{\underline{Beschreibung:}} & [1]  \\
-        & [2]  \\
-        & [3]  \\
-        & [4]  \\
-        & [5]  \\\hline
-        \multirow{1}{*}{\underline{Erweiterung:}} & [3a]  \\
-        & [4a]  \\\hline
-        \underline{Alternativen:} & [4b]  \\\hline
-\end{tabularx}\\
-\captionof{table}[Anwendungsfall : ]{xxx}
+In der unten dargestellten Tabelle ist der Anwendungsfall \glqq{}Benutzer verwalten\grqq{} beschrieben, der zum Ziel hat die im System hinterlegten Stammdaten der Benutzer zu bearbeiten, die Zuordnung zu einem Projekt oder Teilprojekt durchzuführen, oder die Benutzerrolle zu ändern. Es handelt sich dabei um einen administrativen Anwendungsfall der entweder durch einen Administrator oder einen Projektleiter durchgeführt wird.\\
 
-
-\end{comment}
-
-
-\label{tab:UC1}
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Stammdaten, Rolle oder Projektzuordnung des Benutzer verändern \\\hline
@@ -115,17 +89,24 @@ Für die Beschreibung der Anwendungsfälle wird auf eine Anwendungsfallschablone
         \multirow{1}{*}{\underline{Erweiterung:}} & [1a] Benutzer wird angelegt \\
         & [2a] Änderung der Projektzuordnung \\
         & [2b] Änderung der Teilprojektzuordnung \\
-        & [2c] Änderung der Benutzerrolle \\
-        & [2d] Zurücksetzen des Passwortes \\\hline
+        & [2c] Änderung der Benutzerrolle \\\hline
         \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 1: Benutzer verwalten ]{Benutzer verwalten}
+\newpage
+In Abbildung \ref{fig:AD1} sind die Aktivitäten des oben beschriebenen Anwendungsfalls \glqq{}Benutzer verwalten\grqq{} abgebildet, die im System durchgeführt werden um das gewünscht Ziel zu erreichen. Das Aktivitätsdiagramm stellt dabei, die Schritte des Ablaufs visuell dar.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD1_BenutzerVerwalten.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 1]{Aktivitätsdiagramm Benutzer verwalten}
+    \label{fig:AD1}
+\end{figure}
+\\Mit der Aktivität \glqq{}Benutzerrolle ändern\grqq{} kann der Bearbeiter die Rolle des ausgewählten Nutzers verändern. Die Rollen, die bereits in den vorherigen Kapiteln erwähnt wurden, stellen die jeweilige Position im Projekt dar. Die Aktivität kann durch die Rolle Projektleiter und Administator durchgeführt werden, jedoch kann ein Projektleiter keine Administatorrolle vergeben.
 
 \newpage
 \subsubsection{Anwendungsfall 2: Projekt anlegen}
-Nachfolgend der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser zeigt das Vorgehen zum Anlegen eines neues Projektes im System auf. Das Vorgehen wird zuerst in einer Use-Case-Schablone beschrieben und im Anschluss durch ein Aktivitätsdiagramm beschrieben.\\
+Nachfolgend Tabelle wird der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser zeigt das Vorgehen zum Anlegen eines neues Projektes im System auf. Das Vorgehen wird zuerst in der Anwendungsfallschablone beschrieben und im Anschluss durch ein Aktivitätsdiagramm beschrieben.\\
 
-\label{tab:UC2}
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Ein neues Projekt wird im System angelegt.\\\hline
@@ -135,29 +116,30 @@ Nachfolgend der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschrieben. Dieser
         \underline{Nachbedingung Fehlschlag:} & System bleibt unverändert.\\\hline
         \underline{Akteure:} & Administrator, Projektleiter\\\hline
         \underline{Auslösendes Ereignis:} & adesso orange beginnt neues S/4HANA-Transformationsprojekt.\\\hline        
-        \multirow{5}{*}{\underline{Beschreibung:}} & [1] Projekt hinzufügen\\
+        \multirow{1}{*}{\underline{Beschreibung:}} & [1] Projekt hinzufügen\\
         & [2] Stammdaten anlegen\\
         & [3] Teilprojekt anlegen\\
         & [4] Projektphase anlegen\\
         & [5] Mitarbeiter zuordnen\\\hline
-        \multirow{2}{*}{\underline{Erweiterung:}} & [3a] Weiteres Teilprojekt anlegen\\
+        \multirow{1}{*}{\underline{Erweiterung:}} & [3a] Weiteres Teilprojekt anlegen\\
         & [4a] Weitere Projektphase hinzufügen\\\hline
         \underline{Alternativen:} & [4b] Attribute hinzufügen\\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 2: Projekt anlegen]{Projekt anlegen}
-
+\newpage
 Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt. Dies zeigt den Ablauf des Anwendungsfalls 2 detailliert auf und zeigt die Schritte, die der Anwender durchführen muss um im System erfolgreich ein Projekt anzulegen.
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[scale=0.67]{./Bilder/AD2_ProjektAnlegen.png}
     \caption[Aktivitätsdiagramm Anwendungsfall 2]{Aktivitätsdiagramm Projekt anlegen}
     \label{fig:AD2}
 \end{figure}
+\\Dieses Diagramm wird im ersten Moment sehr komplex, da es viele für den Erstellers des Projektes viele Entscheidungsmöglichkeiten gibt, wie umfangreich das Projekt anlegt wird. 
 
 \newpage
 \subsubsection{Anwendungsfall 3: Teilprojekt verwalten}
+Der Anwendungsfall 3 \glqq{}Teilprojekt verwalten\grqq{} beschreibt die Bearbeitung eines Teilprojekts aus Sicht eines Teilprojektleiters. Dieser kann in dem ihn zugewiesenen Teilprojekt die Stammdaten ändern, die Attribute der Projektphasen anpassen und Mitarbeiter dem Teilprojekt zuweisen.\\
 
-\label{tab:UC3}
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Änderung in Teilprojekt durchführen durch Stammdatenänderung, Attribut änderung oder Mitarbeiterzuweisung \\\hline
@@ -170,16 +152,24 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
         \multirow{1}{*}{\underline{Beschreibung:}} & [1] Aufruf Teilprojekt\\
         & [2] Bearbeitung der Stammdaten\\\hline
         \multirow{1}{*}{\underline{Erweiterung:}} & [2a] Mitarbeiter zuordnen\\
-        & [2b] Phasenattribut ändern\\\hline
-        \underline{Alternativen:} & [4b]  \\\hline
+        & [2b] Attribut ändern\\\hline
+        \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 3: Teilprojekt verwalten]{Teilprojekt verwalten}
-
+\newpage
+Nachfolgend ist in Abbildung \ref{fig:AD3} das Aktivitätsdiagramm für den Anwendungsfall \glqq{}Teilprojekt verwalten\grqq{} dargestellt.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD3_TeilprojektVerwalten.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 3]{Aktivitätsdiagramm Teilprojekt verwalten}
+    \label{fig:AD3}
+\end{figure}
+\\Im Mittelpunkt dieses Anwendungsfalls steht die Entscheidung, welche Aktion durchgeführt werden soll. Hier kann der Anwender auswählen, ob er die Stammdaten bearbeitet, einen weiteren Mitarbeiter zuordnet oder ein Attribut anpasst. Im Anschluss an die Durchführung einer Aktivität kann der Anwender erneut entscheiden, ob er eine weitere Aktion durchführen möchte, bis schließlich alle gewünschten Anpassungen durchgeführt wurden.
 
 \newpage
 \subsubsection{Anwendungsfall 4: Prozess erfassen}
+In der unten abgebildeten Tabelle ist der Anwendungsfall \glqq{}Prozess erfassen\grqq{} beschrieben, der zu beginn eines S/4HANA-Transformationsprojekts zur Anwendung kommt, wenn, in Zusammenarbeit mit den Kunden, die in SAP abgebildeten Prozesse in ihrer Gesamtheit aufgenommen werden.\\
 
-\label{tab:UC4}
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Kundenprozess inklusive aller Schritte erfassen \\\hline
@@ -200,12 +190,20 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
         \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 4: Prozess erfassen]{Prozess erfassen}
-
+\newpage
+In Abbildung \ref{fig:AD4} ist die Abfolge der Aktivitäten zur Erfassung eines neuen Prozesses abgebildet. Mit dieser Abfolge ist es möglich Prozesse zu erfassen, die entweder nur in einem Teilprojekt stattfinden, oder die sich über mehrere Teilprojekt erstrecken. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD4_ProzessErfassen.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 4]{Aktivitätsdiagramm Prozess erfassen}
+    \label{fig:AD4}
+\end{figure}
+\\Danach werden nach und nach alle Einzelheiten des Prozess erfasst, sodass dieser mit all seinen Subprozessen und einzelnen Prozessschritten im System abgebildet wird. Der Anwender hat am Ende der Aktivitätenabfolge jedes Mal die Möglichkeit weitere Aktionen durchzuführen, indem er an den Anfang des Prozess zurückkehrt.
 
 \newpage
 \subsubsection{Anwendungsfall 5: Fortschritt erfassen}
+Der Anwendungsfall \glqq{}Fortschritt erfassen\grqq{} dient dazu den in der S/4HANA-Transformation geleisteten Fortschritt, bzw. die Abarbeitung einer geleisteten Transformationsaufgabe, im System zu erfassen und ihn dadurch zu dokumentieren.\\
 
-\label{tab:UC5}
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Im Projekt geleisteten Fortschritt dokumentieren \\\hline
@@ -223,12 +221,18 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
         \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 5: Fortschritt erfassen]{Fortschritt erfassen}
-
-
+\newpage
+In dem in Abbildung \ref{fig:AD5} dargestellten Aktivitätsdiagramm sind die Schritte zur Fortschrittserfassung im System abgebildet.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD5_FortschrittErfassen.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 5]{Aktivitätsdiagramm Fortschritt erfassen}
+    \label{fig:AD5}
+\end{figure}
+\\Diese Erfassung wird durch die Ausprägung der Projektphasenattribute im System vorgenommen. Dazu wird zuerst der Prozess und im nachfolgenden Verlauf ein einzelner Prozessschritt aufgerufen und dort die Ausprägung der Attribute gepflegt.
 \newpage
 \subsubsection{Anwendungsfall 6: Fortschritt überprüfen}
-
-\label{tab:UC6}
+Der Anwendungsfall 6 \glqq{}Fortschritt überprüfen\grqq{} beschreibt das Vorgehen zur Überprüfung des geleisteten Fortschrittes. Dies geschieht durch ein eigens dafür vorgesehenes Dashboard, das auf einem Blick den Fortschritt eines Projektes wiederspiegelt.\\
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
         \underline{Ziel:} & Aktuellen Fortschritt einer Projektphase wiedergeben\\\hline
@@ -244,8 +248,16 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
         \underline{Alternativen:} & [3a] Teilprojekt aufrufen (detaillierte Auswertung)\\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 6: Fortschritt überprüfen]{Fortschritt überprüfen}
-
-
+\newpage
+In Abbildung \ref{fig:AD6} sind die Aktivitäten visualisiert, die durchgeführt werden müssen, um eine Auswertung zu erhalten.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.67]{./Bilder/AD6_FortschrittÜberprüfen.png}
+    \caption[Aktivitätsdiagramm Anwendungsfall 6]{Aktivitätsdiagramm Fortschritt überprüfen}
+    \label{fig:AD6}
+\end{figure}
+\\Dies geschieht entweder über das Dashboard, das eine Übersicht über und das Projekt und seine Teilprojekte liefert, oder über den Aufruf der einzelnen Teilprojekte, in denen der Fortschritt detaillierter Beguachtet werden kann.
+\newpage
 \subsection{Qualitätsanforderungen}
 Die nichtfunktionalen Anforderungen, bzw. Qualitätsanforderungen spiegeln Eigenschaften wieder, die das gesamte System und somit alle funktionalen Anforderungen betreffen. Die Qualitätsanforderungen werden anhand unterschiedlicher Kriterien kategorisiert, der \textbf{F}unktionalität, der \textbf{Z}uverlässigkeit, der \textbf{B}enutzbarkeit, der \textbf{E}ffizienz, der \textbf{W}artbarkeit und der \textbf{P}ortabilität.\footcite[Vgl.][S. 494 f.]{balzert} Die ermittelten nichtfunktionalen Anforderungen lauten wie folgt:
 \begin{itemize}
