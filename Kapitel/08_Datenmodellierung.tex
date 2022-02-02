@@ -1,8 +1,135 @@
-\section{Datenmodellierung}
+\section{Modellierung der Daten}
 \subsection{Ermittlung der Klassen}
-\subsection{Übersichtsklassendiagramm}
-\subsection{Vollständiges Klassendiagramm}
+In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Kapitel spezifizierten Anforderungen. Ziel ist es mit Hilfe eines Klassendiagramms die Daten des System visuell darzustellen und die Beziehungen der Klassen untereinander zu modellieren. Diese Klasendiagramme sollen einen tatsächlichen Aufbau des Systems darstellen, der in einem späteren, nicht im Rahmen dieser Arbeit angefertigten, Entwurf und Implementierung als Vorlage dienen soll um die tatsächlichen Klassen aufzubauen. Da dieses Klassendiagramm bereits in der Konzeptionsphase des Systems aufgebaut wird, haben diese Modellierungen keinen Anspruch auf Richtigkeit, da aus technischen oder organisatorischen Gründen zu einem späteren Zeitpunkt noch Änderungen erfolgen können. Diese Änderungen können zum Beispiel aufgrund von technischen Restriktionen der Entwicklungsumgebung oder aufgrund von Wünschen des Auftraggebers auftreten.
+\\Um die Übersichtlichkeit zu bewahren werden die Klassen und Beziehungen als erstes aufgezählt und beschrieben. Im Anschluss erfolgt die Darstellung der Klassen in einem Übersichtsklassendiagramm und die Beschreibung der untereinander herrschenden Beziehungen. Danach werden die Klassen in einem erweiterten Klassendiagramm dargestellt, in dem auch die Operationen und Attribute der Klassen visualisiert sind. Im Anschluss erfolgt eine exemplarische Spezifikation von Attributen und Operation anhand von drei ausgewählten Klassen. Zum Schluss erfolgt die Zusammenfassung der Klassen in einem Paketdiagramm.    
 
+\newpage
+
+\subsection{Übersichtsklassendiagramm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{./Bilder/Übersichtsklassendiagramm.png}
+    \caption[Übersichtsklassendiagramm]{Übersichtsklassendiagramm}
+    \label{fig:Übersichtsklassendiagramm}
+\end{figure}
+
+\newpage
+\subsection{Klassen und Beziehungen}
+\subsubsection{Beschreibung der Klassen}
+In den nachfolgenden Tabelle werden zuerst die ermittelten Klassen beschrieben, danach die Beziehungen mit Assoziationen und die Beziehungen mit Generalisierungen.
+
+\begin{xltabular}{\textwidth}{|p{0.3\textwidth}|p{0.642\textwidth}|}
+    \hline
+    \textbf{Klasse} & \textbf{Beschreibung} \\\hline\hline
+    Benutzer & Eine natürliche Person, die ein Benutzerkonto im System hat.\\\hline
+    Administrator & Eine natürliche Person, die für die Verwaltung des Systems zuständig ist. \\\hline
+    Projektleiter & Eine natürliche Person, die ein S/4HANA-Transformationsprojekt leitet. \\\hline
+    Teilprojektleiter & Eine natürliche Person, die ein Teilprojekt in einem S/4HANA-Transformationsprojekt leitet. \\\hline
+    Projektmitarbeiter & Eine natürliche Person, die Mitarbeiter in einem S/4HANA-Transformationsprojekt ist. \\\hline
+    Kunde &  Eine natürliche Person, die Kunde eines S/4HANA-Transformationsprojekt ist.\\\hline
+    Projekt & Eine Einheit, die ein S/4HANA-Transformationsprojekt abbildet. \\\hline
+    Teilprojekt & Eine Einheit, die ein Teilprojekt in einem S/4HANA-Transformationsprojekt abbildet. \\\hline
+    Projektphase & Ein Zeitraum in einem S/4HANA-Transformationsprojekt\\\hline
+    Attribut & Eine Eigenschaft einer Projektphase, die während der S/4HANA-Transformation erfüllt wird. \\\hline
+    Boolsches Attribut & Ein Attribut, das einen Ja- oder Nein-Wert speichert.\\\hline
+    Textattribut & Ein Attribut, das eine Zeichenkette speichert.\\\hline
+    Zahlenattribut & Ein Attribut, das eine Ganzzahl oder Gleitkommazahl speichert. \\\hline
+    Prozess &  Ein in SAP abgebildetete Folge von Aktivitäten.\\\hline
+    Subprozess &  Ein in sich geschlossener Abschnitt eines Prozess.\\\hline
+    Prozessschritt & Eine Aktivität eines Prozess.\\\hline
+\end{xltabular}
+\captionof{table}[Klassenbeschreibungen]{Beschreibung der ermittelten Klassen}
+
+\subsubsection{Beschreibung der Assoziationen}
+Assoziationen sind Beziehungen, die zwischen Klassen bestehen und können unterschiedlicher Natur sein. Assoziationen sind bidirektional und funktionieren deswegen in beide Richtungen.\\
+\begin{xltabular}{\textwidth}{|p{0.3\textwidth}|p{0.145\textwidth}|p{0.145\textwidth}|p{0.3\textwidth}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Klassen mit Assoziationen}}\\\hline\hline
+    %%%%%%
+    Administrator & 1 & 0..* & Projekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Administrator kann kein, oder mehrere Projekte im System erstellen, aber ein Projekt kann nur von genau einem Administrator erstellt werden.}\\\hline\hline
+    %%%%%%
+    %%%%%%
+    Benutzer & 1..* & 0..* & Projekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Benutzer kann kein, oder mehreren Projekten im System zugeordnet sein und ein Projekt kann keinem oder mehreren Benutzer zugeordnet werden.}\\\hline\hline
+    %%%%%%
+    %%%%%%
+    Administrator & 1..* & 0..* & Benutzer\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Administrator kann ein keinen oder mehrere Benutzer verwalten und ein Benutzer kann von einem oder mehreren Administratoren verwaltet werden.}\\\hline\hline
+    %%%%%%
+    Projektleiter & 1..* & 1 & Projektphase\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter kann eine oder mehrere Projektphasen erstellen aber eine Projektphase kann nur durch genau einen Projektleiter erstellt werden.}\\\hline\hline
+    %%%%%%
+    %%%%%%
+    Teilprojektleiter & 1 & 0..* & Attribut\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter kann kein, oder belieb viele Attribute erstellen, ein Attribut wird jedoch nur durch eine Teilprojektleiter erstellt.}\\\hline\hline
+    %%%%%%
+    Projektleiter & 1..* & 0..* & Projekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter verwaltet kein oder mehrere Projekte und ein Projekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
+    %%%%%%
+    Teilprojektleiter & 1..* & 0..* & Teilprojekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter verwaltet kein oder mehrere Teilprojekte und ein Teilprojekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
+    %%%%%%
+    Projektmitarbeiter & 1 & 0..* & Attribut\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder belieb viele Attribute erstellen, ein Attribut wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
+    Prozessschritt & 0..* & 0..* & Attribut\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Attribute aus und ein Attribut wird durch kein oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
+    Subprozess & 0..1 & 1..* & Prozessschritt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Subprozess beinhaltet einen oder mehrere Prozessschritte und ein Prozessschritt kann zu keinem oder einem Prozessschritt gehören, da Subprozesse nur optional sind.}\\\hline
+\end{xltabular}
+\captionof{table}[Klassen mit Assoziationen]{Beschreibung der ermittelten Klassen mit Assoziationen}
+
+\newpage
+\subsubsection{Beschreibung der Aggregationen}
+Aggregationen sind eine besondere Form von Assoziationen, bei denen Objekte einer Klasse einen Teil von einer anderen Klasse darstellen. Dadurch ist es möglich beispielsweise Besitz darzustellen.\\
+
+\begin{xltabular}{\textwidth}{|p{0.3\textwidth}|p{0.145\textwidth}|p{0.145\textwidth}|p{0.3\textwidth}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Klassen mit Aggregationen}}\\\hline\hline
+    Teilprojekt & 1..* & 0..* & Prozess\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt beinhaltet keinen oder mehrere Prozesse, ein Prozess gehört aber immer zu einem oder mehreren Teilprojekten. Ein Teilprojekt ohne Prozesse kann existieren, ein Prozess ohne nicht mindestens ein Teilprojekt jedoch nicht.}\\\hline\hline
+    Prozess & 1 & 0..* & Subprozess\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess kann keine oder mehrere Subprozesse beinhalten, ein Subprozess gehört immer zu genau einem Prozess. Ein Prozess ohne Subprozesse kann existieren, ein Subprozess ohne Prozess jedoch nicht.}\\\hline
+\end{xltabular}
+\captionof{table}[Klassen mit Aggregation]{Beschreibung der ermittelten Klassen mit Aggregationen}
+
+\subsubsection{Beschreibung der Kompositionen}
+Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte der einen Klasse nicht ohne die Objekte der anderen Klasse existieren können.\\
+
+\begin{xltabular}{\textwidth}{|p{0.3\textwidth}|p{0.145\textwidth}|p{0.145\textwidth}|p{0.3\textwidth}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Klassen mit Kompositionen}}\\\hline\hline
+    Projekt & 1 & 1..5 & Projektphase\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann eine oder bis zu fünf Projektphasen beinhalten und eine Projektphase gehört immer zu genau einem Projekt. Ein Projekt ohne Projektphasen kann nicht existieren, eine Projektphase ohne Projekt ebenfalls nicht.}\\\hline\hline
+    %%%%%%
+    Projekt & 1 & 1..* & Teilprojekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann ein oder mehrere Teilprojekte beinhalten und ein Teilprojekt gehört zu genau einem Projekt. Ein Projekt ohne Teilprojekte kann nicht existieren, ein Teilprojekt ohne Projekt ebenfalls nicht.}\\\hline\hline
+    %%%%%%
+    Projektphase & 1 & 1..* & Attribut\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Eine Projektphase hat ein oder mehrere Attribute und ein Attribut gehört zu genau einer Projektphase. Eine Projektphase ohne Attribute kann nicht existieren, ein Attribut ohne Projektphase ebenfalls nicht.}\\\hline\hline
+    %%%%%%
+    Prozess & 1 & 1..* & Prozessschritt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess hat ein oder mehrere Prozessschritte und ein Prozessschritt gehört immer zu genau einem Prozess. Ein Prozess ohne Prozessschritte kann nicht existieren, ein Prozessschritt ohne Prozess ebenfalls nicht.}\\\hline
+    %%%%%%
+\end{xltabular}
+\captionof{table}[Klassen mit Kompositionen]{Beschreibung der ermittelten Klassen mit Kompositionen}
+
+\subsubsection{Beschreibung der Generalisierungen}
+Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt, die ihre Attribute an eine oder mehrere spezialisierte, bzw. abgeleitete Klassen vererbt.\\
+
+\begin{xltabular}{\textwidth}{|p{0.472\textwidth}|p{0.472\textwidth}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Klassen mit Generalisierungen}}\\\hline\hline
+    Boolsches Attribut, Textattribut, Zahlenattribut & Attribut \\\hline
+    \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Attribut ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen Boolsches Attribut, Textattribut und Zahlenattribut.}\\\hline\hline
+    Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter, Kunde & Benutzer \\\hline
+    \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Benutzer ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunde.}\\\hline
+\end{xltabular}
+\captionof{table}[Klassen mit Generalisierungen]{Beschreibung der ermittelten Klassen mit Generalisierungen}
+
+\subsection{Erweitertes Klassendiagramm}
+
+\subsection{Paketdiagramm}
 
 
 
