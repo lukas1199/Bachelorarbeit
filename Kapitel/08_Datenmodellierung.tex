@@ -74,8 +74,11 @@ Assoziationen sind Beziehungen, die zwischen Klassen bestehen und können unters
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder belieb viele Attribute erstellen, ein Attribut wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
     Prozessschritt & 0..* & 0..* & Attribut\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Attribute aus und ein Attribut wird durch kein oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
+    Kunde & 0..* & 0..1 & Projekt\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Kunde betrachtet keins oder ein Projekt und ein Projekt wird von keinem oder mehreren Kunden betrachtet.}\\\hline\hline
     Subprozess & 0..1 & 1..* & Prozessschritt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Subprozess beinhaltet einen oder mehrere Prozessschritte und ein Prozessschritt kann zu keinem oder einem Prozessschritt gehören, da Subprozesse nur optional sind.}\\\hline
+    
 \end{xltabular}
 \captionof{table}[Klassen mit Assoziationen]{Beschreibung der ermittelten Klassen mit Assoziationen}
 
