@@ -1,10 +1,9 @@
 \section{Modellierung der Daten}
-\subsection{Ermittlung der Klassen}
-In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Kapitel spezifizierten Anforderungen. Ziel ist es mit Hilfe eines Klassendiagramms die Daten des System visuell darzustellen und die Beziehungen der Klassen untereinander zu modellieren. Diese Klasendiagramme sollen einen tatsächlichen Aufbau des Systems darstellen, der in einem späteren, nicht im Rahmen dieser Arbeit angefertigten, Entwurf und Implementierung als Vorlage dienen soll um die tatsächlichen Klassen aufzubauen. Da dieses Klassendiagramm bereits in der Konzeptionsphase des Systems aufgebaut wird, haben diese Modellierungen keinen Anspruch auf Richtigkeit, da aus technischen oder organisatorischen Gründen zu einem späteren Zeitpunkt noch Änderungen erfolgen können. Diese Änderungen können zum Beispiel aufgrund von technischen Restriktionen der Entwicklungsumgebung oder aufgrund von Wünschen des Auftraggebers auftreten.
-\\Um die Übersichtlichkeit zu bewahren werden die Klassen und Beziehungen als erstes aufgezählt und beschrieben. Im Anschluss erfolgt die Darstellung der Klassen in einem Übersichtsklassendiagramm und die Beschreibung der untereinander herrschenden Beziehungen. Danach werden die Klassen in einem erweiterten Klassendiagramm dargestellt, in dem auch die Operationen und Attribute der Klassen visualisiert sind. Im Anschluss erfolgt eine exemplarische Spezifikation von Attributen und Operation anhand von drei ausgewählten Klassen. Zum Schluss erfolgt die Zusammenfassung der Klassen in einem Paketdiagramm.    
+\subsection{Darstellung der Klassen}
+In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Kapitel spezifizierten Anforderungen. Ziel ist es mit Hilfe eines Klassendiagramms die Daten des System visuell darzustellen und die Beziehungen der Klassen untereinander zu modellieren. Diese Klasendiagramme sollen einen tatsächlichen Aufbau des Systems darstellen, der in einem späteren, nicht im Rahmen dieser Arbeit angefertigten, Entwurf und Implementierung als Vorlage dienen soll, um die tatsächlichen Klassen aufzubauen. Da dieses Klassendiagramm bereits in der Konzeptionsphase des Systems aufgebaut wird, haben diese Modellierungen keinen Anspruch auf Richtigkeit, da aus technischen oder organisatorischen Gründen zu einem späteren Zeitpunkt noch Änderungen erfolgen können. Diese Änderungen können zum Beispiel aufgrund von technischen Restriktionen der Entwicklungsumgebung oder aufgrund von Wünschen des Auftraggebers auftreten.
+\\Um die Übersichtlichkeit zu bewahren wird als erstes ein Übersichtsklassendiagramm gezeigt, dass die Klassen nur bei ihrem Namen nennt und die Beziehung zwischen den Klassen darstellt. Im Anschluss erfolgt die Beschreibung der Klassen und den herrschenden Assoziationen, Aggregationen, Kompositionen und Generalisierungen. Im Anschluss erfolgt die vollständige Darstellung der Klassen in einem erweiterten Klassendiagramm, indem zusätzlich die Operationen und Attribute dargestellt sind. Danach werden die Attribute und Operationen exemplarisch anhand von drei ausgewählten Klassen spezifiziert. Zum Ende dieses Kapitels erfolgt die Zusammenfassung der Klassen in einem Paketdiagramm.    
 
 \newpage
-
 \subsection{Übersichtsklassendiagramm}
 \begin{figure}[h!]
     \centering
@@ -12,6 +11,7 @@ In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Ka
     \caption[Übersichtsklassendiagramm]{Übersichtsklassendiagramm}
     \label{fig:Übersichtsklassendiagramm}
 \end{figure}
+\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Übersichtsklassendiagramm.png dieser Arbeit abgelegt.}
 
 \newpage
 \subsection{Klassen und Beziehungen}
@@ -91,11 +91,13 @@ Aggregationen sind eine besondere Form von Assoziationen, bei denen Objekte eine
     \multicolumn{4}{|c|}{\textbf{Klassen mit Aggregationen}}\\\hline\hline
     Teilprojekt & 1..* & 0..* & Prozess\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt beinhaltet keinen oder mehrere Prozesse, ein Prozess gehört aber immer zu einem oder mehreren Teilprojekten. Ein Teilprojekt ohne Prozesse kann existieren, ein Prozess ohne nicht mindestens ein Teilprojekt jedoch nicht.}\\\hline\hline
+    Teilprojekt & 1 & 0..1 & Projektmitarbeiter\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt hat keinen oder mehrere zugeordnete Projektmitarbeiter und ein Projektmitarbeiter ist immer einem Teilprojekt zugeordnet. Ein Teilprojekt ohne Projekmitarbeiter kann existieren, ein Projektmitarbeiter ohne Teilprojekt jedoch nicht.}\\\hline\hline
     Prozess & 1 & 0..* & Subprozess\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess kann keine oder mehrere Subprozesse beinhalten, ein Subprozess gehört immer zu genau einem Prozess. Ein Prozess ohne Subprozesse kann existieren, ein Subprozess ohne Prozess jedoch nicht.}\\\hline
 \end{xltabular}
 \captionof{table}[Klassen mit Aggregation]{Beschreibung der ermittelten Klassen mit Aggregationen}
-
+\newpage
 \subsubsection{Beschreibung der Kompositionen}
 Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte der einen Klasse nicht ohne die Objekte der anderen Klasse existieren können.\\
 
@@ -116,7 +118,7 @@ Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte de
     %%%%%%
 \end{xltabular}
 \captionof{table}[Klassen mit Kompositionen]{Beschreibung der ermittelten Klassen mit Kompositionen}
-
+\newpage
 \subsubsection{Beschreibung der Generalisierungen}
 Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt, die ihre Attribute an eine oder mehrere spezialisierte, bzw. abgeleitete Klassen vererbt.\\
 
@@ -129,10 +131,39 @@ Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt
     \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Benutzer ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunde.}\\\hline
 \end{xltabular}
 \captionof{table}[Klassen mit Generalisierungen]{Beschreibung der ermittelten Klassen mit Generalisierungen}
-
+\newpage
 \subsection{Erweitertes Klassendiagramm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.45]{./Bilder/Klassendiagramm.png}
+    \caption[Erweitertes Klassendiagramm]{Erweitertes Klassendiagramm}
+    \label{fig:Klassendiagramm}
+\end{figure}
+\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Klassendiagramm.png dieser Arbeit abgelegt.}
 
+\newpage
 \subsection{Paketdiagramm}
+Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Business Transformation Trackers zu vier Paketen in einem Paketdiagramm.\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.8]{./Bilder/Paketdiagramm.png}
+    \caption[Paketdiagramm]{Paketdiagramm}
+    \label{fig:Paketdiagramm}
+\end{figure}
+\\Die ermittelten Pakete sind \glqq{}Benuterrollen\grqq{}, \glqq{}Projektaufbau\grqq{}, \glqq{}Prozessinhalt\grqq{} und \glqq{}Prozessattribute\grqq{}. 
+\vspace{1em}
+\\Das Paket \underline{Benutzerrollen} enthält die Klassen \emph{Benuter, Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunde}. Diese Klassen werden für den Aufbau der Berechtigungen und der Rollen benötigt werden. 
+\vspace{1em}
+\\In dem Paket \underline{Projektaufbau} befinden sich die Klassen \emph{Projekt, Projektphase und Teilprojekt}, die im System für den Aufbau des Projektes zuständig sind. 
+\vspace{1em}
+\\In dem Paket \underline{Prozessinhalt} befinden sich die Klassen \emph{Prozess, Subprozess und Prozessschritt}, die in der direkten Interaktion mit dem Anwender stehen. Mit ihnen werden die Geschäftsprozesse im System erfasst, indem diese nach Prozess, Subprozess und Prozessschritt aufgespalten werden. 
+\vspace{1em}
+\\Das Paket \underline{Prozessattribute} enthält die Klassen \emph{Attribut, Boolsches Attribut, Textattribut und Zahlenattribut}, die für die Ausprägung der Fortschrittserfassung der Geschäfts-prozesse benötigt werden.
+\vspace{1em}
+\\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Prozessattribute}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Prozessattribute}. In allen fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
+\vspace{1em}
+\\\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Paketdiagramm.png dieser Arbeit abgelegt.}
+
 
 
 
