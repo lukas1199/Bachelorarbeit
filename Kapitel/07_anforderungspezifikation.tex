@@ -37,16 +37,13 @@ Als Rahmenbedingungen bezeichnet man Einschränkungen, die in der Entwicklung de
 \end{itemize}
 
 \subsection{Kontext und Überblick}
-Der Kontext beschreibt die technische Umgebebung, in die die Entwicklung eingebettet ist und welche Abhängigkeiten und Schnittstellen zu anderen Systemen exisitieren.\footcite[Vgl.][S. 461 f.]{balzert} 
-\begin{itemize}
-    \item[] \emph{/K10/}
-    \item[] \emph{/K20/}
-\end{itemize}
+Der Kontext beschreibt die technische Umgebebung, in die die Entwicklung eingebettet ist und welche Abhängigkeiten und Schnittstellen zu anderen Systemen exisitieren.\footcite[Vgl.][S. 461 f.]{balzert} Aus den Anforderungen des Systems haben sich keine Schnittstellen zu anderen System ergeben. 
 
 \subsection{Funktionale Anforderungen}
 Die Funktionalen Anforderungen beschreiben den Funktionsumfang des Systems. Sie werden im folgenden auf oberster Abstraktionsebene beschrieben und durch Anwendungsfälle (Use-Cases) zusammengefasst, die wiederrum mit der Hilfe von Anwendungsfalldiagrammen dargestellt werden.\footcite[Vgl.][S. 496]{balzert}
 
 \subsubsection{Rollen und Berechtigungen}
+\label{kap:RuB}
 Zuvor werden jedoch die Akteure der Anwendungsfälle definiert, die sich aus der Anforderungsermittlung und der Stakeholderanalyse ergeben haben. Diese Akteure interagieren mit dem System und sollen später als Benutzerrolle umgesetzt werden. Dazu werden sie hier in einem Rollen- und Berechtigungskonzept beschrieben, damit sie eindeutig spezifiziert sind.
 
 \begin{itemize}
@@ -260,11 +257,46 @@ In Abbildung \ref{fig:AD6} sind die Aktivitäten visualisiert, die durchgeführt
 \newpage
 \subsection{Qualitätsanforderungen}
 Die nichtfunktionalen Anforderungen, bzw. Qualitätsanforderungen spiegeln Eigenschaften wieder, die das gesamte System und somit alle funktionalen Anforderungen betreffen. Die Qualitätsanforderungen werden anhand unterschiedlicher Kriterien kategorisiert, der \textbf{F}unktionalität, der \textbf{Z}uverlässigkeit, der \textbf{B}enutzbarkeit, der \textbf{E}ffizienz, der \textbf{W}artbarkeit und der \textbf{P}ortabilität.\footcite[Vgl.][S. 494 f.]{balzert} Die ermittelten nichtfunktionalen Anforderungen lauten wie folgt:
+\vspace{0.5cm}
+\\\textbf{Funktionalität:}
 \begin{itemize}
-    \item[] \emph{/Q10/}
-    \item[] \emph{/F00/} Die Anwendung benutzt eine grafische Oberfläche.
-    \vspace{0.5cm}
-    \item[] \emph{/Q20/}
+    \item[] \emph{/QF10/} Das System darf nur über eine gesicherte Verbindung mit SSL-Ver-schlüsselung erreichbar sein.
+    \item[] \emph{/QF20/} Die Anwender dürfen nur die Aktionen der ihr zugeordneten Rolle (siehe Kapitel \ref{kap:RuB}) ausführen dürfen.
+    \item[] \emph{/QF30/} Alle Benutzer verfügen über personalisierte Benutzernamen und Passwörter.
+    \item[] \emph{/QF31/} Die Passwörter der Benutzerkonten müssen den \glqq{}Digital Identity Guidlines\grqq{} des NIST (National Institute of Standards and Technology) entsprechen\footnote{Siehe: https://doi.org/10.6028/NIST.SP.800-63b}
+    \item[] \emph{/QF40/} Die Eingabefelder des Systems müssen gegen SQL-Injecting und Cross-Site-Scripting gesichert sein.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Zuverlässigkeit:}
+\begin{itemize}
+    \item[] \emph{/QZ10/} Das System soll eine Verfügbarkeit von 98 Prozent im Jahr haben.
+    \item[] \emph{/QZ20/} Es werden regelmäßige Sicherungen der Daten durchgeführt.
+    \item[] \emph{/QZ30/} Fehler in der Anwendung führen nur zum Absturz, wenn dieses unvermeidbar ist.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Benutzbarkeit:}
+\begin{itemize}
+    \item[] \emph{/QB10/} Das System verfügt über eine grafische Benutzeroberfläche.
+    \item[] \emph{/QB20/} Es gibt eine Anwenderdokumentation.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Effizienz:}
+\begin{itemize}
+    \item[] \emph{/QE10/} Die Reaktionszeiten des Systems betragen bei einer stabilen Internetverbindung weniger als 5 Sekunden.
+    \item[] \emph{/QE20/} Speichervorgänge dürfen nicht länger als 5 Sekunden dauern.  
+\end{itemize} 
+\vspace{0.5cm}
+\textbf{Wartbarkeit:}
+\begin{itemize}
+    \item[] \emph{/QW10/} Es finden regelmäßige Updates der Serversoftware statt.
+    \item[] \emph{/QW20/} Das System speichert Protokolle über von dem Benutzer ausgeführte Aktionen. (TBD) 
+    \item[] 
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Portabilität:}
+\begin{itemize}
+    \item[] \emph{/QP10/} Der kleinste unterstützte Bildschirm hat eine Bilddiagonale von 4,7 Zoll mit einer Auflösung von 1334 x 750 Pixeln (iPhone 6).
+    \item[] \emph{/QP20/} Die Benutzeroberfläche der Anwendung ist durch den Benutzer frei in ihrer Größe skalierbar.
 \end{itemize}
 
 \begin{comment}
