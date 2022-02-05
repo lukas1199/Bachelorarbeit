@@ -51,9 +51,9 @@ Zuvor werden jedoch die Akteure der Anwendungsfälle definiert, die sich aus der
     
     \item[] \underline{Projektleiter:} Die Rolle des Projektleiter ist für die Erstellung und Administration seiner Projekte im System veranwortlich. Im Gegensatz zum Administrator hat der Projektleiter keine vollständigen, globalen Berechtigungen sondern diese nur in seinem eigenen Projekt und kann dort z.B. Teilprojekte anlegen, Projektphasen definieren und Mitarbeiter zuordnen. Zum Ende einer Projektphase kann der Projektleiter die Phase für die Bearbeitung sperren. Auf fremde Projekte hat der Projektleiter keinen Zugriff. 
     
-    \item[] \underline{Teilprojektleiter:} Die Rolle des Teilprojektleiter ist für die Verwaltung des ihm zugeordneten Teilprojekts zuständig. In diesem kann er sämtliche Aktionen durchführen, wie z.B. das Bearbeiten von Projektphasenattributen, das Anlegen von Prozessen, Subprozessen und Prozessschritten und das Erfassen des aktuellen Fortschrittes. Des Weiteren haben Teilprojektleiter Lesezugriff auf fremde Teilprojekte im selben Projekt, um beispielweise Informationen zu übergreifenden Prozessen zu erlangen.
+    \item[] \underline{Teilprojektleiter:} Die Rolle des Teilprojektleiter ist für die Verwaltung des ihm zugeordneten Teilprojekts zuständig. In diesem kann er sämtliche Aktionen durchführen, wie z.B. das Bearbeiten von Projektphasenkriterien, das Anlegen von Prozessen, Subprozessen und Prozessschritten und das Erfassen des aktuellen Fortschrittes. Des Weiteren haben Teilprojektleiter Lesezugriff auf fremde Teilprojekte im selben Projekt, um beispielweise Informationen zu übergreifenden Prozessen zu erlangen.
 
-    \item[] \underline{Projektmitarbeiter:} Die Rolle des Projektmitarbeiters ist für die Erfassung in den jeweiligen Teilprojekten zuständig. Der Projektmitarbeiter ist einem Teilprojekt zugeordnet und kann dort Prozesse, Subprozesse und Prozessschritte anlegen und den aktuellen Status erfassen, indem die Attribute der aktuellen Projektphase entsprechend ausgeprägt werden.
+    \item[] \underline{Projektmitarbeiter:} Die Rolle des Projektmitarbeiters ist für die Erfassung in den jeweiligen Teilprojekten zuständig. Der Projektmitarbeiter ist einem Teilprojekt zugeordnet und kann dort Prozesse, Subprozesse und Prozessschritte anlegen und den aktuellen Status erfassen, indem die Kriterien der aktuellen Projektphase entsprechend ausgeprägt werden.
 
     \item[] \underline{Kunde:} Die Rolle des Kunden soll den Kunden, in dessen Kontext das jeweilige Projekt stattfindet, Zugriff auf das System gewähren. Die Kunden erhalten dabei standardmäßig jeweils nur Lesezugriff auf ihr eigenes Projekt, damit die Fortschritte im Projekt nachvollzogen werden können. Es besteht die Möglichkeit den Benutzern Schreibrechte zu erteilen, entweder für das ganze Projekt, oder nur für einzelne Teilprojekte, um den Fall zu ermöglichen, das Mitarbeiter des Kunden ebenfalls mit dem BTT arbeiten.  
 \end{itemize}
@@ -120,7 +120,7 @@ Nachfolgend Tabelle wird der Anwendungsfall \glqq{}Projekt anlegen\grqq{} beschr
         & [5] Mitarbeiter zuordnen\\\hline
         \multirow{1}{*}{\underline{Erweiterung:}} & [3a] Weiteres Teilprojekt anlegen\\
         & [4a] Weitere Projektphase hinzufügen\\\hline
-        \underline{Alternativen:} & [4b] Attribute hinzufügen\\\hline
+        \underline{Alternativen:} & [4b] Kriterien hinzufügen\\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 2: Projekt anlegen]{Projekt anlegen}
 \newpage
@@ -135,11 +135,11 @@ Nachfolgend wird in Abbildung \ref{fig:AD2} das Aktivitätsdiagramm dargestellt.
 
 \newpage
 \subsubsection{Anwendungsfall 3: Teilprojekt verwalten}
-Der Anwendungsfall 3 \glqq{}Teilprojekt verwalten\grqq{} beschreibt die Bearbeitung eines Teilprojekts aus Sicht eines Teilprojektleiters. Dieser kann in dem ihn zugewiesenen Teilprojekt die Stammdaten ändern, die Attribute der Projektphasen anpassen und Mitarbeiter dem Teilprojekt zuweisen.\\
+Der Anwendungsfall 3 \glqq{}Teilprojekt verwalten\grqq{} beschreibt die Bearbeitung eines Teilprojekts aus Sicht eines Teilprojektleiters. Dieser kann in dem ihn zugewiesenen Teilprojekt die Stammdaten ändern, die Kriterien der Projektphasen anpassen und Mitarbeiter dem Teilprojekt zuweisen.\\
 
 \begin{tabularx}{\textwidth}{|p{0.33\textwidth}|p{0.612\textwidth}|}
         \hline
-        \underline{Ziel:} & Änderung in Teilprojekt durchführen durch Stammdatenänderung, Attribut änderung oder Mitarbeiterzuweisung \\\hline
+        \underline{Ziel:} & Änderung in Teilprojekt durchführen durch Stammdatenänderung, Kriteriennderung oder Mitarbeiterzuweisung \\\hline
         \underline{Kategorie:} & Sekundär\\\hline
         \underline{Vorbedingung:} & Der Anwender ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt zugeordnet\\\hline
         \underline{Nachbedingung Erfolg:} & Daten im Teilprojekt geändert \\\hline
@@ -149,7 +149,7 @@ Der Anwendungsfall 3 \glqq{}Teilprojekt verwalten\grqq{} beschreibt die Bearbeit
         \multirow{1}{*}{\underline{Beschreibung:}} & [1] Aufruf Teilprojekt\\
         & [2] Bearbeitung der Stammdaten\\\hline
         \multirow{1}{*}{\underline{Erweiterung:}} & [2a] Mitarbeiter zuordnen\\
-        & [2b] Attribut ändern\\\hline
+        & [2b] Kriterium ändern\\\hline
         \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 3: Teilprojekt verwalten]{Teilprojekt verwalten}
@@ -161,7 +161,7 @@ Nachfolgend ist in Abbildung \ref{fig:AD3} das Aktivitätsdiagramm für den Anwe
     \caption[Aktivitätsdiagramm Anwendungsfall 3]{Aktivitätsdiagramm Teilprojekt verwalten}
     \label{fig:AD3}
 \end{figure}
-\\Im Mittelpunkt dieses Anwendungsfalls steht die Entscheidung, welche Aktion durchgeführt werden soll. Hier kann der Anwender auswählen, ob er die Stammdaten bearbeitet, einen weiteren Mitarbeiter zuordnet oder ein Attribut anpasst. Im Anschluss an die Durchführung einer Aktivität kann der Anwender erneut entscheiden, ob er eine weitere Aktion durchführen möchte, bis schließlich alle gewünschten Anpassungen durchgeführt wurden.
+\\Im Mittelpunkt dieses Anwendungsfalls steht die Entscheidung, welche Aktion durchgeführt werden soll. Hier kann der Anwender auswählen, ob er die Stammdaten bearbeitet, einen weiteren Mitarbeiter zuordnet oder ein Kriterium anpasst. Im Anschluss an die Durchführung einer Aktivität kann der Anwender erneut entscheiden, ob er eine weitere Aktion durchführen möchte, bis schließlich alle gewünschten Anpassungen durchgeführt wurden.
 
 \newpage
 \subsubsection{Anwendungsfall 4: Prozess erfassen}
@@ -206,15 +206,15 @@ Der Anwendungsfall \glqq{}Fortschritt erfassen\grqq{} dient dazu den in der S/4H
         \underline{Ziel:} & Im Projekt geleisteten Fortschritt dokumentieren \\\hline
         \underline{Kategorie:} & Primär \\\hline
         \underline{Vorbedingung:} & Der Benutzer ist mit Benutzername und Passwort angemeldet; Projekt mit Teilprojekt(en) und Projektphase(n) ist angelegt; Bearbeiter ist Projekt und Teilprojekt zugeordnet \\\hline
-        \underline{Nachbedingung Erfolg:} & Projektphasenattribute werden ausgefüllt; Fortschrittsanzeige verändert sich \\\hline
-        \underline{Nachbedingung Fehlschlag:} & Keine Änderung in Projektphasenattribut; Fortschrittsanzeige bleibt gleich \\\hline
+        \underline{Nachbedingung Erfolg:} & Projektphasenkriterien werden ausgefüllt; Fortschrittsanzeige verändert sich \\\hline
+        \underline{Nachbedingung Fehlschlag:} & Keine Änderung in Projektphasenkriterien; Fortschrittsanzeige bleibt gleich \\\hline
         \underline{Akteure:} & Teilprojektleiter; Projektmitarbeiter \\\hline
         \underline{Auslösendes Ereignis:} & Im Transformationsprozess wurde Aufgabe abgearbeitet (Außerhalb des IT-Systems)\\\hline        
         \multirow{1}{*}{\underline{Beschreibung:}} & [1] Projekt aufrufen \\
         & [2] Teilprojekt aufrufen \\
         & [3] Prozess aufrufen \\
-        & [4] Projektphasenattribut mit Wert befüllen \\\hline
-        \multirow{1}{*}{\underline{Erweiterung:}} & [4a] Weitere Projektphasenattribute verändern \\\hline
+        & [4] Projektphasenkriterium mit Wert befüllen \\\hline
+        \multirow{1}{*}{\underline{Erweiterung:}} & [4a] Weitere Projektphasenkriterien verändern \\\hline
         \underline{Alternativen:} & ./. \\\hline
 \end{tabularx}
 \captionof{table}[Anwendungsfall 5: Fortschritt erfassen]{Fortschritt erfassen}
@@ -226,7 +226,7 @@ In dem in Abbildung \ref{fig:AD5} dargestellten Aktivitätsdiagramm sind die Sch
     \caption[Aktivitätsdiagramm Anwendungsfall 5]{Aktivitätsdiagramm Fortschritt erfassen}
     \label{fig:AD5}
 \end{figure}
-\\Diese Erfassung wird durch die Ausprägung der Projektphasenattribute im System vorgenommen. Dazu wird zuerst der Prozess und im nachfolgenden Verlauf ein einzelner Prozessschritt aufgerufen und dort die Ausprägung der Attribute gepflegt.
+\\Diese Erfassung wird durch die Ausprägung der Projektphasenkriterien im System vorgenommen. Dazu wird zuerst der Prozess und im nachfolgenden Verlauf ein einzelner Prozessschritt aufgerufen und dort die Ausprägung der Kriterien gepflegt.
 \newpage
 \subsubsection{Anwendungsfall 6: Fortschritt überprüfen}
 Der Anwendungsfall 6 \glqq{}Fortschritt überprüfen\grqq{} beschreibt das Vorgehen zur Überprüfung des geleisteten Fortschrittes. Dies geschieht durch ein eigens dafür vorgesehenes Dashboard, das auf einem Blick den Fortschritt eines Projektes wiederspiegelt.\\

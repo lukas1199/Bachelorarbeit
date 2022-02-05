@@ -30,10 +30,10 @@ In den nachfolgenden Tabelle werden zuerst die ermittelten Klassen beschrieben, 
     Projekt & Eine Einheit, die ein S/4HANA-Transformationsprojekt abbildet. \\\hline
     Teilprojekt & Eine Einheit, die ein Teilprojekt in einem S/4HANA-Transformationsprojekt abbildet. \\\hline
     Projektphase & Ein Zeitraum in einem S/4HANA-Transformationsprojekt\\\hline
-    Attribut & Eine Eigenschaft einer Projektphase, die während der S/4HANA-Transformation erfüllt wird. \\\hline
-    Boolsches Attribut & Ein Attribut, das einen Ja- oder Nein-Wert speichert.\\\hline
-    Textattribut & Ein Attribut, das eine Zeichenkette speichert.\\\hline
-    Zahlenattribut & Ein Attribut, das eine Ganzzahl oder Gleitkommazahl speichert. \\\hline
+    Kriterium & Eine Eigenschaft einer Projektphase, die während der S/4HANA-Transformation erfüllt wird. \\\hline
+    BoolschesKriterium & Ein Kriterium, das einen Ja- oder Nein-Wert speichert.\\\hline
+    Textkriterium & Ein Kriterium, das eine Zeichenkette speichert.\\\hline
+    Zahlenkriterium & Ein Kriterium, das eine Ganzzahl oder Gleitkommazahl speichert. \\\hline
     Prozess &  Ein in SAP abgebildetete Folge von Aktivitäten.\\\hline
     Subprozess &  Ein in sich geschlossener Abschnitt eines Prozess.\\\hline
     Prozessschritt & Eine Aktivität eines Prozess.\\\hline
@@ -61,8 +61,8 @@ Assoziationen sind Beziehungen, die zwischen Klassen bestehen und können unters
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter kann eine oder mehrere Projektphasen erstellen aber eine Projektphase kann nur durch genau einen Projektleiter erstellt werden.}\\\hline\hline
     %%%%%%
     %%%%%%
-    Teilprojektleiter & 1 & 0..* & Attribut\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter kann kein, oder belieb viele Attribute erstellen, ein Attribut wird jedoch nur durch eine Teilprojektleiter erstellt.}\\\hline\hline
+    Teilprojektleiter & 1 & 0..* & Kriterium\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter kann kein, oder belieb viele Kriterien erstellen, ein Kriterium wird jedoch nur durch eine Teilprojektleiter erstellt.}\\\hline\hline
     %%%%%%
     Projektleiter & 1..* & 0..* & Projekt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter verwaltet kein oder mehrere Projekte und ein Projekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
@@ -70,10 +70,10 @@ Assoziationen sind Beziehungen, die zwischen Klassen bestehen und können unters
     Teilprojektleiter & 1..* & 0..* & Teilprojekt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter verwaltet kein oder mehrere Teilprojekte und ein Teilprojekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
     %%%%%%
-    Projektmitarbeiter & 1 & 0..* & Attribut\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder belieb viele Attribute erstellen, ein Attribut wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
-    Prozessschritt & 0..* & 0..* & Attribut\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Attribute aus und ein Attribut wird durch kein oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
+    Projektmitarbeiter & 1 & 0..* & Kriterium\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder belieb viele Kriterien erstellen, ein Kriterium wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
+    Prozessschritt & 0..* & 0..* & Kriterium\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Kriterien aus und ein Kriterium wird durch kein oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
     Kunde & 0..* & 0..1 & Projekt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Kunde betrachtet keins oder ein Projekt und ein Projekt wird von keinem oder mehreren Kunden betrachtet.}\\\hline\hline
     Subprozess & 0..1 & 1..* & Prozessschritt\\\hline
@@ -110,8 +110,8 @@ Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte de
     Projekt & 1 & 1..* & Teilprojekt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann ein oder mehrere Teilprojekte beinhalten und ein Teilprojekt gehört zu genau einem Projekt. Ein Projekt ohne Teilprojekte kann nicht existieren, ein Teilprojekt ohne Projekt ebenfalls nicht.}\\\hline\hline
     %%%%%%
-    Projektphase & 1 & 1..* & Attribut\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Eine Projektphase hat ein oder mehrere Attribute und ein Attribut gehört zu genau einer Projektphase. Eine Projektphase ohne Attribute kann nicht existieren, ein Attribut ohne Projektphase ebenfalls nicht.}\\\hline\hline
+    Projektphase & 1 & 1..* & Kriterium\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Eine Projektphase hat ein oder mehrere Kriterien und ein Kriterium gehört zu genau einer Projektphase. Eine Projektphase ohne Kriterien kann nicht existieren, ein Kriterium ohne Projektphase ebenfalls nicht.}\\\hline\hline
     %%%%%%
     Prozess & 1 & 1..* & Prozessschritt\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess hat ein oder mehrere Prozessschritte und ein Prozessschritt gehört immer zu genau einem Prozess. Ein Prozess ohne Prozessschritte kann nicht existieren, ein Prozessschritt ohne Prozess ebenfalls nicht.}\\\hline
@@ -120,13 +120,13 @@ Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte de
 \captionof{table}[Klassen mit Kompositionen]{Beschreibung der ermittelten Klassen mit Kompositionen}
 \newpage
 \subsubsection{Beschreibung der Generalisierungen}
-Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt, die ihre Attribute an eine oder mehrere spezialisierte, bzw. abgeleitete Klassen vererbt.\\
+Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt, die ihre Kriterien an eine oder mehrere spezialisierte, bzw. abgeleitete Klassen vererbt.\\
 
 \begin{xltabular}{\textwidth}{|p{0.472\textwidth}|p{0.472\textwidth}|}
     \hline
     \multicolumn{2}{|c|}{\textbf{Klassen mit Generalisierungen}}\\\hline\hline
-    Boolsches Attribut, Textattribut, Zahlenattribut & Attribut \\\hline
-    \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Attribut ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen Boolsches Attribut, Textattribut und Zahlenattribut.}\\\hline\hline
+    BoolschesKriterium, Textkriterium, Zahlenkriterium & Kriterium \\\hline
+    \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Kriterium ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen BoolschesKriterium, Textkriterium und Zahlenkriterium.}\\\hline\hline
     Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter, Kunde & Benutzer \\\hline
     \multicolumn{2}{|p{0.944\textwidth}|}{Die Klasse Benutzer ist abstrakt und vererbt ihre Eigenschaften an die abgeleiteten Klassen Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunde.}\\\hline
 \end{xltabular}
@@ -150,7 +150,7 @@ Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Busi
     \caption[Paketdiagramm]{Paketdiagramm}
     \label{fig:Paketdiagramm}
 \end{figure}
-\\Die ermittelten Pakete sind \glqq{}Benuterrollen\grqq{}, \glqq{}Projektaufbau\grqq{}, \glqq{}Prozessinhalt\grqq{} und \glqq{}Prozessattribute\grqq{}. 
+\\Die ermittelten Pakete sind \glqq{}Benuterrollen\grqq{}, \glqq{}Projektaufbau\grqq{}, \glqq{}Prozessinhalt\grqq{} und \glqq{}Transformationskriterien\grqq{}. 
 \vspace{1em}
 \\Das Paket \underline{Benutzerrollen} enthält die Klassen \emph{Benuter, Administrator, Projektleiter, Teilprojektleiter, Projektmitarbeiter und Kunde}. Diese Klassen werden für den Aufbau der Berechtigungen und der Rollen benötigt werden. 
 \vspace{1em}
@@ -158,9 +158,9 @@ Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Busi
 \vspace{1em}
 \\In dem Paket \underline{Prozessinhalt} befinden sich die Klassen \emph{Prozess, Subprozess und Prozessschritt}, die in der direkten Interaktion mit dem Anwender stehen. Mit ihnen werden die Geschäftsprozesse im System erfasst, indem diese nach Prozess, Subprozess und Prozessschritt aufgespalten werden. 
 \vspace{1em}
-\\Das Paket \underline{Prozessattribute} enthält die Klassen \emph{Attribut, Boolsches Attribut, Textattribut und Zahlenattribut}, die für die Ausprägung der Fortschrittserfassung der Geschäfts-prozesse benötigt werden.
+\\Das Paket \underline{Transformationskriterien} enthält die Klassen \emph{Kriterium, BoolschesKriterium, Textkriterium und Zahlenkriterium}, die für die Ausprägung der Fortschrittserfassung der Geschäfts-prozesse benötigt werden.
 \vspace{1em}
-\\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Prozessattribute}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Prozessattribute}. In allen fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
+\\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Transformationskriterien}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Transformationskriterien}. In allen fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
 \vspace{1em}
 \\\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Paketdiagramm.png dieser Arbeit abgelegt.}
 
