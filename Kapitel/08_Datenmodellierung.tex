@@ -135,13 +135,99 @@ Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt
 \subsection{Erweitertes Klassendiagramm}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.45]{./Bilder/Klassendiagramm.png}
+    \includegraphics[scale=0.43]{./Bilder/GroßesKlassendiagramm.png}
     \caption[Erweitertes Klassendiagramm]{Erweitertes Klassendiagramm}
     \label{fig:Klassendiagramm}
 \end{figure}
 \emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Klassendiagramm.png dieser Arbeit abgelegt.}
-
 \newpage
+\subsection{Detaillierte Spezifikationen der Klassen}
+Nachfolgend werden zur Begründung des Vorgehen im erweiterten Klassendiagramm, exemplarisch die Attribute, Operationen und strukturieretn Datentypen der Klassen Benutzer, Projekt und Prozessschritt genauer spezifiziert. Dazu werden die Attribute der Klassen und die Attribute der strukturierten Datentypen anhand den Kriterien \glqq{}Datentyp\grqq{}, \glqq{}Anfangswert\grqq{}, \glqq{}Erforderlichkeit\grqq{}, \glqq{}Schlüssel\grqq{}, \glqq{}Änderbarkeit\grqq{}, \glqq{}Einheit\grqq{}, und \glqq{}Beschreibung\grqq{} beschrieben und aufgeschlüsselt, sowie die Operationen anhand der Eigenschaften \glqq{}Typ\grqq{}, \glqq{}Parameter\grqq{}, \glqq{}Ergebnis\grqq{} und \glqq{}Wirkung\grqq{}. 
+
+\subsubsection{Spezifikationen der Klasse Benutzer}
+
+\begin{tabularx}{\textwidth}{|p{0.155\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.1\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.09\textwidth}|}
+    \hline
+    \multicolumn{7}{|c|}{\textbf{Attribute der Klasse Benutzer}}\\\hline
+    Attribut & user & passwort & vorname & nachname & abteilung & userID\\\hline\hline
+    Datentyp & String & String & String & String & String & IdT\\\hline
+    Anfangswert & - & - & - & - & - & 001\\\hline
+    Erforderlich & ja & ja & nein & nein & nein & ja \\\hline
+    Schlüssel & ja & nein & nein & nein & nein & ja\\\hline
+    Änderbarkeit & ja & ja & ja & ja & ja & nein \\\hline
+    Einheit & - & - & - & - & - & -\\\hline
+    Beschreibung & - & Nur durch Benutzer festlegbar & - & - & - & - \\\hline
+\end{tabularx}
+\captionof{table}[Klassenattribute Benutzer]{Attribute der Klasse Benutzer}
+\vspace{3em}
+\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.155\textwidth}|P{0.245\textwidth}|}
+    \hline
+    \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Benutzer}}\\\hline
+    Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
+    gibStammdaten & Objekt-operation & userID: IdT & stammdatenT & User, Name, Abteilung und ID werden ausgegeben\\\hline
+    gibBenutzerrolle & Objekt-operation & userID: IdT & String & Benutzerrolle wird ausgegeben\\\hline
+    erstelleBenutzer & Klassen-operation & user: String & IdT & Neuer Benutzer wird erstellt, ID zurückgegeben\\\hline
+    sperreBenutzer & Objekt-operation & userID: IdT & - & Der Zugang des Benutzers wird gesperrt\\\hline
+    gibID & Objekt-operation & user: String & IdT & ID des Benutzers wird ausgegeben\\\hline
+\end{tabularx}
+\captionof{table}[Klassenoperationen Benutzer]{Operationen der Klasse Benutzer}
+
+\subsubsection{Spezifikationen der Klasse Projekt}
+\begin{tabularx}{\textwidth}{|p{0.155\textwidth}|P{0.09\textwidth}|P{0.07\textwidth}|P{0.08\textwidth}|P{0.1\textwidth}|P{0.1\textwidth}|P{0.1\textwidth}|P{0.08\textwidth}|}
+    \hline
+    \multicolumn{8}{|c|}{\textbf{Attribute der Klasse Projekt}}\\\hline
+    Attribut & prjname & prjID & kunde & beschrb & beginn & ende & prjleit\\\hline\hline
+    Datentyp & String & IdT & String & String & DatumT & DatumT & IdT \\\hline
+    Anfangswert & - & 001 & - & - & 01.01.21 & 01.01.22 & - \\\hline
+    Erforderlich & ja & ja & ja & nein & ja & nein & ja \\\hline
+    Schlüssel & nein & ja & nein & nein & nein & nein & nein \\\hline
+    Änderbarkeit & ja & nein & ja & ja & nein & ja & ja\\\hline
+    Einheit & - & - & - & - & Zeit & Zeit & - \\\hline
+    Beschreibung & - & - & - & Freitext & - & - & -\\\hline
+\end{tabularx}
+\captionof{table}[Klassenattribute Projekt]{Attribute der Klasse Projekt}
+\vspace{3em}
+\begin{tabularx}{\textwidth}{|p{0.21\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.145\textwidth}|P{0.225\textwidth}|}
+    \hline
+    \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Projekt}}\\\hline
+    Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
+    erstelleProjekt & Klassen-operation & prjname: String & IdT & Neues Projekt wird erstellt, ID zurückgegeben \\\hline
+    gibFortschritt & Objekt-operation & prjID: IdT & float & Der Gesamtfortschritt in Prozent wird ausgegeben \\\hline
+    gibTeilprojekte & Objekt-operation & prjID: IdT & String[] & Es wird ein Array mit den Teilprojekten Ausgegeben \\\hline
+    ändereProjektleiter & Objekt-operation & prjID: IdT; prjleit: IdT & - & Projektleiter wird geändert \\\hline
+    ändereEnde & Objekt-operation & ende: DatumT & - & Die Laufzeit wird verländert \\\hline
+    gibID & Objekt-operation & prjname: String & IdT & ID des Projekts wird ausgegeben\\\hline
+\end{tabularx}
+\captionof{table}[Klassenoperationen Projekt]{Operationen der Klasse Projekt}
+
+
+\subsubsection{Spezifikationen der Klasse Prozesschritt}
+\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|}
+    \hline
+    \multicolumn{6}{|c|}{\textbf{Attribute der Klasse Prozessschritt}}\\\hline
+    Attribut & schrittID & name & subprozess & prozess & teilprojekt \\\hline\hline
+    Datentyp & IdT & String & IdT & IdT & IdT \\\hline
+    Anfangswert & 001 & - & - & - & - \\\hline
+    Erforderlich & ja & ja & nein & ja & nein\\\hline
+    Schlüssel & ja & nein & nein & nein & nein\\\hline
+    Änderbarkeit & nein & ja & ja & ja & ja \\\hline
+    Einheit & - & - & - & - & -\\\hline
+    Beschreibung & - & - & - & - & -\\\hline
+\end{tabularx}
+\captionof{table}[Klassenattribute Prozessschritt]{Attribute der Klasse Prozessschritt}
+\vspace{3em}
+\begin{tabularx}{\textwidth}{|p{0.21\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.145\textwidth}|P{0.225\textwidth}|}
+    \hline
+    \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Prozesschritt}}\\\hline
+    Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
+    gibProzess & Objekt-operation & schrittID: IdT & IdT & ID des Prozess wird ausgegeben\\\hline
+    gibSubprozess & Objekt-operation & schrittID: IdT & IdT & ID des Subprozess wird ausgegeben\\\hline
+    erstelleSchritt & Klassen-operation & name: String; prozess: IdT & IdT & Neuer Schritt wird angelegt; ID wird zurückgegeben\\\hline
+    gibFortschritt & Objekt-operation & schrittID: IdT & float & Fortschritt des Schritts wird in Prozent ausgegeben \\\hline
+    gibID & Objekt-operation & name: String & IdT & ID des Schritts wird ausgegeben\\\hline
+\end{tabularx}
+\captionof{table}[Klassenoperationen Prozessschritt]{Operationen der Klasse Prozessschritt}
+
 \subsection{Paketdiagramm}
 Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Business Transformation Trackers zu vier Paketen in einem Paketdiagramm.\\
 \begin{figure}[h!]
@@ -163,88 +249,3 @@ Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Busi
 \\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Transformationskriterien}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Transformationskriterien}. In allen fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
 \vspace{1em}
 \\\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Paketdiagramm.png dieser Arbeit abgelegt.}
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{comment}
-%überarbeiten, an neues Buch anpassen
-%Anforderungen --> Anforderungsspezifikation --> Fachliche Lösung
-In dem nun folgendem Kapitel wird die Anforderungsanalyse behandelt. Orientiert wird sich dazu an dem Vorgehensmodell von Helmut Balzert, das ausführlich in dem Modul BIS-134 Anforderungsanalyse des Studiengangs Wirtschaftsinformatik der Hochschule Hannover behandelt wurde.\\Die Anforderungsanalyse ist einer der ersten Schritte im Softwareentwicklungsprozess und hat zum Ziel die Anforderungen zu ermitteln, die das System, in diesem Fall der Business Transformation Tracker, leisten soll, sowie diese zu definieren. Dadurch soll eine größtmögliche Abdeckung der gestellten Anforderungen erreicht werden und Unstimmigkeiten mit dem Kunden, bzw. dem Auftraggeber, in Bezug auf Funktion und Umfang, vermieden werden. Im Wasserfallmodell nach Balzert ist die Anforderungsanalyse in der Definitionsphase verortert und arbeitet somit mit den Ergebnisobjekten der vorangegangenen Planungsphase. \footcite[Vgl.][S. 100 ff.]{balzert} Die Ergebnisse der Anforderungsanalyse werden dem anschließenden Kapitel, der Konzeption und somit der Entwurfsphase, als Basis dienen.\\
-Im Rahmen dieser    Darstellung in UML
-
-
-\subsection{Ermittlung der Anforderungen}
-Im nachfolgendem Kapitel werden die Anforderungen an die Software, die sich aus der Problemstellung und Gesprächen mit dem Auftraggeber ergeben haben, genauer spezifiziert. Im Anschluss folgen dann die zusätzlichen Anforderungen, die sich aus der Umfrage ergeben haben.
-
-\subsubsection{Nichtfunktionale Anforderungen}
-%Anforderungen müssen systematisch gewonnen werden von Beteiligten und Betroffenen, sonstige quellen
-
-\subsection{Spezifizierung der Anforderungen}
-%Ermittelte Anforderungen müssen spezifiziert werden, unter Berücksichtigung von festgelegten Methoden, Richtlinien, etc.
-
-\subsection{Analyse der Anforderungen}
-%Spezifizierte Anforderungen müssen anhand von Richtlinien und Checklisten analysiert werden
-
-\subsection{Modellierung der Anforderungen}
-%analysierte und validierte Anforderungen bilden Ausgangspunkt für Modellierung der fachlichen Lösung
-
-\subsection{Verifikation der Anforderungen}
-
-\subsection{Wahl der Entwicklungsplattform}
-warum java, nicht web, nicht abap, nicht etc..
-bewertung der it sicherheit anhand bestimmter kriterien (datenschutz, zugriffssicherheit, bewahrung von geschäftsgeheimnissne), java weil protierung auf allen plattformen (windows, unix, macos) verfügbar
-
-\subsection{Pflichtenheft}
-Durch den Auftraggeber wurden folgende Anforderungen gestellt:
-
-\subsection{Use-Cases}
-Akteure des IT-Systems definieren
-Mitarbeiter: Projektmitarbeiter, Projektleiter, Teilprojektleiter
-Usecase 1:
-Der Projektleiter möchte ein neues Projekt anlegen und die Mitarbeiter zuordnen
-
-Usecase 2:
-Der Teilprojektleiter öffnet ein vorhandenes Projekt und fügt erfasst die Prozesse und Subprozesse
-
-Usecase 3:
-Ein Projektmitarbeiter möchte den aktuellen Fortschritt in einem Subprozess erfassen.
-
-\subsection{Umgebung}
-\subsection{Schnittstellen}
-
-%Methodik
-\begin{comment}
-    %Methodik
-    --> Wasserfallmodell nach Helmut Balzert(1995), S.100 ff.
-
-    Anwendungsfälle
-    Geschäftsprozessdiagramm, Aktivitätsdiagramm (Folie 94)
-    Anwendungsfalldiagramm, -schablone
-    Klassendiagramme --> Beziehungen --> Detailliertes Klassendiagramme
-    Attribute Spezifizieren (exemplarisch), Operationen
-    Sequenzdiagramm
-
-    Pflichtenheft (genaue spezifizierung) 
-    Verfeinerung des Lastenheftes
-    Verbale Beschreibung dessen, was das System leisten soll (Auftraggebersicht)
-    Dient i. a. als vertragliche Beschreibung des Lieferumfangs
-    Einstiegsdokument für alle, die das System später pflegen und warten sollen
-    Grundlage für die Erstellung des Produkt-Modells
-
-    Ziel
-    •Präzise Festlegung, WAS das System leisten soll (aus Sicht des Auftraggebers)
-    Anforderungsanalyse
-    •Ermittlung und Beschreibung der Anforderungen des Auftraggebers an ein IT-System
-    •Bestimmung dessen, WAS das System leisten soll
-    •Erstellen eines logischen Modells
-
-\end{comment}

@@ -16,6 +16,8 @@
 \usepackage{tabularx}
 \usepackage{capt-of}
 \usepackage{xltabular}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage[backend=biber, %% Hilfsprogramm "biber" (statt "biblatex" oder "bibtex")
 style=authoryear-ibid, %% Zitierstil (siehe Dokumentation)
 natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
