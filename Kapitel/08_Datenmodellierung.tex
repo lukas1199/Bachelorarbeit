@@ -135,7 +135,7 @@ Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt
 \subsection{Erweitertes Klassendiagramm}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.43]{./Bilder/GroßesKlassendiagramm.png}
+    \includegraphics[scale=0.45]{./Bilder/GroßesKlassendiagramm.png}
     \caption[Erweitertes Klassendiagramm]{Erweitertes Klassendiagramm}
     \label{fig:Klassendiagramm}
 \end{figure}
@@ -145,89 +145,130 @@ Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt
 Nachfolgend werden zur Begründung des Vorgehen im erweiterten Klassendiagramm, exemplarisch die Attribute, Operationen und strukturieretn Datentypen der Klassen Benutzer, Projekt und Prozessschritt genauer spezifiziert. Dazu werden die Attribute der Klassen und die Attribute der strukturierten Datentypen anhand den Kriterien \glqq{}Datentyp\grqq{}, \glqq{}Anfangswert\grqq{}, \glqq{}Erforderlichkeit\grqq{}, \glqq{}Schlüssel\grqq{}, \glqq{}Änderbarkeit\grqq{}, \glqq{}Einheit\grqq{}, und \glqq{}Beschreibung\grqq{} beschrieben und aufgeschlüsselt, sowie die Operationen anhand der Eigenschaften \glqq{}Typ\grqq{}, \glqq{}Parameter\grqq{}, \glqq{}Ergebnis\grqq{} und \glqq{}Wirkung\grqq{}. 
 
 \subsubsection{Spezifikationen der Klasse Benutzer}
-
-\begin{tabularx}{\textwidth}{|p{0.155\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.1\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.09\textwidth}|}
+\begin{xltabular}{\textwidth}{|p{0.155\textwidth}||P{0.1\textwidth}|P{0.11\textwidth}|P{0.1\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.105\textwidth}|}
     \hline
     \multicolumn{7}{|c|}{\textbf{Attribute der Klasse Benutzer}}\\\hline
     Attribut & user & passwort & vorname & nachname & abteilung & userID\\\hline\hline
-    Datentyp & String & String & String & String & String & IdT\\\hline
-    Anfangswert & - & - & - & - & - & 001\\\hline
+    Datentyp & String & String & String & String & String & String\\\hline
+    Anfangswert & - & - & - & - & - & USR0001\\\hline
     Erforderlich & ja & ja & nein & nein & nein & ja \\\hline
     Schlüssel & ja & nein & nein & nein & nein & ja\\\hline
     Änderbarkeit & ja & ja & ja & ja & ja & nein \\\hline
     Einheit & - & - & - & - & - & -\\\hline
     Beschreibung & - & Nur durch Benutzer festlegbar & - & - & - & - \\\hline
-\end{tabularx}
+\end{xltabular}
 \captionof{table}[Klassenattribute Benutzer]{Attribute der Klasse Benutzer}
-\vspace{3em}
-\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.155\textwidth}|P{0.245\textwidth}|}
+\newpage
+\begin{xltabular}{\textwidth}{|p{0.18\textwidth}||P{0.13\textwidth}|P{0.15\textwidth}|P{0.16\textwidth}|P{0.24\textwidth}|}
     \hline
     \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Benutzer}}\\\hline
     Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
-    gibStammdaten & Objekt-operation & userID: IdT & stammdatenT & User, Name, Abteilung und ID werden ausgegeben\\\hline
-    gibBenutzerrolle & Objekt-operation & userID: IdT & String & Benutzerrolle wird ausgegeben\\\hline
-    erstelleBenutzer & Klassen-operation & user: String & IdT & Neuer Benutzer wird erstellt, ID zurückgegeben\\\hline
-    sperreBenutzer & Objekt-operation & userID: IdT & - & Der Zugang des Benutzers wird gesperrt\\\hline
-    gibID & Objekt-operation & user: String & IdT & ID des Benutzers wird ausgegeben\\\hline
-\end{tabularx}
+    gibStammdaten & Objekt-operation & userID: String & StammdatenT & User, Name, Abteilung und ID werden ausgegeben\\\hline
+    gibBenutzerrolle & Objekt-operation & userID: String & String & Benutzerrolle wird ausgegeben\\\hline
+    erstelleBenutzer & Klassen-operation & user: String & String & Neuer Benutzer wird erstellt, ID zurückgegeben\\\hline
+    sperreBenutzer & Objekt-operation & userID: String & - & Der Zugang des Benutzers wird gesperrt\\\hline
+    gibID & Objekt-operation & user: String & String & ID des Benutzers wird ausgegeben\\\hline
+\end{xltabular}
 \captionof{table}[Klassenoperationen Benutzer]{Operationen der Klasse Benutzer}
-
+\vspace{5em}
+\begin{xltabular}{\textwidth}{|p{0.17\textwidth}||P{0.14\textwidth}|P{0.14\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|}
+    \hline
+    \multicolumn{6}{|c|}{\textbf{Strukturierer Datentyp StammdatenT}}\\\hline
+    Attribut & user & vorname & nachname & abteilung & userID\\\hline\hline
+    Datentyp & String & String & String & String & String\\\hline
+    Anfangswert & - & - & - & - & -\\\hline
+    Erforderlich & ja & nein & nein & nein & ja \\\hline
+    Schlüssel & ja & nein & nein & nein & ja\\\hline
+    Änderbarkeit & ja & ja & ja & ja & nein \\\hline
+    Einheit & - & - & - & - & -\\\hline
+    Beschreibung & - &  - & - & - & - \\\hline
+\end{xltabular}
+\captionof{table}[Strukturierter Datentyp StammdatenT]{Strukturierter Datentyp StammdatenT}
+\vspace{3em}
 \subsubsection{Spezifikationen der Klasse Projekt}
-\begin{tabularx}{\textwidth}{|p{0.155\textwidth}|P{0.09\textwidth}|P{0.07\textwidth}|P{0.08\textwidth}|P{0.1\textwidth}|P{0.1\textwidth}|P{0.1\textwidth}|P{0.08\textwidth}|}
+\begin{xltabular}{\textwidth}{|p{0.15\textwidth}||P{0.09\textwidth}|P{0.11\textwidth}|P{0.08\textwidth}|P{0.085\textwidth}|P{0.095\textwidth}|P{0.095\textwidth}|P{0.08\textwidth}|}
     \hline
     \multicolumn{8}{|c|}{\textbf{Attribute der Klasse Projekt}}\\\hline
     Attribut & prjname & prjID & kunde & beschrb & beginn & ende & prjleit\\\hline\hline
-    Datentyp & String & IdT & String & String & DatumT & DatumT & IdT \\\hline
-    Anfangswert & - & 001 & - & - & 01.01.21 & 01.01.22 & - \\\hline
+    Datentyp & String & String & String & String & DatumT & DatumT & String \\\hline
+    Anfangswert & - & PRJ0001 & - & - & 01.01.21 & 01.01.22 & - \\\hline
     Erforderlich & ja & ja & ja & nein & ja & nein & ja \\\hline
     Schlüssel & nein & ja & nein & nein & nein & nein & nein \\\hline
     Änderbarkeit & ja & nein & ja & ja & nein & ja & ja\\\hline
     Einheit & - & - & - & - & Zeit & Zeit & - \\\hline
     Beschreibung & - & - & - & Freitext & - & - & -\\\hline
-\end{tabularx}
+\end{xltabular}
 \captionof{table}[Klassenattribute Projekt]{Attribute der Klasse Projekt}
-\vspace{3em}
-\begin{tabularx}{\textwidth}{|p{0.21\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.145\textwidth}|P{0.225\textwidth}|}
+\vspace{5em}
+\begin{xltabular}{\textwidth}{|p{0.22\textwidth}||P{0.13\textwidth}|P{0.15\textwidth}|P{0.16\textwidth}|P{0.22\textwidth}|}
     \hline
     \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Projekt}}\\\hline
     Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
-    erstelleProjekt & Klassen-operation & prjname: String & IdT & Neues Projekt wird erstellt, ID zurückgegeben \\\hline
-    gibFortschritt & Objekt-operation & prjID: IdT & float & Der Gesamtfortschritt in Prozent wird ausgegeben \\\hline
-    gibTeilprojekte & Objekt-operation & prjID: IdT & String[] & Es wird ein Array mit den Teilprojekten Ausgegeben \\\hline
-    ändereProjektleiter & Objekt-operation & prjID: IdT; prjleit: IdT & - & Projektleiter wird geändert \\\hline
+    erstelleProjekt & Klassen-operation & prjname: String & String & Neues Projekt wird erstellt, ID zurückgegeben \\\hline
+    gibFortschritt & Objekt-operation & prjID: String & float & Der Gesamtfortschritt in Prozent wird ausgegeben \\\hline
+    gibTeilprojekte & Objekt-operation & prjID: String & String[] & Es wird ein Array mit den Teilprojekten Ausgegeben \\\hline
+    ändereProjektleiter & Objekt-operation & prjID: String; prjleit: String & - & Projektleiter wird geändert \\\hline
     ändereEnde & Objekt-operation & ende: DatumT & - & Die Laufzeit wird verländert \\\hline
-    gibID & Objekt-operation & prjname: String & IdT & ID des Projekts wird ausgegeben\\\hline
-\end{tabularx}
+    gibID & Objekt-operation & prjname: String & String & ID des Projekts wird ausgegeben\\\hline
+\end{xltabular}
 \captionof{table}[Klassenoperationen Projekt]{Operationen der Klasse Projekt}
+\vspace{5em}
+\begin{xltabular}{\textwidth}{|p{0.23\textwidth}||P{0.23\textwidth}|P{0.23\textwidth}|P{0.23\textwidth}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Strukturierer Datentyp DatumT}}\\\hline
+    Attribut & tag & monat & jahr\\\hline\hline
+    Datentyp & int & int & int\\\hline
+    Anfangswert & 1 & 1 & 2021 \\\hline
+    Erforderlich & ja & ja & ja\\\hline
+    Schlüssel & ja & ja & ja\\\hline
+    Änderbarkeit & ja & ja & ja\\\hline
+    Einheit & Tage & Monat & Jahr\\\hline
+    Beschreibung & - & - & -\\\hline
+\end{xltabular}
+\captionof{table}[Strukturierter Datentyp DatumT]{Strukturierter Datentyp DatumT}
 
 
 \subsubsection{Spezifikationen der Klasse Prozesschritt}
-\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|P{0.13\textwidth}|}
+\begin{xltabular}{\textwidth}{|p{0.18\textwidth}||P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|}
     \hline
     \multicolumn{6}{|c|}{\textbf{Attribute der Klasse Prozessschritt}}\\\hline
     Attribut & schrittID & name & subprozess & prozess & teilprojekt \\\hline\hline
-    Datentyp & IdT & String & IdT & IdT & IdT \\\hline
-    Anfangswert & 001 & - & - & - & - \\\hline
+    Datentyp & String & String & String & String & TeilprojekT \\\hline
+    Anfangswert & PSR001 & - & - & - & - \\\hline
     Erforderlich & ja & ja & nein & ja & nein\\\hline
     Schlüssel & ja & nein & nein & nein & nein\\\hline
     Änderbarkeit & nein & ja & ja & ja & ja \\\hline
     Einheit & - & - & - & - & -\\\hline
     Beschreibung & - & - & - & - & -\\\hline
-\end{tabularx}
+\end{xltabular}
 \captionof{table}[Klassenattribute Prozessschritt]{Attribute der Klasse Prozessschritt}
 \vspace{3em}
-\begin{tabularx}{\textwidth}{|p{0.21\textwidth}|P{0.13\textwidth}|P{0.15\textwidth}|P{0.145\textwidth}|P{0.225\textwidth}|}
+\begin{xltabular}{\textwidth}{|p{0.21\textwidth}||P{0.15\textwidth}|P{0.15\textwidth}|P{0.15\textwidth}|P{0.225\textwidth}|}
     \hline
     \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Prozesschritt}}\\\hline
     Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
-    gibProzess & Objekt-operation & schrittID: IdT & IdT & ID des Prozess wird ausgegeben\\\hline
-    gibSubprozess & Objekt-operation & schrittID: IdT & IdT & ID des Subprozess wird ausgegeben\\\hline
-    erstelleSchritt & Klassen-operation & name: String; prozess: IdT & IdT & Neuer Schritt wird angelegt; ID wird zurückgegeben\\\hline
-    gibFortschritt & Objekt-operation & schrittID: IdT & float & Fortschritt des Schritts wird in Prozent ausgegeben \\\hline
-    gibID & Objekt-operation & name: String & IdT & ID des Schritts wird ausgegeben\\\hline
-\end{tabularx}
+    gibProzess & Objekt-operation & schrittID: String & String & ID des Prozess wird ausgegeben\\\hline
+    gibSubprozess & Objekt-operation & schrittID: String & String & ID des Subprozess wird ausgegeben\\\hline
+    erstelleSchritt & Klassen-operation & name: String; prozess: String & String & Neuer Schritt wird angelegt; ID wird zurückgegeben\\\hline
+    gibFortschritt & Objekt-operation & schrittID: String & float & Fortschritt des Schritts wird in Prozent ausgegeben \\\hline
+    gibID & Objekt-operation & name: String & String & ID des Schritts wird ausgegeben\\\hline
+\end{xltabular}
 \captionof{table}[Klassenoperationen Prozessschritt]{Operationen der Klasse Prozessschritt}
-
+\vspace{3em}
+\begin{xltabular}{\textwidth}{|p{0.23\textwidth}||P{0.23\textwidth}|P{0.23\textwidth}|P{0.23\textwidth}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Strukturierer Datentyp TeilprojektT}}\\\hline
+    Attribut & name & teilprojektID & prjID\\\hline\hline
+    Datentyp & String & String & String\\\hline
+    Anfangswert & - & TPR0001 & PRJ0001 \\\hline
+    Erforderlich & ja & ja & ja\\\hline
+    Schlüssel & nein & ja & ja\\\hline
+    Änderbarkeit & ja & ja & ja\\\hline
+    Einheit & - & - & -\\\hline
+    Beschreibung & - & - & -\\\hline
+\end{xltabular}
+\captionof{table}[Strukturierter Datentyp TeilprojektT]{Strukturierter Datentyp TeilprojekT}
+\newpage
 \subsection{Paketdiagramm}
 Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Business Transformation Trackers zu vier Paketen in einem Paketdiagramm.\\
 \begin{figure}[h!]
