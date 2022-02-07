@@ -1,7 +1,7 @@
 \section{Modellierung der Daten}
 \subsection{Darstellung der Klassen}
-In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Kapitel spezifizierten Anforderungen. Ziel ist es mit Hilfe eines Klassendiagramms die Daten des System visuell darzustellen und die Beziehungen der Klassen untereinander zu modellieren. Diese Klasendiagramme sollen einen tatsächlichen Aufbau des Systems darstellen, der in einem späteren, nicht im Rahmen dieser Arbeit angefertigten, Entwurf und Implementierung als Vorlage dienen soll, um die tatsächlichen Klassen aufzubauen. Da dieses Klassendiagramm bereits in der Konzeptionsphase des Systems aufgebaut wird, haben diese Modellierungen keinen Anspruch auf Richtigkeit, da aus technischen oder organisatorischen Gründen zu einem späteren Zeitpunkt noch Änderungen erfolgen können. Diese Änderungen können zum Beispiel aufgrund von technischen Restriktionen der Entwicklungsumgebung oder aufgrund von Wünschen des Auftraggebers auftreten.
-\\Um die Übersichtlichkeit zu bewahren wird als erstes ein Übersichtsklassendiagramm gezeigt, dass die Klassen nur bei ihrem Namen nennt und die Beziehung zwischen den Klassen darstellt. Im Anschluss erfolgt die Beschreibung der Klassen und den herrschenden Assoziationen, Aggregationen, Kompositionen und Generalisierungen. Im Anschluss erfolgt die vollständige Darstellung der Klassen in einem erweiterten Klassendiagramm, indem zusätzlich die Operationen und Attribute dargestellt sind. Danach werden die Attribute und Operationen exemplarisch anhand von drei ausgewählten Klassen spezifiziert. Zum Ende dieses Kapitels erfolgt die Zusammenfassung der Klassen in einem Paketdiagramm.    
+In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Kapitel spezifizierten Anforderungen. Ziel ist es mithilfe eines Klassendiagramms die Daten des Systems visuell darzustellen und die Beziehungen der Klassen untereinander zu modellieren. Diese Klassendiagramme sollen einen tatsächlichen Aufbau des Systems darstellen, der in einem späteren, nicht im Rahmen dieser Arbeit angefertigten, Entwurf und Implementierung als Vorlage dienen soll, um die tatsächlichen Klassen aufzubauen. Da dieses Klassendiagramm bereits in der Konzeptionsphase des Systems aufgebaut wird, haben diese Modellierungen keinen Anspruch auf Richtigkeit, da aus technischen oder organisatorischen Gründen zu einem späteren Zeitpunkt noch Änderungen erfolgen können. Diese Änderungen können zum Beispiel aufgrund von technischen Restriktionen der Entwicklungsumgebung oder aufgrund von Wünschen des Auftraggebers auftreten.
+\\Um die Übersichtlichkeit zu bewahren wird als Erstes ein Übersichtsklassendiagramm gezeigt, dass die Klassen nur bei ihrem Namen nennt und die Beziehung zwischen den Klassen darstellt. Im Anschluss erfolgt die Beschreibung der Klassen und den herrschenden Assoziationen, Aggregationen, Kompositionen und Generalisierungen. Im Anschluss erfolgt die vollständige Darstellung der Klassen in einem erweiterten Klassendiagramm, indem zusätzlich die Operationen und Attribute dargestellt sind. Danach werden die Attribute und Operationen exemplarisch anhand von drei ausgewählten Klassen spezifiziert. Zum Ende dieses Kapitels erfolgt die Zusammenfassung der Klassen in einem Paketdiagramm.    
 
 \newpage
 \subsection{Übersichtsklassendiagramm}
@@ -16,7 +16,7 @@ In diesem Kapitel geht es um die objektorientierte Analyse der in dem letzten Ka
 \newpage
 \subsection{Klassen und Beziehungen}
 \subsubsection{Beschreibung der Klassen}
-In den nachfolgenden Tabelle werden zuerst die ermittelten Klassen beschrieben, danach die Beziehungen mit Assoziationen und die Beziehungen mit Generalisierungen.
+In den nachfolgenden Tabellen werden zuerst die ermittelten Klassen beschrieben, danach die Beziehungen mit Assoziationen und die Beziehungen mit Generalisierungen.
 
 \begin{xltabular}{\textwidth}{|p{0.3\textwidth}|p{0.642\textwidth}|}
     \hline
@@ -34,7 +34,7 @@ In den nachfolgenden Tabelle werden zuerst die ermittelten Klassen beschrieben, 
     BoolschesKriterium & Ein Kriterium, das einen Ja- oder Nein-Wert speichert.\\\hline
     Textkriterium & Ein Kriterium, das eine Zeichenkette speichert.\\\hline
     Zahlenkriterium & Ein Kriterium, das eine Ganzzahl oder Gleitkommazahl speichert. \\\hline
-    Prozess &  Ein in SAP abgebildetete Folge von Aktivitäten.\\\hline
+    Prozess &  Ein in SAP abgebildete Folge von Aktivitäten.\\\hline
     Subprozess &  Ein in sich geschlossener Abschnitt eines Prozess.\\\hline
     Prozessschritt & Eine Aktivität eines Prozess.\\\hline
 \end{xltabular}
@@ -51,33 +51,33 @@ Assoziationen sind Beziehungen, die zwischen Klassen bestehen und können unters
     %%%%%%
     %%%%%%
     Benutzer & 1..* & 0..* & Projekt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Benutzer kann kein, oder mehreren Projekten im System zugeordnet sein und ein Projekt kann keinem oder mehreren Benutzer zugeordnet werden.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Benutzer kann kein, oder mehreren Projekten im System zugeordnet sein und ein Projekt kann keinem, oder mehreren Benutzern zugeordnet werden.}\\\hline\hline
     %%%%%%
     %%%%%%
     Administrator & 1..* & 0..* & Benutzer\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Administrator kann ein keinen oder mehrere Benutzer verwalten und ein Benutzer kann von einem oder mehreren Administratoren verwaltet werden.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Administrator kann ein, keinen, oder mehrere Benutzer verwalten und ein Benutzer kann von einem, oder mehreren Administratoren verwaltet werden.}\\\hline\hline
     %%%%%%
     Projektleiter & 1..* & 1 & Projektphase\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter kann eine oder mehrere Projektphasen erstellen aber eine Projektphase kann nur durch genau einen Projektleiter erstellt werden.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter kann eine, oder mehrere Projektphasen erstellen, aber eine Projektphase kann nur durch genau einen Projektleiter erstellt werden.}\\\hline\hline
     %%%%%%
     %%%%%%
     Teilprojektleiter & 1 & 0..* & Kriterium\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter kann kein, oder belieb viele Kriterien erstellen, ein Kriterium wird jedoch nur durch eine Teilprojektleiter erstellt.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter kann kein, oder beliebig viele Kriterien erstellen, ein Kriterium wird jedoch nur durch eine Teilprojektleiter erstellt.}\\\hline\hline
     %%%%%%
     Projektleiter & 1..* & 0..* & Projekt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter verwaltet kein oder mehrere Projekte und ein Projekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektleiter verwaltet kein, oder mehrere Projekte und ein Projekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
     %%%%%%
     Teilprojektleiter & 1..* & 0..* & Teilprojekt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter verwaltet kein oder mehrere Teilprojekte und ein Teilprojekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojektleiter verwaltet kein, oder mehrere Teilprojekte und ein Teilprojekt wird durch mindestens einen Projektleiter verwaltet}\\\hline\hline
     %%%%%%
     Projektmitarbeiter & 1 & 0..* & Kriterium\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder belieb viele Kriterien erstellen, ein Kriterium wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projektmitarbeiter kann kein, oder beliebig viele Kriterien erstellen, ein Kriterium wird jedoch nur durch einen Projektmitarbeiter erstellt.}\\\hline\hline
     Prozessschritt & 0..* & 0..* & Kriterium\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Kriterien aus und ein Kriterium wird durch kein oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozessschritt prägt kein, oder beliebig viele Kriterien aus und ein Kriterium wird durch kein, oder beliebig vielen Prozessschritten ausgeprägt.}\\\hline\hline
     Kunde & 0..* & 0..1 & Projekt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Kunde betrachtet keins oder ein Projekt und ein Projekt wird von keinem oder mehreren Kunden betrachtet.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Kunde betrachtet keins, oder ein Projekt und ein Projekt wird von keinem, oder mehreren Kunden betrachtet.}\\\hline\hline
     Subprozess & 0..1 & 1..* & Prozessschritt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Subprozess beinhaltet einen oder mehrere Prozessschritte und ein Prozessschritt kann zu keinem oder einem Prozessschritt gehören, da Subprozesse nur optional sind.}\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Subprozess beinhaltet einen, oder mehrere Prozessschritte und ein Prozessschritt kann zu keinem, oder einem Prozessschritt gehören, da Subprozesse nur optional sind.}\\\hline
     
 \end{xltabular}
 \captionof{table}[Klassen mit Assoziationen]{Beschreibung der ermittelten Klassen mit Assoziationen}
@@ -92,7 +92,7 @@ Aggregationen sind eine besondere Form von Assoziationen, bei denen Objekte eine
     Teilprojekt & 1..* & 0..* & Prozess\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt beinhaltet keinen oder mehrere Prozesse, ein Prozess gehört aber immer zu einem oder mehreren Teilprojekten. Ein Teilprojekt ohne Prozesse kann existieren, ein Prozess ohne nicht mindestens ein Teilprojekt jedoch nicht.}\\\hline\hline
     Teilprojekt & 1 & 0..1 & Projektmitarbeiter\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt hat keinen oder mehrere zugeordnete Projektmitarbeiter und ein Projektmitarbeiter ist immer einem Teilprojekt zugeordnet. Ein Teilprojekt ohne Projekmitarbeiter kann existieren, ein Projektmitarbeiter ohne Teilprojekt jedoch nicht.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Teilprojekt hat keinen oder mehrere zugeordnete Projektmitarbeiter und ein Projektmitarbeiter ist immer einem Teilprojekt zugeordnet. Ein Teilprojekt ohne Projektmitarbeiter kann existieren, ein Projektmitarbeiter ohne Teilprojekt jedoch nicht.}\\\hline\hline
     Prozess & 1 & 0..* & Subprozess\\\hline
     \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess kann keine oder mehrere Subprozesse beinhalten, ein Subprozess gehört immer zu genau einem Prozess. Ein Prozess ohne Subprozesse kann existieren, ein Subprozess ohne Prozess jedoch nicht.}\\\hline
 \end{xltabular}
@@ -105,16 +105,16 @@ Kompositionen sind eine besondere Form von Aggregation, bei denen die Objekte de
     \hline
     \multicolumn{4}{|c|}{\textbf{Klassen mit Kompositionen}}\\\hline\hline
     Projekt & 1 & 1..5 & Projektphase\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann eine oder bis zu fünf Projektphasen beinhalten und eine Projektphase gehört immer zu genau einem Projekt. Ein Projekt ohne Projektphasen kann nicht existieren, eine Projektphase ohne Projekt ebenfalls nicht.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann eine, oder bis zu fünf Projektphasen beinhalten und eine Projektphase gehört immer zu genau einem Projekt. Ein Projekt ohne Projektphasen kann nicht existieren, eine Projektphase ohne Projekt ebenfalls nicht.}\\\hline\hline
     %%%%%%
     Projekt & 1 & 1..* & Teilprojekt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann ein oder mehrere Teilprojekte beinhalten und ein Teilprojekt gehört zu genau einem Projekt. Ein Projekt ohne Teilprojekte kann nicht existieren, ein Teilprojekt ohne Projekt ebenfalls nicht.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Projekt kann ein, oder mehrere Teilprojekte beinhalten und ein Teilprojekt gehört zu genau einem Projekt. Ein Projekt ohne Teilprojekte kann nicht existieren, ein Teilprojekt ohne Projekt ebenfalls nicht.}\\\hline\hline
     %%%%%%
     Projektphase & 1 & 1..* & Kriterium\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Eine Projektphase hat ein oder mehrere Kriterien und ein Kriterium gehört zu genau einer Projektphase. Eine Projektphase ohne Kriterien kann nicht existieren, ein Kriterium ohne Projektphase ebenfalls nicht.}\\\hline\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Eine Projektphase hat ein, oder mehrere Kriterien und ein Kriterium gehört zu genau einer Projektphase. Eine Projektphase ohne Kriterien kann nicht existieren, ein Kriterium ohne Projektphase ebenfalls nicht.}\\\hline\hline
     %%%%%%
     Prozess & 1 & 1..* & Prozessschritt\\\hline
-    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess hat ein oder mehrere Prozessschritte und ein Prozessschritt gehört immer zu genau einem Prozess. Ein Prozess ohne Prozessschritte kann nicht existieren, ein Prozessschritt ohne Prozess ebenfalls nicht.}\\\hline
+    \multicolumn{4}{|p{0.942\textwidth}|}{Ein Prozess hat ein, oder mehrere Prozessschritte und ein Prozessschritt gehört immer zu genau einem Prozess. Ein Prozess ohne Prozessschritte kann nicht existieren, ein Prozessschritt ohne Prozess ebenfalls nicht.}\\\hline
     %%%%%%
 \end{xltabular}
 \captionof{table}[Klassen mit Kompositionen]{Beschreibung der ermittelten Klassen mit Kompositionen}
@@ -142,7 +142,7 @@ Generalisierungen sind Vererbungsbeziehungen, bei denen es eine Basisklasse gibt
 \emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Klassendiagramm.png dieser Arbeit abgelegt.}
 \newpage
 \subsection{Detaillierte Spezifikationen der Klassen}
-Nachfolgend werden zur Begründung des Vorgehen im erweiterten Klassendiagramm, exemplarisch die Attribute, Operationen und strukturieretn Datentypen der Klassen Benutzer, Projekt und Prozessschritt genauer spezifiziert. Dazu werden die Attribute der Klassen und die Attribute der strukturierten Datentypen anhand den Kriterien \glqq{}Datentyp\grqq{}, \glqq{}Anfangswert\grqq{}, \glqq{}Erforderlichkeit\grqq{}, \glqq{}Schlüssel\grqq{}, \glqq{}Änderbarkeit\grqq{}, \glqq{}Einheit\grqq{}, und \glqq{}Beschreibung\grqq{} beschrieben und aufgeschlüsselt, sowie die Operationen anhand der Eigenschaften \glqq{}Typ\grqq{}, \glqq{}Parameter\grqq{}, \glqq{}Ergebnis\grqq{} und \glqq{}Wirkung\grqq{}. 
+Nachfolgend werden zur Begründung des Vorgehens im erweiterten Klassendiagramm, exemplarisch die Attribute, Operationen und strukturierten Datentypen der Klassen Benutzer, Projekt und Prozessschritt genauer spezifiziert. Dazu werden die Attribute der Klassen und die Attribute der strukturierten Datentypen anhand der Kriterien \glqq{}Datentyp\grqq{}, \glqq{}Anfangswert\grqq{}, \glqq{}Erforderlichkeit\grqq{}, \glqq{}Schlüssel\grqq{}, \glqq{}Änderbarkeit\grqq{}, \glqq{}Einheit\grqq{}, und \glqq{}Beschreibung\grqq{} beschrieben und aufgeschlüsselt, sowie die Operationen anhand der Eigenschaften \glqq{}Typ\grqq{}, \glqq{}Parameter\grqq{}, \glqq{}Ergebnis\grqq{} und \glqq{}Wirkung\grqq{}. 
 
 \subsubsection{Spezifikationen der Klasse Benutzer}
 \begin{xltabular}{\textwidth}{|p{0.155\textwidth}||P{0.1\textwidth}|P{0.11\textwidth}|P{0.1\textwidth}|P{0.12\textwidth}|P{0.11\textwidth}|P{0.105\textwidth}|}
@@ -228,7 +228,7 @@ Nachfolgend werden zur Begründung des Vorgehen im erweiterten Klassendiagramm, 
 \captionof{table}[Strukturierter Datentyp DatumT]{Strukturierter Datentyp DatumT}
 
 
-\subsubsection{Spezifikationen der Klasse Prozesschritt}
+\subsubsection{Spezifikationen der Klasse Prozessschritt}
 \begin{xltabular}{\textwidth}{|p{0.18\textwidth}||P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|P{0.135\textwidth}|}
     \hline
     \multicolumn{6}{|c|}{\textbf{Attribute der Klasse Prozessschritt}}\\\hline
@@ -245,7 +245,7 @@ Nachfolgend werden zur Begründung des Vorgehen im erweiterten Klassendiagramm, 
 \vspace{3em}
 \begin{xltabular}{\textwidth}{|p{0.21\textwidth}||P{0.15\textwidth}|P{0.15\textwidth}|P{0.15\textwidth}|P{0.225\textwidth}|}
     \hline
-    \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Prozesschritt}}\\\hline
+    \multicolumn{5}{|c|}{\textbf{Operationen der Klasse Prozessschritt}}\\\hline
     Operation & Typ & Parameter & Ergebnis & Wirkung\\\hline\hline
     gibProzess & Objekt-operation & schrittID: String & String & ID des Prozess wird ausgegeben\\\hline
     gibSubprozess & Objekt-operation & schrittID: String & String & ID des Subprozess wird ausgegeben\\\hline
@@ -287,6 +287,6 @@ Die nachfolgende Abbildung zeigt die Bündelung der ermittelten Klassen des Busi
 \vspace{1em}
 \\Das Paket \underline{Transformationskriterien} enthält die Klassen \emph{Kriterium, BoolschesKriterium, Textkriterium und Zahlenkriterium}, die für die Ausprägung der Fortschrittserfassung der Geschäfts-prozesse benötigt werden.
 \vspace{1em}
-\\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Transformationskriterien}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Transformationskriterien}. In allen fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
+\\Es bestehen Abhängigkeiten zwischen den Paketen \underline{Projektaufbau} und \underline{Prozessinhalt}; \underline{Prozessinhalt} und \underline{Transformationskriterien}; \underline{Benutzerrollen} und \underline{Projektaufbau} sowie zwischen \underline{Projektaufbau} und \underline{Transformationskriterien}. In allen Fällen ist das Paket \underline{Projektaufbau} das unabhängigste, da eine Änderung hier sich mit großer Wahrscheinlichkeit auch auf die anderen Pakete auswirkt, jedoch nicht umgekehrt.
 \vspace{1em}
 \\\emph{Zur verbesserten Anschauung ist das Diagramm ebenfalls im Verzeichnis ./Bilder/Paketdiagramm.png dieser Arbeit abgelegt.}
